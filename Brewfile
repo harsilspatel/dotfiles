@@ -7,10 +7,14 @@ tap "khanhas/tap"
 tap "koekeishiya/formulae"
 tap "mopidy/mopidy"
 tap "rigellute/tap"
+# Interpreted, interactive, object-oriented programming language
+brew "python", link: false
 # Get/set bluetooth power and discoverable state
 brew "blueutil"
 # Text-based personal organizer
 brew "calcurse"
+# Good-lookin' diffs with diff-highlight and more
+brew "diff-so-fancy"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Improved top (interactive process viewer)
@@ -27,8 +31,14 @@ brew "neofetch"
 brew "openvpn"
 # Animated pipes terminal screensaver
 brew "pipes-sh"
+# Python version management
+brew "pyenv"
 # Command-line interface for Spotify on a Mac
 brew "shpotify"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Language for application scale JavaScript development
+brew "typescript"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Command-line tool to customize Spotify client
