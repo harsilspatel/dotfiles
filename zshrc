@@ -76,10 +76,11 @@ plugins=(
   osx
   brew
   ruby
+  pyenv
   zsh-nvm
   screen
   extract
-  #zsh-nvm
+  alias-tips
   colored-man-pages
   zsh-autosuggestions
   zsh-syntax-highlighting  
@@ -126,6 +127,8 @@ alias pl="spotify play"
 alias c="clear"
 alias o="open ."
 alias h="history | grep "
+alias c.="code ."
+alias b="blueutil"
 
 alias mongo='ulimit -n 4096  && /Users/harsilpatel/Utils/mongodb-osx-x86_64-enterprise-3.6.9/bin/mongod --config /Users/harsilpatel/Utils/mongodb-osx-x86_64-enterprise-3.6.9/mongod.conf'
 alias redis='ulimit -n 4096 && /Users/harsilpatel/Utils/redis-3.2.9/src/redis-server /Users/harsilpatel/Utils/redis-3.2.9/redis.conf'
@@ -133,7 +136,16 @@ alias redis='ulimit -n 4096 && /Users/harsilpatel/Utils/redis-3.2.9/src/redis-se
 export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH=$PATH:/usr/local/Cellar/openvpn/2.4.8/sbin
 
-alias b="blueutil"
-
 cd ~/Workspace
 
+function lc() {
+  set -x
+  if [[ "$PWD" == "/Users/harsilpatel/Workspace/leetcode" ]]
+    then
+      f=$(ls -t | head -n 1)
+      git add $f
+      git commit -v -m "add ${f}"
+      git push
+  fi
+  set +x
+}
