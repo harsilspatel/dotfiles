@@ -8,7 +8,7 @@ tap "koekeishiya/formulae"
 tap "mopidy/mopidy"
 tap "rigellute/tap"
 # Interpreted, interactive, object-oriented programming language
-brew "python", link: false
+brew "python"
 # Get/set bluetooth power and discoverable state
 brew "blueutil"
 # Text-based personal organizer
@@ -51,6 +51,8 @@ brew "koekeishiya/formulae/skhd"
 brew "mopidy/mopidy/mopidy"
 # A terminal user interface for Spotify
 brew "rigellute/tap/spotify-tui"
+cask "bartender"
+cask "bettertouchtool"
 cask "emacs"
 cask "font-source-code-pro"
 cask "iterm2"

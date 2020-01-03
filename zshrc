@@ -1,3 +1,4 @@
+zmodload zsh/zprof
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -74,13 +75,14 @@ plugins=(
   z
   git
   osx
-  brew
-  ruby
-  pyenv
+ # brew
+ # ruby
+ # pyenv
   zsh-nvm
-  screen
-  extract
-  alias-tips
+ # screen
+ # extract
+ # vi-mode
+ # alias-tips
   colored-man-pages
   zsh-autosuggestions
   zsh-syntax-highlighting  
@@ -123,12 +125,12 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 alias n="spotify next"
 alias p="spotify pause"
 alias pp="spotify prev"
-alias pl="spotify play"
 alias c="clear"
 alias o="open ."
 alias h="history | grep "
 alias c.="code ."
 alias b="blueutil"
+alias x="exit"
 
 alias mongo='ulimit -n 4096  && /Users/harsilpatel/Utils/mongodb-osx-x86_64-enterprise-3.6.9/bin/mongod --config /Users/harsilpatel/Utils/mongodb-osx-x86_64-enterprise-3.6.9/mongod.conf'
 alias redis='ulimit -n 4096 && /Users/harsilpatel/Utils/redis-3.2.9/src/redis-server /Users/harsilpatel/Utils/redis-3.2.9/redis.conf'
@@ -138,14 +140,26 @@ export PATH=$PATH:/usr/local/Cellar/openvpn/2.4.8/sbin
 
 cd ~/Workspace
 
-function lc() {
+function lcode() {
   set -x
-  if [[ "$PWD" == "/Users/harsilpatel/Workspace/leetcode" ]]
-    then
-      f=$(ls -t | head -n 1)
-      git add $f
-      git commit -v -m "add ${f}"
-      git push
-  fi
+  f=$1
+  git add $f
+  git commit -v -m "add ${f}"
+  git push
   set +x
 }
+
+function lc() {
+  if [[ "$PWD" == "/Users/harsilpatel/Workspace/leetcode" ]]
+    then
+    f=$(ls -t | head -n 1)
+    lcode $f 
+  fi
+}
+
+autoload -Uz compinit
+if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
+  compinit
+else
+  compinit -C
+fi
