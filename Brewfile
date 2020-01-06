@@ -1,5 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
@@ -13,6 +14,8 @@ brew "python"
 brew "blueutil"
 # Text-based personal organizer
 brew "calcurse"
+# Emacs dependency management
+brew "cask"
 # Good-lookin' diffs with diff-highlight and more
 brew "diff-so-fancy"
 # Command-line fuzzy finder written in Go
@@ -35,10 +38,16 @@ brew "pipes-sh"
 brew "pyenv"
 # Command-line interface for Spotify on a Mac
 brew "shpotify"
+# Terminal multiplexer
+brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Language for application scale JavaScript development
 brew "typescript"
+# Internet file retriever
+brew "wget"
+# JavaScript package manager
+brew "yarn"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Command-line tool to customize Spotify client
@@ -53,13 +62,4 @@ brew "mopidy/mopidy/mopidy"
 brew "rigellute/tap/spotify-tui"
 cask "bartender"
 cask "bettertouchtool"
-cask "emacs"
-cask "font-source-code-pro"
-cask "iterm2"
-cask "karabiner-elements"
-cask "keycastr"
-cask "maccy"
-cask "plover"
-cask "pomotroid"
-cask "qutebrowser"
-cask "visual-studio-code"
+cask "sonos"
