@@ -107,34 +107,10 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 
 # Activating powerline
 #. /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
-
-# Setting aliases
-alias n="spotify next"
-alias p="spotify pause"
-alias pp="spotify prev"
-alias c="clear"
-alias o="open ."
-alias h="history | grep "
-alias c.="code ."
-alias b="blueutil"
-alias x="exit"
-alias st="open -a SourceTree"
-
-alias mongo='ulimit -n 4096  && /Users/harsilpatel/Utils/mongodb-osx-x86_64-enterprise-3.6.9/bin/mongod --config /Users/harsilpatel/Utils/mongodb-osx-x86_64-enterprise-3.6.9/mongod.conf'
-alias redis='ulimit -n 4096 && /Users/harsilpatel/Utils/redis-3.2.9/src/redis-server /Users/harsilpatel/Utils/redis-3.2.9/redis.conf'
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH=$PATH:/usr/local/Cellar/openvpn/2.4.8/sbin
@@ -164,3 +140,5 @@ if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
 else
   compinit -C
 fi
+
+source ~/.dotfiles/.aliases
