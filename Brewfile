@@ -10,6 +10,8 @@ tap "mopidy/mopidy"
 tap "rigellute/tap"
 # Interpreted, interactive, object-oriented programming language
 brew "python"
+# Official Amazon AWS command-line interface
+brew "awscli"
 # Get/set bluetooth power and discoverable state
 brew "blueutil"
 # Text-based personal organizer
@@ -24,6 +26,8 @@ brew "fzf"
 brew "htop"
 # Manage your Java environment
 brew "jenv"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 # Simple terminal UI for git commands
 brew "lazygit"
 # Ncurses-based client for the Music Player Daemon
@@ -38,6 +42,8 @@ brew "pipes-sh"
 brew "pyenv"
 # Command-line interface for Spotify on a Mac
 brew "shpotify"
+# Tool to build, change, and version infrastructure
+brew "terraform"
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
@@ -62,4 +68,5 @@ brew "mopidy/mopidy/mopidy"
 brew "rigellute/tap/spotify-tui"
 cask "bartender"
 cask "bettertouchtool"
+cask "iterm2"
 cask "sonos"
