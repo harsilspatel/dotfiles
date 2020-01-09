@@ -142,3 +142,12 @@ else
 fi
 
 source ~/.dotfiles/.aliases
+
+function api() {
+    git clone https://gitlab.com/medipass/software/medipass-api.git
+    cd medipass-api
+    npm i
+    make -p .vscode
+    cp ~/Workspace/commons/launch.json ./.vscode/launch.json
+    cp ~/Workspace/commons/Gruntfile.js ./.vscode/Gruntfile.js
+}
