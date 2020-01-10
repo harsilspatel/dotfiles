@@ -6,5 +6,5 @@
         path: ssh/config
         create: true
     ~/.zshrc: zshrc
-
+    ~/.spacemacs: spacemacs
 
