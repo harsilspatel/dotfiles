@@ -12,6 +12,8 @@ tap "rigellute/tap"
 brew "python"
 # Official Amazon AWS command-line interface
 brew "awscli"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
 # Get/set bluetooth power and discoverable state
 brew "blueutil"
 # Text-based personal organizer
@@ -34,12 +36,16 @@ brew "lazygit"
 brew "ncmpcpp"
 # Fast, highly customisable system info script
 brew "neofetch"
+# Tiny, lightning fast, feature-packed file manager
+brew "nnn"
 # SSL/TLS VPN implementing OSI layer 2 or 3 secure network extension
 brew "openvpn"
 # Animated pipes terminal screensaver
 brew "pipes-sh"
 # Python version management
 brew "pyenv"
+# File browser
+brew "ranger"
 # Command-line interface for Spotify on a Mac
 brew "shpotify"
 # Tool to build, change, and version infrastructure
@@ -68,5 +74,6 @@ brew "mopidy/mopidy/mopidy"
 brew "rigellute/tap/spotify-tui"
 cask "bartender"
 cask "bettertouchtool"
+cask "google-chrome"
 cask "iterm2"
 cask "sonos"
