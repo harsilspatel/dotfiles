@@ -1,4 +1,4 @@
-zmodload zsh/zprof
+# zmodload zsh/zprof
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -78,6 +78,7 @@ plugins=(
  # brew
  # ruby
  # pyenv
+  npm
   zsh-nvm
  # screen
  # extract
@@ -141,13 +142,16 @@ else
   compinit -C
 fi
 
+source ~/.dotfiles/.tokens
 source ~/.dotfiles/.aliases
 
 function api() {
     git clone https://gitlab.com/medipass/software/medipass-api.git
     cd medipass-api
     npm i
-    make -p .vscode
+    mkdir ./.vscode
     cp ~/Workspace/commons/launch.json ./.vscode/launch.json
-    cp ~/Workspace/commons/Gruntfile.js ./.vscode/Gruntfile.js
+    cp ~/Workspace/commons/Gruntfile.js ./Gruntfile.js
 }
+
+
