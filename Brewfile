@@ -7,6 +7,7 @@ tap "homebrew/services"
 tap "khanhas/tap"
 tap "koekeishiya/formulae"
 tap "mopidy/mopidy"
+tap "railwaycat/emacsmacport"
 tap "rigellute/tap"
 # Interpreted, interactive, object-oriented programming language
 brew "python"
@@ -20,10 +21,14 @@ brew "blueutil"
 brew "calcurse"
 # Emacs dependency management
 brew "cask"
+# Tiling window manager for macOS based on plugin architecture
+brew "chunkwm"
 # Good-lookin' diffs with diff-highlight and more
 brew "diff-so-fancy"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# Render markdown on the CLI
+brew "glow"
 # Improved top (interactive process viewer)
 brew "htop"
 # Manage your Java environment
@@ -36,6 +41,8 @@ brew "lazygit"
 brew "ncmpcpp"
 # Fast, highly customisable system info script
 brew "neofetch"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
 # Tiny, lightning fast, feature-packed file manager
 brew "nnn"
 # SSL/TLS VPN implementing OSI layer 2 or 3 secure network extension
@@ -64,8 +71,6 @@ brew "yarn"
 brew "zsh"
 # Command-line tool to customize Spotify client
 brew "khanhas/tap/spicetify-cli"
-# Tiling window manager for macOS based on plugin architecture
-brew "koekeishiya/formulae/chunkwm"
 # Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd"
 # Extensible music server written in Python
@@ -74,6 +79,8 @@ brew "mopidy/mopidy/mopidy"
 brew "rigellute/tap/spotify-tui"
 cask "bartender"
 cask "bettertouchtool"
+cask "coderunner"
+cask "emacs-mac"
 cask "firefox"
 cask "google-chrome"
 cask "iterm2"
