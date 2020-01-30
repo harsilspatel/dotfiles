@@ -116,8 +116,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH=$PATH:/usr/local/Cellar/openvpn/2.4.8/sbin
 
-cd ~/Workspace
-
 function lcode() {
   set -x
   f=$1
