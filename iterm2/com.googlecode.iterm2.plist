@@ -227,6 +227,12 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>26276612-13CC-4A98-98AE-0A91741F3032</string>
+	<key>DimBackgroundWindows</key>
+	<false/>
+	<key>DimInactiveSplitPanes</key>
+	<true/>
+	<key>DimOnlyText</key>
+	<true/>
 	<key>GlobalKeyMap</key>
 	<dict>
 		<key>0x19-0x60000</key>
@@ -413,7 +419,11 @@ Select Previous Tab</string>
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>0 138 224 275 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 2560 524 0 0 2560 1440 </string>
+	<string>0 697 2560 743 0 0 2560 1440 </string>
+	<key>NeverWarnAboutShortLivedSessions_26276612-13CC-4A98-98AE-0A91741F3032</key>
+	<true/>
+	<key>NeverWarnAboutShortLivedSessions_26276612-13CC-4A98-98AE-0A91741F3032_selection</key>
+	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1953,7 +1963,7 @@ Select Previous Tab</string>
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
 			<key>Rows</key>
-			<integer>40</integer>
+			<integer>48</integer>
 			<key>Screen</key>
 			<integer>-2</integer>
 			<key>Scrollback Lines</key>
@@ -2297,7 +2307,7 @@ Select Previous Tab</string>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
 			<key>HotKey Activated By Modifier</key>
-			<true/>
+			<false/>
 			<key>HotKey Alternate Shortcuts</key>
 			<array/>
 			<key>HotKey Characters</key>
@@ -2854,21 +2864,21 @@ Select Previous Tab</string>
 		<key>screenFrame</key>
 		<string>{{0, 0}, {2560, 1440}}</string>
 		<key>topLeft</key>
-		<string>{269, 596}</string>
+		<string>{269, 598}</string>
 	</dict>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
 		<string>{{0, 0}, {2560, 1440}}</string>
 		<key>topLeft</key>
-		<string>{272, 809}</string>
+		<string>{829, 1002}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>DD986F44-0C2A-4ABE-88BF-D7602DE591E8</string>
 	<key>NoSyncLastTipTime</key>
-	<real>599615231.19867504</real>
+	<real>602038632.748842</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>16</integer>
+	<integer>26</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -3592,27 +3602,50 @@ Select Previous Tab</string>
 		<key>Initial Directory</key>
 		<string>/Users/harsilpatel/.dotfiles/iterm2</string>
 	</dict>
+	<key>NoSyncSearchHistory2</key>
+	<array>
+		<string>packa</string>
+	</array>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
 	<real>596944130.80985701</real>
 	<key>NoSyncTipsToNotShow</key>
 	<array>
-		<string>0004</string>
-		<string>0000</string>
 		<string>0010</string>
-		<string>0007</string>
-		<string>0003</string>
-		<string>0013</string>
-		<string>0006</string>
-		<string>0002</string>
-		<string>000</string>
-		<string>0012</string>
+		<string>0026</string>
+		<string>0015</string>
+		<string>0004</string>
+		<string>0030</string>
 		<string>0009</string>
-		<string>0005</string>
-		<string>0001</string>
+		<string>0024</string>
+		<string>0013</string>
+		<string>0002</string>
+		<string>0029</string>
+		<string>0018</string>
+		<string>0007</string>
+		<string>0022</string>
 		<string>0011</string>
-		<string>0008</string>
+		<string>0000</string>
+		<string>0027</string>
+		<string>0016</string>
+		<string>0005</string>
+		<string>0020</string>
+		<string>0025</string>
 		<string>0014</string>
+		<string>0003</string>
+		<string>0019</string>
+		<string>0008</string>
+		<string>0023</string>
+		<string>0012</string>
+		<string>0001</string>
+		<string>000</string>
+		<string>0017</string>
+		<string>0006</string>
+		<string>0028</string>
+		<string>0021</string>
+		<string>0031</string>
 	</array>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -3648,6 +3681,8 @@ Select Previous Tab</string>
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/harsilpatel/.dotfiles/iterm2</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -3657,13 +3692,15 @@ Select Previous Tab</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-01-01T23:49:43Z</date>
+	<date>2020-01-28T00:46:30Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
 	<false/>
 	<key>SoundForEsc</key>
 	<false/>
+	<key>SplitPaneDimmingAmount</key>
+	<real>0.35027703900709217</real>
 	<key>StatusBarPosition</key>
 	<integer>0</integer>
 	<key>TabStyleWithAutomaticOption</key>
