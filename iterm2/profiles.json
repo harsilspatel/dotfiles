@@ -31,17 +31,7 @@
     "Red Component" : 0.26666668057441711
   },
   "Triggers" : [
-    {
-      "action" : "PasswordTrigger",
-      "parameter" : "ssh@130.194.70.136",
-      "regex" : "hpatel@130.194.70.136's password",
-      "partial" : false
-    },
-    {
-      "regex" : "hpat0010@clusterfuzz.infotech.monash.edu's password",
-      "action" : "PasswordTrigger",
-      "parameter" : "ssh hpat0010@fit-web83-v20.ocio.monash.edu"
-    }
+
   ],
   "Mouse Reporting" : true,
   "Cursor Boost" : 0,
@@ -493,17 +483,7 @@
     "Red Component" : 0.26666668057441711
   },
   "Triggers" : [
-    {
-      "action" : "PasswordTrigger",
-      "parameter" : "ssh@130.194.70.136",
-      "regex" : "hpatel@130.194.70.136's password",
-      "partial" : false
-    },
-    {
-      "regex" : "hpat0010@clusterfuzz.infotech.monash.edu's password",
-      "action" : "PasswordTrigger",
-      "parameter" : "ssh hpat0010@fit-web83-v20.ocio.monash.edu"
-    }
+
   ],
   "Mouse Reporting" : true,
   "Cursor Boost" : 0,
@@ -958,17 +938,7 @@
     "Red Component" : 0.26666668057441711
   },
   "Triggers" : [
-    {
-      "action" : "PasswordTrigger",
-      "parameter" : "ssh@130.194.70.136",
-      "regex" : "hpatel@130.194.70.136's password",
-      "partial" : false
-    },
-    {
-      "regex" : "hpat0010@clusterfuzz.infotech.monash.edu's password",
-      "action" : "PasswordTrigger",
-      "parameter" : "ssh hpat0010@fit-web83-v20.ocio.monash.edu"
-    }
+
   ],
   "Mouse Reporting" : true,
   "Cursor Boost" : 0,
