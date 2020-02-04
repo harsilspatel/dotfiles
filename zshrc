@@ -1,6 +1,6 @@
 # zmodload zsh/zprof
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/Cellar/openvpn/2.4.8/sbin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/harsilpatel/.oh-my-zsh"
@@ -64,6 +64,7 @@ ZSH_THEME="robbyrussell"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# for lazy loading nvm, more info https://github.com/lukechilds/zsh-nvm#lazy-loading
 export NVM_LAZY_LOAD=true
 
 # Which plugins would you like to load?
@@ -108,15 +109,13 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# for setting the foreground color, read more at https://stackoverflow.com/a/52713893/9701238
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 
 # Activating powerline
 #. /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 
 export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH=$PATH:/usr/local/Cellar/openvpn/2.4.8/sbin
-
-cd ~/Workspace
 
 function lcode() {
   set -x

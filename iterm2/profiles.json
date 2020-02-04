@@ -31,17 +31,7 @@
     "Red Component" : 0.26666668057441711
   },
   "Triggers" : [
-    {
-      "partial" : false,
-      "parameter" : "ssh@130.194.70.136",
-      "regex" : "hpatel@130.194.70.136's password",
-      "action" : "PasswordTrigger"
-    },
-    {
-      "regex" : "hpat0010@clusterfuzz.infotech.monash.edu's password",
-      "action" : "PasswordTrigger",
-      "parameter" : "ssh hpat0010@fit-web83-v20.ocio.monash.edu"
-    }
+
   ],
   "Mouse Reporting" : true,
   "Cursor Boost" : 0,
@@ -72,6 +62,7 @@
     "Green Component" : 0.9268307089805603
   },
   "BM Growl" : true,
+  "AWDS Window Directory" : "~\/Workspace\/",
   "Ansi 3 Color" : {
     "Green Component" : 0.98039215686274506,
     "Blue Component" : 0.5490196078431373,
@@ -94,6 +85,7 @@
   },
   "Unlimited Scrollback" : false,
   "Custom Command" : "Yes",
+  "AWDS Tab Option" : "Yes",
   "HotKey Key Code" : 0,
   "Keyboard Map" : {
     "0xf728-0x80000" : {
@@ -401,6 +393,7 @@
     "Red Component" : 0
   },
   "Cursor Type" : 1,
+  "AWDS Pane Directory" : "",
   "Blur" : false,
   "Normal Font" : "Menlo-Regular 11",
   "Vertical Spacing" : 1,
@@ -410,6 +403,8 @@
     "Red Component" : 0.73333334922790527
   },
   "Space" : -1,
+  "AWDS Tab Directory" : "~\/Workspace\/",
+  "AWDS Pane Option" : "Recycle",
   "HotKey Window AutoHides" : true,
   "Command" : "\/bin\/zsh",
   "Terminal Type" : "xterm-256color",
@@ -437,6 +432,7 @@
   },
   "Screen" : -2,
   "HotKey Characters Ignoring Modifiers" : "",
+  "AWDS Window Option" : "No",
   "Non Ascii Font" : "Monaco 12",
   "Ansi 13 Color" : {
     "Green Component" : 0.47450980392156861,
@@ -449,7 +445,7 @@
   ],
   "Unicode Normalization" : 0,
   "Visual Bell" : true,
-  "Custom Directory" : "No",
+  "Custom Directory" : "Advanced",
   "Ansi 5 Color" : {
     "Green Component" : 0.47450980392156861,
     "Blue Component" : 0.77647058823529413,
@@ -465,7 +461,7 @@
     "Blue Component" : 1,
     "Red Component" : 1
   },
-  "Rows" : 40,
+  "Rows" : 48,
   "Ansi 11 Color" : {
     "Green Component" : 0.98039215686274506,
     "Blue Component" : 0.5490196078431373,
@@ -487,17 +483,7 @@
     "Red Component" : 0.26666668057441711
   },
   "Triggers" : [
-    {
-      "partial" : false,
-      "parameter" : "ssh@130.194.70.136",
-      "regex" : "hpatel@130.194.70.136's password",
-      "action" : "PasswordTrigger"
-    },
-    {
-      "regex" : "hpat0010@clusterfuzz.infotech.monash.edu's password",
-      "action" : "PasswordTrigger",
-      "parameter" : "ssh hpat0010@fit-web83-v20.ocio.monash.edu"
-    }
+
   ],
   "Mouse Reporting" : true,
   "Cursor Boost" : 0,
@@ -528,6 +514,7 @@
     "Green Component" : 0.9268307089805603
   },
   "BM Growl" : true,
+  "AWDS Window Directory" : "~\/Workspace\/",
   "Ansi 3 Color" : {
     "Green Component" : 0.98039215686274506,
     "Blue Component" : 0.5490196078431373,
@@ -550,6 +537,7 @@
   },
   "Unlimited Scrollback" : false,
   "Custom Command" : "Yes",
+  "AWDS Tab Option" : "Yes",
   "HotKey Key Code" : 0,
   "Keyboard Map" : {
     "0xf728-0x80000" : {
@@ -857,6 +845,7 @@
     "Red Component" : 0
   },
   "Cursor Type" : 1,
+  "AWDS Pane Directory" : "",
   "Blur" : false,
   "Normal Font" : "Menlo-Regular 11",
   "Vertical Spacing" : 1,
@@ -866,6 +855,8 @@
     "Red Component" : 0.73333334922790527
   },
   "Space" : -1,
+  "AWDS Tab Directory" : "~\/Workspace\/",
+  "AWDS Pane Option" : "Recycle",
   "HotKey Window AutoHides" : true,
   "Command" : "\/bin\/zsh",
   "Terminal Type" : "xterm-256color",
@@ -893,6 +884,7 @@
   },
   "Screen" : -2,
   "HotKey Characters Ignoring Modifiers" : "",
+  "AWDS Window Option" : "Yes",
   "Bound Hosts" : [
 
   ],
@@ -908,7 +900,7 @@
   ],
   "Unicode Normalization" : 0,
   "Visual Bell" : true,
-  "Custom Directory" : "No",
+  "Custom Directory" : "Advanced",
   "Ansi 5 Color" : {
     "Green Component" : 0.47450980392156861,
     "Blue Component" : 0.77647058823529413,
@@ -931,7 +923,7 @@
     "Red Component" : 0.94509803921568625
   },
   "Use Italic Font" : true,
-  "HotKey Characters" : "",
+  "HotKey Characters" : "\u0003",
   "Foreground Color" : {
     "Green Component" : 0.90032327175140381,
     "Blue Component" : 0.90032327175140381,
@@ -946,17 +938,7 @@
     "Red Component" : 0.26666668057441711
   },
   "Triggers" : [
-    {
-      "partial" : false,
-      "parameter" : "ssh@130.194.70.136",
-      "regex" : "hpatel@130.194.70.136's password",
-      "action" : "PasswordTrigger"
-    },
-    {
-      "regex" : "hpat0010@clusterfuzz.infotech.monash.edu's password",
-      "action" : "PasswordTrigger",
-      "parameter" : "ssh hpat0010@fit-web83-v20.ocio.monash.edu"
-    }
+
   ],
   "Mouse Reporting" : true,
   "Cursor Boost" : 0,
@@ -987,6 +969,7 @@
     "Green Component" : 0.9268307089805603
   },
   "BM Growl" : true,
+  "AWDS Window Directory" : "~\/Workspace\/",
   "Ansi 3 Color" : {
     "Green Component" : 0.98039215686274506,
     "Blue Component" : 0.5490196078431373,
@@ -1009,7 +992,8 @@
   },
   "Unlimited Scrollback" : false,
   "Custom Command" : "Yes",
-  "HotKey Key Code" : 0,
+  "AWDS Tab Option" : "Yes",
+  "HotKey Key Code" : 8,
   "Keyboard Map" : {
     "0xf728-0x80000" : {
       "Action" : 10,
@@ -1316,6 +1300,7 @@
     "Red Component" : 0
   },
   "Cursor Type" : 1,
+  "AWDS Pane Directory" : "",
   "Blur" : false,
   "Normal Font" : "Menlo-Regular 11",
   "Vertical Spacing" : 1,
@@ -1325,6 +1310,8 @@
     "Red Component" : 0.73333334922790527
   },
   "Space" : -1,
+  "AWDS Tab Directory" : "~\/Workspace\/",
+  "AWDS Pane Option" : "Recycle",
   "HotKey Window AutoHides" : true,
   "Command" : "\/bin\/zsh",
   "Terminal Type" : "xterm-256color",
@@ -1332,7 +1319,7 @@
   "Option Key Sends" : 0,
   "Minimum Contrast" : 0,
   "HotKey Window Animates" : false,
-  "HotKey Modifier Flags" : 0,
+  "HotKey Modifier Flags" : 1310720,
   "Ansi 15 Color" : {
     "Green Component" : 1,
     "Blue Component" : 1,
@@ -1344,14 +1331,15 @@
     "Red Component" : 0.54509803921568623
   },
   "Transparency" : 0,
-  "HotKey Activated By Modifier" : true,
+  "HotKey Activated By Modifier" : false,
   "Background Color" : {
     "Green Component" : 0.12215272337198257,
     "Blue Component" : 0.15977837145328522,
     "Red Component" : 0.11765811592340469
   },
   "Screen" : -2,
-  "HotKey Characters Ignoring Modifiers" : "",
+  "HotKey Characters Ignoring Modifiers" : "c",
+  "AWDS Window Option" : "Yes",
   "Bound Hosts" : [
 
   ],
@@ -1367,7 +1355,7 @@
   ],
   "Unicode Normalization" : 0,
   "Visual Bell" : true,
-  "Custom Directory" : "No",
+  "Custom Directory" : "Advanced",
   "Ansi 5 Color" : {
     "Green Component" : 0.47450980392156861,
     "Blue Component" : 0.77647058823529413,
