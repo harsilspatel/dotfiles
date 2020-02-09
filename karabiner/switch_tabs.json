@@ -1,0 +1,33 @@
+{
+  "type": "basic",
+  "description": "Next tab using right-commnd + k + caps-lock",
+  "from": {
+    "key_code": "k",
+    "modifiers": {
+      "mandatory": [
+        "right_gui"
+      ],
+      "optional": [
+        "left_control",
+        "option"
+      ]
+    }
+  },
+  "to": [
+    {
+      "key_code": "tab",
+      "modifiers": {
+        "mandatory": [
+          "right_gui"
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "type": "variable_if",
+      "name": "left_control pressed",
+      "value": 1
+    }
+  ]
+}
