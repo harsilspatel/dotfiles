@@ -29,8 +29,12 @@ brew "diff-so-fancy"
 brew "fzf"
 # Render markdown on the CLI
 brew "glow"
+# GitHub Markdown previewer
+brew "grip"
 # Improved top (interactive process viewer)
 brew "htop"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
 # Manage your Java environment
 brew "jenv"
 # Lightweight and flexible command-line JSON processor
@@ -84,6 +88,7 @@ cask "emacs-mac"
 cask "firefox"
 cask "google-chrome"
 cask "iterm2"
+cask "jetbrains-toolbox"
 cask "key-codes"
 cask "postman"
 cask "sonos"

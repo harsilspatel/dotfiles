@@ -153,4 +153,6 @@ function api() {
     cp ~/Workspace/commons/Gruntfile.js ./Gruntfile.js
 }
 
-
+# to separate history for iterm tabs
+unsetopt share_history
+unsetopt inc_append_history
