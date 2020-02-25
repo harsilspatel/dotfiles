@@ -29,18 +29,26 @@ brew "diff-so-fancy"
 brew "fzf"
 # Render markdown on the CLI
 brew "glow"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
 # GitHub Markdown previewer
 brew "grip"
+# Perceptual JPEG encoder
+brew "guetzli"
 # Improved top (interactive process viewer)
 brew "htop"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
+# GNU utilities for networking
+brew "inetutils"
 # Manage your Java environment
 brew "jenv"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Simple terminal UI for git commands
 brew "lazygit"
+# Collection of tools that nobody wrote when UNIX was young
+brew "moreutils"
 # Ncurses-based client for the Music Player Daemon
 brew "ncmpcpp"
 # Fast, highly customisable system info script
@@ -59,6 +67,8 @@ brew "pyenv"
 brew "ranger"
 # Command-line interface for Spotify on a Mac
 brew "shpotify"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
 # Tool to build, change, and version infrastructure
 brew "terraform"
 # Terminal multiplexer
@@ -83,12 +93,14 @@ brew "mopidy/mopidy/mopidy"
 brew "rigellute/tap/spotify-tui"
 cask "bartender"
 cask "bettertouchtool"
-cask "coderunner"
 cask "emacs-mac"
 cask "firefox"
 cask "google-chrome"
 cask "iterm2"
 cask "jetbrains-toolbox"
 cask "key-codes"
+cask "mailspring"
+cask "paw"
 cask "postman"
 cask "sonos"
+cask "visual-studio-code"
