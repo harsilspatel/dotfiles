@@ -1,121 +1,71 @@
-# zmodload zsh/zprof
+zmodload zsh/zprof
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/Cellar/openvpn/2.4.8/sbin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/harsilpatel/.oh-my-zsh"
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# A.
+setopt promptsubst
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+# B.
+zinit snippet OMZ::/lib/bzr.zsh
+zinit snippet OMZ::/lib/clipboard.zsh
+zinit snippet OMZ::/lib/compfix.zsh
+zinit snippet OMZ::/lib/completion.zsh
+zinit snippet OMZ::/lib/correction.zsh
+zinit snippet OMZ::/lib/diagnostics.zsh
+zinit snippet OMZ::/lib/directories.zsh
+zinit snippet OMZ::/lib/functions.zsh
+zinit snippet OMZ::/lib/git.zsh
+zinit snippet OMZ::/lib/grep.zsh
+zinit snippet OMZ::/lib/history.zsh
+zinit snippet OMZ::/lib/key-bindings.zsh
+zinit snippet OMZ::/lib/misc.zsh
+zinit snippet OMZ::/lib/prompt_info_functions.zsh
+zinit snippet OMZ::/lib/spectrum.zsh
+zinit snippet OMZ::/lib/termsupport.zsh
+zinit snippet OMZ::/lib/theme-and-appearance.zsh
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+# C.
+zinit ice wait atload"unalias grv" lucid
+zinit snippet OMZ::plugins/git/git.plugin.zsh
 
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+# D.
+PS1="READY >" # provide a nice prompt till the theme loads
+zinit ice wait'!' lucid
+zinit snippet OMZ::themes/robbyrussell.zsh-theme
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+# Syntax highlighting
+# (compinit without `-i` spawns warning on `sudo -s`)
+zinit ice wait"0a" lucid atinit"ZINIT[COMPINIT_OPTS]='-i' zpcompinit; zpcdreplay"
+zinit light zdharma/fast-syntax-highlighting
 
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+# Autosuggestions
+# Note: should go _after_ syntax highlighting plugiuun
+zinit light zsh-users/zsh-autosuggestions
+# zinit ice wait"0a" lucid atload"_zsh_autosuggest_start"; 
+# zinit ice wait"0a" lucid ZSH_AUTOSUGGEST_USE_ASYNC=1
+# export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+zinit ice wait'1' lucid
+zinit light lukechilds/zsh-nvm
 
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
+zinit ice wait'1' lucid
+zinit light rupa/z
 
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+zinit ice wait'1' lucid
+zinit light igoradamenko/npm.plugin.zsh
 
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# for lazy loading nvm, more info https://github.com/lukechilds/zsh-nvm#lazy-loading
-export NVM_LAZY_LOAD=true
-
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  z
-  git
-  osx
- # brew
- # ruby
- # pyenv
-  npm
-  zsh-nvm
- # screen
- # extract
- # vi-mode
- # alias-tips
-  colored-man-pages
-  zsh-autosuggestions
-  zsh-syntax-highlighting  
-)
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+zinit ice wait'2' lucid
+zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
 
 # for setting the foreground color, read more at https://stackoverflow.com/a/52713893/9701238
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 
-# Activating powerline
-#. /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
-
 export JAVA_HOME=$(/usr/libexec/java_home)
+export HISTCONTROL='ignoreboth';
 
 function lcode() {
   set -x
@@ -135,11 +85,10 @@ function lc() {
 }
 
 autoload -Uz compinit
-if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
+for dump in ~/.zcompdump(N.mh+24); do
   compinit
-else
-  compinit -C
-fi
+done
+compinit -C
 
 source ~/.dotfiles/.tokens
 source ~/.dotfiles/.aliases
@@ -156,3 +105,4 @@ function api() {
 # to separate history for iterm tabs
 unsetopt share_history
 unsetopt inc_append_history
+
