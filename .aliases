@@ -1,4 +1,7 @@
+unset gf
+
 # Setting aliases
+alias l="ls -alt"
 alias n="spotify next"
 alias p="spotify pause"
 alias pp="spotify prev"
@@ -11,6 +14,15 @@ alias st="open -a SourceTree"
 alias lz="lazygit"
 alias e="emacs --no-window"
 alias rmrf="rm -rf"
+alias s="~/Workspace/playground/s.py"
+alias va="vim ~/.dotfiles/.aliases"
+alias vz="vim ~/.dotfiles/zshrc"
+
+# grunt aliases
+alias gf="grunt spec:f"
+alias gu="grunt spec:u"
+alias guf="grunt spec:fd"
+alias gud="grunt spec:ud"
 
 # aliases for backend configs
 alias redis='ulimit -n 4096 && /Users/harsilpatel/Utils/redis-3.2.9/src/redis-server /Users/harsilpatel/Utils/redis-3.2.9/redis.conf'
