@@ -29,7 +29,7 @@ zinit snippet OMZ::/lib/termsupport.zsh
 zinit snippet OMZ::/lib/theme-and-appearance.zsh
 
 # C.
-zinit ice wait atload"unalias grv" lucid
+zinit ice wait atload"unalias grv; alias gf=\"grunt f\"" lucid
 zinit snippet OMZ::plugins/git/git.plugin.zsh
 
 # D.
@@ -60,6 +60,8 @@ zinit light igoradamenko/npm.plugin.zsh
 
 zinit ice wait'2' lucid
 zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
+
+zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # for setting the foreground color, read more at https://stackoverflow.com/a/52713893/9701238
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
@@ -106,3 +108,5 @@ function api() {
 unsetopt share_history
 unsetopt inc_append_history
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

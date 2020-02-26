@@ -1,5 +1,3 @@
-unset gf
-
 # Setting aliases
 alias l="ls -alt"
 alias n="spotify next"
@@ -19,10 +17,9 @@ alias va="vim ~/.dotfiles/.aliases"
 alias vz="vim ~/.dotfiles/zshrc"
 
 # grunt aliases
-alias gf="grunt spec:f"
-alias gu="grunt spec:u"
-alias guf="grunt spec:fd"
-alias gud="grunt spec:ud"
+alias gu="grunt u"
+alias guf="grunt fd"
+alias gud="grunt ud"
 
 # aliases for backend configs
 alias redis='ulimit -n 4096 && /Users/harsilpatel/Utils/redis-3.2.9/src/redis-server /Users/harsilpatel/Utils/redis-3.2.9/redis.conf'

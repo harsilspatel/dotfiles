@@ -7,4 +7,5 @@
         create: true
     ~/.zshrc: zshrc
     ~/.spacemacs: spacemacs
+    ~/.p10k.zsh: p10k.zsh
 
