@@ -1,53 +1,57 @@
 zmodload zsh/zprof
 # If you come from bash you might have to change your $PATH.
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=50000
+export SAVEHIST=10000
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/Cellar/openvpn/2.4.8/sbin:$PATH
 
 source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
-# A.
-setopt promptsubst
+# https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/key-bindings.zsh
+if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
+  function zle-line-init() {
+    echoti smkx
+  }
+  function zle-line-finish() {
+    echoti rmkx
+  }
+  zle -N zle-line-init
+  zle -N zle-line-finish
+fi
 
-# B.
-zinit snippet OMZ::/lib/bzr.zsh
-zinit snippet OMZ::/lib/clipboard.zsh
-zinit snippet OMZ::/lib/compfix.zsh
-zinit snippet OMZ::/lib/completion.zsh
-zinit snippet OMZ::/lib/correction.zsh
-zinit snippet OMZ::/lib/diagnostics.zsh
-zinit snippet OMZ::/lib/directories.zsh
-zinit snippet OMZ::/lib/functions.zsh
-zinit snippet OMZ::/lib/git.zsh
-zinit snippet OMZ::/lib/grep.zsh
-zinit snippet OMZ::/lib/history.zsh
-zinit snippet OMZ::/lib/key-bindings.zsh
-zinit snippet OMZ::/lib/misc.zsh
-zinit snippet OMZ::/lib/prompt_info_functions.zsh
-zinit snippet OMZ::/lib/spectrum.zsh
-zinit snippet OMZ::/lib/termsupport.zsh
-zinit snippet OMZ::/lib/theme-and-appearance.zsh
+# start typing + [Up-Arrow] - fuzzy find history forward
+if [[ "${terminfo[kcuu1]}" != "" ]]; then
+  autoload -U up-line-or-beginning-search
+  zle -N up-line-or-beginning-search
+  bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
+fi
+# start typing + [Down-Arrow] - fuzzy find history backward
+if [[ "${terminfo[kcud1]}" != "" ]]; then
+  autoload -U down-line-or-beginning-search
+  zle -N down-line-or-beginning-search
+  bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
+fi
 
-# C.
-zinit ice wait atload"unalias grv; alias gf=\"grunt f\"" lucid
+if [[ "${terminfo[khome]}" != "" ]]; then
+  bindkey "${terminfo[khome]}" beginning-of-line      # [Home] - Go to beginning of line
+fi
+if [[ "${terminfo[kend]}" != "" ]]; then
+  bindkey "${terminfo[kend]}"  end-of-line            # [End] - Go to end of line
+fi
+
+
+# syntax highlighting and auto-suggestions
+zi wait'0' lucid for \
+ atinit'zicompinit; zicdreplay' \
+    zdharma/fast-syntax-highlighting \
+ compile'{src/*.zsh,src/strategies/*}' \
+ atload'!_zsh_autosuggest_start' \
+    zsh-users/zsh-autosuggestions \
+
+zinit ice wait'0' atload"unalias grv; alias gf=\"grunt f\"" lucid
 zinit snippet OMZ::plugins/git/git.plugin.zsh
-
-# D.
-PS1="READY >" # provide a nice prompt till the theme loads
-zinit ice wait'!' lucid
-zinit snippet OMZ::themes/robbyrussell.zsh-theme
-
-# Syntax highlighting
-# (compinit without `-i` spawns warning on `sudo -s`)
-zinit ice wait"0a" lucid atinit"ZINIT[COMPINIT_OPTS]='-i' zpcompinit; zpcdreplay"
-zinit light zdharma/fast-syntax-highlighting
-
-# Autosuggestions
-# Note: should go _after_ syntax highlighting plugiuun
-zinit light zsh-users/zsh-autosuggestions
-# zinit ice wait"0a" lucid atload"_zsh_autosuggest_start"; 
-# zinit ice wait"0a" lucid ZSH_AUTOSUGGEST_USE_ASYNC=1
-# export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
 zinit ice wait'1' lucid
 zinit light lukechilds/zsh-nvm
@@ -61,7 +65,8 @@ zinit light igoradamenko/npm.plugin.zsh
 zinit ice wait'2' lucid
 zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
 
-zinit ice depth=1; zinit light romkatv/powerlevel10k
+zinit ice depth=1;
+zinit light romkatv/powerlevel10k
 
 # for setting the foreground color, read more at https://stackoverflow.com/a/52713893/9701238
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
