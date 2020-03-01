@@ -23,3 +23,8 @@ function api() {
     cp ~/Workspace/commons/launch.json ./.vscode/launch.json
     cp ~/Workspace/commons/Gruntfile.js ./Gruntfile.js
 }
+
+function take() {
+    mkdir $1
+    pushd $1 > nul
+}

@@ -1,25 +1,35 @@
+# oh my zsh aliases
+alias /="cd /"
+alias ~="cd ~"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias d="dirs -v"
+
 # Setting aliases
 alias l="ls -alt"
+alias e="exa -alt created"
 alias n="spotify next"
 alias p="spotify pause"
 alias pp="spotify prev"
-alias c="clear"
 alias o="open ."
 alias h="history | grep "
-alias c.="code ."
+alias c="code ."
 alias x="exit"
 alias st="open -a SourceTree"
 alias lz="lazygit"
-alias e="emacs --no-window"
+alias em="emacs --no-window"
 alias rmrf="rm -rf"
 alias s="~/Workspace/playground/s.py"
 alias va="vim ~/.dotfiles/.aliases"
+alias vf="vim ~/.dotfiles/.functions"
 alias vz="vim ~/.dotfiles/zshrc"
 alias vp="vim ~/.dotfiles/p10k.zsh"
 
 # grunt aliases
 alias gu="grunt u"
-alias guf="grunt fd"
+alias gfd="grunt fd"
 alias gud="grunt ud"
 
 # aliases for backend configs
