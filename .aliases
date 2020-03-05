@@ -26,6 +26,7 @@ alias va="vim ~/.dotfiles/.aliases"
 alias vf="vim ~/.dotfiles/.functions"
 alias vz="vim ~/.dotfiles/zshrc"
 alias vp="vim ~/.dotfiles/p10k.zsh"
+alias vpj="vim package.json"
 
 # grunt aliases
 alias gu="grunt u"

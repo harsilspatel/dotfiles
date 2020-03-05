@@ -1,10 +1,8 @@
 function lcode() {
-  set -x
   f=$1
   git add $f
   git commit -v -m "add ${f}"
   git push
-  set +x
 }
 
 function lc() {

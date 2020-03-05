@@ -1,4 +1,4 @@
-zmodload zsh/zprof
+# zmodload zsh/zprof
 
 source ~/.dotfiles/.tokens
 source ~/.dotfiles/.exports
@@ -47,7 +47,9 @@ zi wait'0' lucid for \
     zdharma/fast-syntax-highlighting \
  compile'{src/*.zsh,src/strategies/*}' \
  atload'!_zsh_autosuggest_start' \
-    zsh-users/zsh-autosuggestions \
+    zsh-users/zsh-autosuggestions
+
+zinit snippet OMZ::/lib/completion.zsh
 
 zinit ice wait'1' atload"unalias grv; alias gf=\"grunt f\"" lucid
 zinit snippet OMZ::plugins/git/git.plugin.zsh
@@ -66,7 +68,6 @@ zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
 
 zinit ice depth=1;
 zinit light romkatv/powerlevel10k
-
 
 # to separate history for iterm tabs
 unsetopt share_history
