@@ -1,7 +1,11 @@
+export EDITOR='vim';
+
 export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=50000
 export SAVEHIST=10000
+
 export NVM_LAZY_LOAD=true
+
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/Cellar/openvpn/2.4.8/sbin:$PATH
 
 # for setting the foreground color, read more at https://stackoverflow.com/a/52713893/9701238

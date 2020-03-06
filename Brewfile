@@ -1,3 +1,4 @@
+tap "candid82/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
@@ -9,6 +10,8 @@ tap "koekeishiya/formulae"
 tap "mopidy/mopidy"
 tap "railwaycat/emacsmacport"
 tap "rigellute/tap"
+tap "romkatv/powerlevel10k"
+tap "yqrashawn/goku"
 # Interpreted, interactive, object-oriented programming language
 brew "python"
 # Official Amazon AWS command-line interface
@@ -25,6 +28,8 @@ brew "cask"
 brew "chunkwm"
 # Good-lookin' diffs with diff-highlight and more
 brew "diff-so-fancy"
+# Modern replacement for 'ls'
+brew "exa"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Render markdown on the CLI
@@ -91,6 +96,8 @@ brew "koekeishiya/formulae/skhd"
 brew "mopidy/mopidy/mopidy"
 # A terminal user interface for Spotify
 brew "rigellute/tap/spotify-tui"
+# karabiner configurator
+brew "yqrashawn/goku/goku"
 cask "bartender"
 cask "bettertouchtool"
 cask "emacs-mac"
@@ -98,8 +105,11 @@ cask "firefox"
 cask "google-chrome"
 cask "iterm2"
 cask "jetbrains-toolbox"
+cask "kap"
 cask "key-codes"
+cask "keyboard-maestro"
 cask "mailspring"
+cask "mongodb-compass-community"
 cask "paw"
 cask "postman"
 cask "sonos"

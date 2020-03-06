@@ -23,6 +23,6 @@ function api() {
 }
 
 function take() {
-    mkdir $1
+    mkdir -p $1
     pushd $1 > nul
 }
