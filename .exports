@@ -1,3 +1,5 @@
+export DOTFILES="$HOME/.dotfiles"
+
 export EDITOR='vim';
 
 export HISTFILE="$HOME/.zsh_history"
@@ -8,8 +10,9 @@ export NVM_LAZY_LOAD=true
 
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/Cellar/openvpn/2.4.8/sbin:$PATH
 
-# for setting the foreground color, read more at https://stackoverflow.com/a/52713893/9701238
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#9e9e9e" 
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 export HISTCONTROL='ignoreboth';
+
+export GPG_TTY=$(tty)

@@ -22,10 +22,15 @@ alias lz="lazygit"
 alias em="emacs --no-window"
 alias rmrf="rm -rf"
 alias s="~/Workspace/playground/s.py"
+
 alias va="$EDITOR ~/.dotfiles/.aliases"
+alias ve="$EDITOR ~/.dotfiles/.exports"
 alias vf="$EDITOR ~/.dotfiles/.functions"
 alias vz="$EDITOR ~/.dotfiles/zshrc"
 alias vp="$EDITOR ~/.dotfiles/p10k.zsh"
+alias vt="$EDITOR ~/.dotfiles/.tmux.conf"
+alias vv="$EDITOR ~/.dotfiles/.vimrc"
+alias vs="$EDITOR ~/.dotfiles/.sandboxrc"
 alias vpj="$EDITOR package.json"
 
 # grunt aliases

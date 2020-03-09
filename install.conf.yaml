@@ -6,6 +6,8 @@
         path: ssh/config
         create: true
     ~/.zshrc: zshrc
-    ~/.spacemacs: spacemacs
-    ~/.p10k.zsh: p10k.zsh
-
+    ~/.spacemacs: .spacemacs
+    ~/.p10k.zsh: .p10k.zsh
+    ~/.tmux.conf: .tmux.conf
+    ~/.sandboxrc: .sandboxrc
+    ~/.vimrc: .vimrc

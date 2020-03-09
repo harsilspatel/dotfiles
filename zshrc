@@ -1,5 +1,4 @@
 # zmodload zsh/zprof
-
 source ~/.dotfiles/.tokens
 source ~/.dotfiles/.exports
 source ~/.dotfiles/.aliases
@@ -27,6 +26,8 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
   zle -N zle-line-init
   zle -N zle-line-finish
 fi
+
+bindkey -e # Use emacs key bindings
 
 # start typing + [Up-Arrow] - fuzzy find history forward
 if [[ "${terminfo[kcuu1]}" != "" ]]; then
@@ -63,8 +64,8 @@ zinit light rupa/z
 zinit ice wait'1' lucid
 zinit light igoradamenko/npm.plugin.zsh
 
-zinit ice wait'2' lucid
-zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
+zinit ice lucid pick"sandboxd"
+zinit light benvan/sandboxd
 
 zinit ice depth=1;
 zinit light romkatv/powerlevel10k
@@ -75,3 +76,4 @@ unsetopt inc_append_history
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
