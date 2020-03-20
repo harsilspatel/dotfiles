@@ -16,5 +16,8 @@
 	trustExitCode = true
 [commit]
 	template = /Users/harsilpatel/.stCommitMsg
+	gpgsign = true
 [credential]
 	helper = osxkeychain
+[gpg]
+	program = /usr/local/bin/gpg

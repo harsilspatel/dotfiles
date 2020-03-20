@@ -1,4 +1,4 @@
-# zmodload zsh/zprof
+zmodload zsh/zprof
 source ~/.dotfiles/.tokens
 source ~/.dotfiles/.exports
 source ~/.dotfiles/.aliases
@@ -64,7 +64,7 @@ zinit light rupa/z
 zinit ice wait'1' lucid
 zinit light igoradamenko/npm.plugin.zsh
 
-zinit ice lucid pick"sandboxd"
+zinit ice wait'2' lucid pick"sandboxd"
 zinit light benvan/sandboxd
 
 zinit ice depth=1;

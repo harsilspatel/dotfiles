@@ -58,6 +58,8 @@ brew "moreutils"
 brew "ncmpcpp"
 # Fast, highly customisable system info script
 brew "neofetch"
+# E-mail reader with support for Notmuch, NNTP and much more
+brew "neomutt"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Tiny, lightning fast, feature-packed file manager
@@ -76,6 +78,8 @@ brew "shpotify"
 brew "stow"
 # Tool to build, change, and version infrastructure
 brew "terraform"
+# Text interface for Git repositories
+brew "tig"
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
@@ -100,17 +104,22 @@ brew "rigellute/tap/spotify-tui"
 brew "yqrashawn/goku/goku"
 cask "bartender"
 cask "bettertouchtool"
+cask "coderunner"
 cask "emacs-mac"
 cask "firefox"
 cask "google-chrome"
+cask "gpg-suite"
+cask "ichm"
 cask "iterm2"
 cask "jetbrains-toolbox"
 cask "kap"
 cask "key-codes"
 cask "keyboard-maestro"
+cask "libreoffice"
 cask "mailspring"
 cask "mongodb-compass-community"
 cask "paw"
 cask "postman"
 cask "sonos"
+cask "ubersicht"
 cask "visual-studio-code"
