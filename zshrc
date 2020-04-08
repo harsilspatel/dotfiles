@@ -62,6 +62,9 @@ zinit ice wait'1' lucid
 zinit light rupa/z
 
 zinit ice wait'1' lucid
+zinit light hlissner/zsh-autopair
+
+zinit ice wait'1' lucid
 zinit light igoradamenko/npm.plugin.zsh
 
 zinit ice wait'2' lucid pick"sandboxd"

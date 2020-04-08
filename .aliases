@@ -8,31 +8,31 @@ alias .....="cd ../../../.."
 alias d="dirs -v"
 
 # Setting aliases
-alias l="ls -alt"
 alias e="exa -alrs=created"
 alias n="spotify next"
 alias p="spotify pause"
 alias pp="spotify prev"
+alias l="lazygit"
 alias o="open ."
 alias h="history | grep "
 alias c="code ."
 alias x="exit"
-alias st="open -a SourceTree"
-alias lz="lazygit"
-alias em="emacs --no-window"
 alias rmrf="rm -rf"
-alias s="~/Workspace/playground/s.py"
 
-alias va="$EDITOR ~/.dotfiles/.aliases"
-alias ve="$EDITOR ~/.dotfiles/.exports"
-alias vf="$EDITOR ~/.dotfiles/.functions"
-alias vz="$EDITOR ~/.dotfiles/zshrc"
+alias va="$EDITOR \"$DOTFILES/.aliases\""
+alias ve="$EDITOR \"$DOTFILES/.exports\""
+alias vf="$EDITOR \"$DOTFILES/.functions\""
+alias vz="$EDITOR \"$DOTFILES/zshrc\""
 alias vl="$EDITOR ~/.vscode/extensions/shengchen.vscode-leetcode-*/out/src/commands/list.js"
-alias vp="$EDITOR ~/.dotfiles/p10k.zsh"
-alias vt="$EDITOR ~/.dotfiles/.tmux.conf"
-alias vv="$EDITOR ~/.dotfiles/.vimrc"
-alias vs="$EDITOR ~/.dotfiles/.sandboxrc"
+alias vp="$EDITOR \"$DOTFILES/.p10k.zsh\""
+alias vt="$EDITOR \"$DOTFILES/.tmux.conf\""
+alias vv="$EDITOR \"$DOTFILES/.vimrc\""
+alias vs="$EDITOR \"$DOTFILES/.skhdrc\""
+alias vy="$EDITOR \"$DOTFILES/.yabairc\""
 alias vpj="$EDITOR package.json"
+
+# git aliases
+alias gcop="gco @{-1}"
 
 # grunt aliases
 alias gu="grunt u"
@@ -40,10 +40,10 @@ alias gfd="grunt fd"
 alias gud="grunt ud"
 
 # aliases for backend configs
-alias redis='ulimit -n 4096 && /Users/harsilpatel/Utils/redis-3.2.9/src/redis-server /Users/harsilpatel/Utils/redis-3.2.9/redis.conf'
-alias mongo='ulimit -n 4096  && /Users/harsilpatel/Utils/mongodb-osx-x86_64-enterprise-3.6.9/bin/mongod --config /Users/harsilpatel/Utils/mongodb-osx-x86_64-enterprise-3.6.9/mongod.conf'
-alias mongo4='ulimit -n 4096  && /Users/harsilpatel/Utils/mongodb-osx-x86_64-enterprise-4.0.16/bin/mongod --config /Users/harsilpatel/Utils/mongodb-osx-x86_64-enterprise-4.0.16/mongod.conf'
-alias mongo42='ulimit -n 4096  && /Users/harsilpatel/Utils/mongodb-macos-x86_64-enterprise-4.2.3/bin/mongod --config /Users/harsilpatel/Utils/mongodb-macos-x86_64-enterprise-4.2.3/mongod.conf'
+alias redis="ulimit -n 4096 && \"$WORKSPACE/utils/redis-3.2.9/src/redis-server\" \"$WORKSPACE/utils/redis-3.2.9/redis.conf\""
+alias mongo="ulimit -n 4096  && \"$WORKSPACE/utils/mongodb-osx-x86_64-enterprise-3.6.9/bin/mongod\" --config \"$WORKSPACE/utils/mongodb-osx-x86_64-enterprise-3.6.9/mongod.conf\""
+alias mongo4="ulimit -n 4096  && \"$WORKSPACE/utils/mongodb-osx-x86_64-enterprise-4.0.16/bin/mongod\" --config \"$WORKSPACE/utils/mongodb-osx-x86_64-enterprise-4.0.16/mongod.conf\""
+alias mongo42="ulimit -n 4096  && \"$WORKSPACE/utils/mongodb-macos-x86_64-enterprise-4.2.3/bin/mongod\" --config \"$WORKSPACE/utils/mongodb-macos-x86_64-enterprise-4.2.3/mongod.conf\""
 
 # taken from https://github.com/mathiasbynens/dotfiles/blob/master/.aliases
 # Print each PATH entry on a separate line
@@ -56,19 +56,3 @@ alias bo="blueutil --power 1"
 alias bt="blueutil --power toggle"
 alias bh="blueutil --connect "WH-1000XM3""
 alias bd="blueutil --disconnect "WH-1000XM3""
-
-# chrome aliases
-## general
-alias crg="open -a Google\ Chrome \"https://mail.google.com\""
-alias cr="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-alias crt="open -a Google\ Chrome \"https://trello.com/b/YSIqZXCe/medipass-sprint?menu=filter&filter=member:harsil_patel\""
-
-## front-end
-alias crwm="open -a Google\ Chrome \"https://github.com/medipass/web-medicules\""
-alias crmc="open -a Google\ Chrome \"https://github.com/medipass/medipass-connect\""
-alias crmo="open -a Google\ Chrome \"https://github.com/medipass/medipass-overlord\""
-
-## back-end
-alias crma="open -a Google\ Chrome \"https://gitlab.com/medipass/software/medipass-api\""
-alias crpm="open -a Google\ Chrome \"https://gitlab.com/medipass/software/platform-medicules\""
-alias crmr="open -a Google\ Chrome \"https://gitlab.com/groups/medipass/software/-/merge_requests\""

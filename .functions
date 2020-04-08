@@ -1,4 +1,4 @@
-function lcode() {
+function commit_file() {
   f=$1
   git add $f
   git commit -v -m "add ${f}"
@@ -6,10 +6,10 @@ function lcode() {
 }
 
 function lc() {
-  if [[ "$PWD" == "/Users/harsilpatel/Workspace/leetcode" ]]
+  if [[ `basename "$PWD"` == "leetcode" ]]
     then
     f=$(ls -t | head -n 1)
-    lcode $f 
+    commit_file $f 
   fi
 }
 
@@ -18,8 +18,8 @@ function api() {
     cd medipass-api
     npm i
     mkdir ./.vscode
-    cp ~/Workspace/commons/launch.json ./.vscode/launch.json
-    cp ~/Workspace/commons/Gruntfile.js ./Gruntfile.js
+    cp "$WORKSPACE/commons/launch.json" ./.vscode/launch.json
+    cp "$WORKSPACE/commons/Gruntfile.js" ./Gruntfile.js
 }
 
 function take() {

@@ -12,8 +12,6 @@ tap "railwaycat/emacsmacport"
 tap "rigellute/tap"
 tap "romkatv/powerlevel10k"
 tap "yqrashawn/goku"
-# Interpreted, interactive, object-oriented programming language
-brew "python"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -32,10 +30,14 @@ brew "diff-so-fancy"
 brew "exa"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# GNU awk utility
+brew "gawk"
+# Interpreted, interactive, object-oriented programming language
+brew "python"
 # Render markdown on the CLI
 brew "glow"
 # GNU Pretty Good Privacy (PGP) package
-brew "gnupg"
+brew "gnupg", link: false
 # GitHub Markdown previewer
 brew "grip"
 # Perceptual JPEG encoder
@@ -52,6 +54,8 @@ brew "jenv"
 brew "jq"
 # Simple terminal UI for git commands
 brew "lazygit"
+# Cross platform, open source .NET development framework
+brew "mono"
 # Collection of tools that nobody wrote when UNIX was young
 brew "moreutils"
 # Ncurses-based client for the Music Player Daemon
@@ -96,15 +100,20 @@ brew "zsh"
 brew "khanhas/tap/spicetify-cli"
 # Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd"
+# A tiling window manager for macOS based on binary space partitioning.
+brew "koekeishiya/formulae/yabai"
 # Extensible music server written in Python
 brew "mopidy/mopidy/mopidy"
 # A terminal user interface for Spotify
 brew "rigellute/tap/spotify-tui"
 # karabiner configurator
 brew "yqrashawn/goku/goku"
+cask "authy"
 cask "bartender"
 cask "bettertouchtool"
+cask "calibre"
 cask "coderunner"
+cask "copyq"
 cask "emacs-mac"
 cask "firefox"
 cask "google-chrome"
@@ -116,8 +125,8 @@ cask "kap"
 cask "key-codes"
 cask "keyboard-maestro"
 cask "libreoffice"
-cask "mailspring"
 cask "mongodb-compass-community"
+cask "pastebot"
 cask "paw"
 cask "postman"
 cask "sonos"
