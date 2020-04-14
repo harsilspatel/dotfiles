@@ -17,6 +17,7 @@ alias o="open ."
 alias h="history | grep "
 alias c="code ."
 alias x="exit"
+alias ch="wc -l $HISTFILE; cp $HISTFILE $HISTFILE.bak; nl ~/.zsh_history | sort -k 2  -k 1,1nr| uniq -f 1 | sort -n | cut -f 2 > $HISTFILE; wc -l $HISTFILE;"
 alias rmrf="rm -rf"
 
 alias va="$EDITOR \"$DOTFILES/.aliases\""

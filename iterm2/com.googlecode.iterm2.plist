@@ -259,28 +259,12 @@ Select Previous Tab</string>
 			<string>Select Next Tab	
 Select Next Tab</string>
 		</dict>
-		<key>0xf700-0x240000</key>
-		<dict>
-			<key>Action</key>
-			<integer>25</integer>
-			<key>Text</key>
-			<string>Select Next Tab	
-Select Next Tab</string>
-		</dict>
 		<key>0xf700-0x300000</key>
 		<dict>
 			<key>Action</key>
 			<integer>7</integer>
 			<key>Text</key>
 			<string></string>
-		</dict>
-		<key>0xf701-0x240000</key>
-		<dict>
-			<key>Action</key>
-			<integer>25</integer>
-			<key>Text</key>
-			<string>Select Previous Tab	
-Select Previous Tab</string>
 		</dict>
 		<key>0xf701-0x300000</key>
 		<dict>
@@ -439,7 +423,7 @@ Select Previous Tab</string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 493 620 392 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 3008 1692 0 0 3008 1692 </string>
+	<string>-1680 0 1680 1050 -1680 0 1680 1050 </string>
 	<key>NeverWarnAboutShortLivedSessions_26276612-13CC-4A98-98AE-0A91741F3032</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_26276612-13CC-4A98-98AE-0A91741F3032_selection</key>
@@ -3680,16 +3664,16 @@ Select Previous Tab</string>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1680, 1050}}</string>
+		<string>{{0, 0}, {3008, 1692}}</string>
 		<key>topLeft</key>
-		<string>{269, 833}</string>
+		<string>{1152, 746}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>DD986F44-0C2A-4ABE-88BF-D7602DE591E8</string>
 	<key>NoSyncLastTipTime</key>
-	<real>608000338.03377903</real>
+	<real>608105650.78348804</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>52</integer>
+	<integer>53</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -4494,6 +4478,7 @@ Select Previous Tab</string>
 		<string>0041</string>
 		<string>0034</string>
 		<string>0027</string>
+		<string>0077</string>
 		<string>0013</string>
 		<string>0049</string>
 		<string>0006</string>
@@ -4526,7 +4511,7 @@ Select Previous Tab</string>
 		<string>000</string>
 		<string>0044</string>
 		<string>0051</string>
-		<string>0077</string>
+		<string>0078</string>
 	</array>
 	<key>PMPrintingExpandedStateForPrint2</key>
 	<false/>
@@ -4576,7 +4561,7 @@ Select Previous Tab</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-04-07T14:33:56Z</date>
+	<date>2020-04-12T14:10:26Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
