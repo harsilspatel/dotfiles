@@ -1,0 +1,40 @@
+{
+    "hwindow.zoomLevel": 0,
+    "editor.minimap.enabled": false,
+    "leetcode.defaultLanguage": "python3",
+    "leetcode.workspaceFolder": "/Users/harsilpatel/workspace/leetcode",
+    "leetcode.nodePath": "/Users/harsilpatel/.nvm/versions/node/v10.16.0/bin/node",
+    "leetcode.endpoint": "leetcode",
+    "leetcode.hideSolved": true,
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.editor.showTabs": true,
+    "editor.renderWhitespace": "all",
+    "vim.useSystemClipboard": false,
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "eslint.format.enable": true,
+    "editor.defaultFormatter": "EditorConfig.EditorConfig",
+    "files.exclude": {
+        "**/.git": true,
+        "**/node_modules": true
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "leetcode.showDescription": "Both",
+    "leetcode.hint.commentDescription": false,
+    "leetcode.hint.configWebviewMarkdown": false,
+    "bracket-pair-colorizer-2.colors": [
+        "#8be9fd",
+        "#50fa7b",
+        "#ffb86c",
+        "#ff79c6",
+        "#bd93f9",
+        "#f1fa8c"
+    ],
+    "leetcode.hint.commandShortcut": false,
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.python"
+    },
+}

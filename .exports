@@ -1,7 +1,7 @@
 export DOTFILES="$HOME/.dotfiles"
 export WORKSPACE="$HOME/workspace"
 
-export EDITOR='vim';
+export EDITOR="nvim";
 
 export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=10000

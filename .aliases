@@ -16,9 +16,20 @@ alias l="lazygit"
 alias o="open ."
 alias h="history | grep "
 alias c="code ."
+alias g="grunt"
 alias x="exit"
 alias ch="wc -l $HISTFILE; cp $HISTFILE $HISTFILE.bak; nl ~/.zsh_history | sort -k 2  -k 1,1nr| uniq -f 1 | sort -n | cut -f 2 > $HISTFILE; wc -l $HISTFILE;"
+alias v="$EDITOR"
+alias vim="$EDITOR"
 alias rmrf="rm -rf"
+
+# tmux alias
+alias t="tmux"
+alias ta="tmux attach -t"
+alias tn="tmux new-session -s"
+alias tl="tmux list-sessions"
+alias tk="tmux kill-session -t"
+alias tks="tmux kill-server"
 
 alias va="$EDITOR \"$DOTFILES/.aliases\""
 alias ve="$EDITOR \"$DOTFILES/.exports\""
@@ -27,18 +38,13 @@ alias vz="$EDITOR \"$DOTFILES/zshrc\""
 alias vl="$EDITOR ~/.vscode/extensions/shengchen.vscode-leetcode-*/out/src/commands/list.js"
 alias vp="$EDITOR \"$DOTFILES/.p10k.zsh\""
 alias vt="$EDITOR \"$DOTFILES/.tmux.conf\""
-alias vv="$EDITOR \"$DOTFILES/.vimrc\""
+alias vv="$EDITOR ~/.config/nvim/init.vim"
 alias vs="$EDITOR \"$DOTFILES/.skhdrc\""
 alias vy="$EDITOR \"$DOTFILES/.yabairc\""
 alias vpj="$EDITOR package.json"
 
 # git aliases
 alias gcop="gco @{-1}"
-
-# grunt aliases
-alias gu="grunt u"
-alias gfd="grunt fd"
-alias gud="grunt ud"
 
 # aliases for backend configs
 alias redis="ulimit -n 4096 && \"$WORKSPACE/utils/redis-3.2.9/src/redis-server\" \"$WORKSPACE/utils/redis-3.2.9/redis.conf\""
@@ -48,12 +54,12 @@ alias mongo42="ulimit -n 4096  && \"$WORKSPACE/utils/mongodb-macos-x86_64-enterp
 
 # taken from https://github.com/mathiasbynens/dotfiles/blob/master/.aliases
 # Print each PATH entry on a separate line
-alias path='echo -e ${PATH//:/\\n}'
+alias path="echo -e ${PATH//:/\\n}"
 
 # aliases for blueutil
 alias b="blueutil"
 alias bz="blueutil --power 0"
 alias bo="blueutil --power 1"
 alias bt="blueutil --power toggle"
-alias bh="blueutil --connect "WH-1000XM3""
-alias bd="blueutil --disconnect "WH-1000XM3""
+alias bh="blueutil --connect \"WH-1000XM3\""
+alias bd="blueutil --disconnect \"WH-1000XM3\""

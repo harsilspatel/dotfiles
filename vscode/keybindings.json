@@ -1,0 +1,93 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "alt+t",
+        "command": "leetcode.testSolution"
+    },
+    {
+        "key": "alt+c",
+        "command": "leetcode.showSolution"
+    },
+    {
+        "key": "alt+p",
+        "command": "leetcode.searchProblem"
+    },
+    {
+        "key": "alt+r",
+        "command": "leetcode.refreshExplorer"
+    },
+    {
+        "key": "alt+s",
+        "command": "leetcode.submitSolution"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "alt+cmd+left",
+        "command": "-workbench.action.previousEditor"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "alt+cmd+right",
+        "command": "-workbench.action.nextEditor"
+    },
+    {
+        "key": "alt+tab",
+        "command": "workbench.action.openNextRecentlyUsedEditorInGroup"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "-workbench.action.openNextRecentlyUsedEditorInGroup"
+    },
+    {
+        "key": "shift+alt+tab",
+        "command": "workbench.action.openPreviousRecentlyUsedEditorInGroup"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "-workbench.action.openPreviousRecentlyUsedEditorInGroup"
+    },
+    {
+        "key": "alt+tab",
+        "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
+        "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "-workbench.action.quickOpenNavigateNextInEditorPicker",
+        "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "shift+alt+tab",
+        "command": "workbench.action.quickOpenNavigatePreviousInEditorPicker",
+        "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "-workbench.action.quickOpenNavigatePreviousInEditorPicker",
+        "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "cmd+r",
+        "command": "workbench.action.debug.run"
+    },
+    {
+        "key": "ctrl+f5",
+        "command": "-workbench.action.debug.run"
+    },
+    {
+        "key": "shift+cmd+r",
+        "command": "workbench.action.debug.start",
+        "when": "!inDebugMode"
+    },
+    {
+        "key": "f5",
+        "command": "-workbench.action.debug.start",
+        "when": "!inDebugMode"
+    },
+]

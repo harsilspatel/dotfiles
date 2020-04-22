@@ -14,12 +14,12 @@ function lc() {
 }
 
 function api() {
-    git clone https://gitlab.com/medipass/software/medipass-api.git
-    cd medipass-api
+    git clone https://gitlab.com/medipass/software/medipass-api.git ./api
+    cd api
     npm i
     mkdir ./.vscode
-    cp "$WORKSPACE/commons/launch.json" ./.vscode/launch.json
-    cp "$WORKSPACE/commons/Gruntfile.js" ./Gruntfile.js
+    cp "$WORKSPACE/utils/commons/launch.json" ./.vscode/launch.json
+    cp "$WORKSPACE/utils/commons/Gruntfile.js" ./Gruntfile.js
 }
 
 function take() {
