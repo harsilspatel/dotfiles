@@ -65,7 +65,7 @@ zinit light romkatv/powerlevel10k
 zinit ice wait'1' lucid
 zinit light rupa/z
 
-zinit ice wait'2' lucid
+zinit ice wait'2' lucid atload'alias g=grunt'
 zinit snippet OMZ::plugins/git/git.plugin.zsh
 
 zinit ice wait'2' lucid
@@ -73,9 +73,6 @@ zinit light lukechilds/zsh-nvm
 
 zinit ice wait'3' lucid
 zinit light hlissner/zsh-autopair
-
-zinit ice wait'3' lucid
-zinit light igoradamenko/npm.plugin.zsh
 
 zinit ice wait'3' lucid
 zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
