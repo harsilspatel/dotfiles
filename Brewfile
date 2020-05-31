@@ -14,7 +14,7 @@ tap "rigellute/tap"
 tap "romkatv/powerlevel10k"
 tap "yqrashawn/goku"
 # Official Amazon AWS command-line interface
-brew "awscli"
+brew "awscli", link: false
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Get/set bluetooth power and discoverable state
@@ -25,12 +25,16 @@ brew "calcurse"
 brew "cask"
 # Tiling window manager for macOS based on plugin architecture
 brew "chunkwm"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
 # Good-lookin' diffs with diff-highlight and more
 brew "diff-so-fancy"
 # Modern replacement for 'ls'
 brew "exa"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# Identify or delete duplicate files
+brew "fdupes"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GNU awk utility
@@ -75,12 +79,16 @@ brew "pipes-sh"
 brew "pyenv"
 # File browser
 brew "ranger"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
 # Command-line interface for Spotify on a Mac
 brew "shpotify"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # Tool to build, change, and version infrastructure
 brew "terraform"
+# Code-search similar to ack
+brew "the_silver_searcher"
 # Text interface for Git repositories
 brew "tig"
 # Terminal multiplexer
@@ -114,15 +122,13 @@ brew "yqrashawn/goku/goku"
 cask "authy"
 cask "bartender"
 cask "bettertouchtool"
-cask "calibre"
-cask "coderunner"
 cask "firefox"
+cask "font-fira-code"
 cask "google-chrome"
 cask "gpg-suite"
 cask "ichm"
 cask "iina"
 cask "iterm2"
-cask "jetbrains-toolbox"
 cask "kap"
 cask "key-codes"
 cask "keyboard-maestro"
@@ -131,6 +137,7 @@ cask "mongodb-compass-community"
 cask "paw"
 cask "postman"
 cask "sonos"
+cask "spotify"
 cask "tunnelblick"
 cask "ubersicht"
 cask "visual-studio-code"

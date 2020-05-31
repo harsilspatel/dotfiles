@@ -10,9 +10,6 @@
     "workbench.editor.showTabs": true,
     "editor.renderWhitespace": "all",
     "vim.useSystemClipboard": false,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
     "eslint.format.enable": true,
     "files.exclude": {
         "**/.git": true,
@@ -36,12 +33,17 @@
         "editor.defaultFormatter": "ms-python.python"
     },
     "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
     "editor.defaultFormatter": "EditorConfig.EditorConfig",
     // "editor.defaultFormatter": "esbenp.prettier-vscode",
     "prettier.tabWidth": 2,
     "emmet.triggerExpansionOnTab": true,
-    // "prettier.requireConfig": true,
+    "prettier.requireConfig": true,
     "editor.fontFamily": "FiraCode-Retina",
     "editor.fontLigatures": true,
     "window.zoomLevel": 0,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.iconTheme": "vscode-icons",
 }

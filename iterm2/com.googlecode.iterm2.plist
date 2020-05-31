@@ -421,13 +421,15 @@ Select Next Tab</string>
 		<string>@^$n</string>
 		<key>Previous Tab</key>
 		<string>@^$p</string>
+		<key>Screen</key>
+		<string>^$8</string>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>0 138 224 275 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 493 620 392 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1501 1692 0 0 3008 1692 </string>
+	<string>-1680 0 1680 1050 -1680 0 1680 1050 </string>
 	<key>NeverWarnAboutShortLivedSessions_26276612-13CC-4A98-98AE-0A91741F3032</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_26276612-13CC-4A98-98AE-0A91741F3032_selection</key>
@@ -1524,19 +1526,19 @@ Select Next Tab</string>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
 			<key>HotKey Activated By Modifier</key>
-			<true/>
+			<false/>
 			<key>HotKey Alternate Shortcuts</key>
 			<array/>
 			<key>HotKey Characters</key>
-			<string></string>
+			<string> </string>
 			<key>HotKey Characters Ignoring Modifiers</key>
-			<string></string>
+			<string> </string>
 			<key>HotKey Key Code</key>
-			<integer>0</integer>
+			<integer>49</integer>
 			<key>HotKey Modifier Activation</key>
 			<integer>2</integer>
 			<key>HotKey Modifier Flags</key>
-			<integer>0</integer>
+			<integer>262144</integer>
 			<key>HotKey Window Animates</key>
 			<false/>
 			<key>HotKey Window AutoHides</key>
@@ -2345,7 +2347,7 @@ Select Next Tab</string>
 			<key>HotKey Modifier Activation</key>
 			<integer>2</integer>
 			<key>HotKey Modifier Flags</key>
-			<integer>1048576</integer>
+			<integer>262144</integer>
 			<key>HotKey Window Animates</key>
 			<false/>
 			<key>HotKey Window AutoHides</key>
@@ -2821,6 +2823,15 @@ Select Next Tab</string>
 				<real>0.27843138575553894</real>
 				<key>Red Component</key>
 				<real>0.26666668057441711</real>
+			</dict>
+			<key>Semantic History</key>
+			<dict>
+				<key>action</key>
+				<string>best editor</string>
+				<key>editor</key>
+				<string>com.github.atom</string>
+				<key>text</key>
+				<string></string>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
@@ -3697,14 +3708,14 @@ Select Next Tab</string>
 		<key>screenFrame</key>
 		<string>{{0, 0}, {3008, 1692}}</string>
 		<key>topLeft</key>
-		<string>{652, 1140}</string>
+		<string>{1285, 1442}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>DD986F44-0C2A-4ABE-88BF-D7602DE591E8</string>
 	<key>NoSyncLastTipTime</key>
 	<real>608105650.78348804</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>72</integer>
+	<integer>75</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -4592,11 +4603,11 @@ Select Next Tab</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-04-26T22:37:39Z</date>
+	<date>2020-05-25T05:03:24Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
