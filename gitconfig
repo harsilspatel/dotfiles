@@ -2,6 +2,7 @@
 [user]
 	name = Harsil Patel
 	email = harsilspatel@gmail.com
+	signingkey = 49D4A268B0162021
 # Please adapt and uncomment the following lines:
 #	name = Harsil Patel
 #	email = harsilspatel@gmail.com
@@ -21,3 +22,5 @@
 	helper = osxkeychain
 [gpg]
 	program = gpg
+[pull]
+	rebase = false

@@ -1,3 +1,5 @@
+tap "buildkite/buildkite"
+tap "buildkite/cli"
 tap "candid82/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -41,6 +43,8 @@ brew "fzf"
 brew "gawk"
 # Distributed revision control system
 brew "git"
+# Small git utilities
+brew "git-extras"
 # Render markdown on the CLI
 brew "glow"
 # GNU Pretty Good Privacy (PGP) package
@@ -109,6 +113,8 @@ brew "yarn"
 brew "youtube-dl"
 # UNIX shell (command interpreter)
 brew "zsh"
+# A command line interface for Buildkite.
+brew "buildkite/cli/bk"
 # Command-line tool to customize Spotify client
 brew "khanhas/tap/spicetify-cli"
 # Simple hotkey-daemon for macOS.
