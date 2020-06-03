@@ -1,6 +1,5 @@
 zmodload zsh/zprof
 source ~/.dotfiles/.tokens
-source ~/.dotfiles/.exports
 source ~/.dotfiles/.aliases
 source ~/.dotfiles/.functions
 
