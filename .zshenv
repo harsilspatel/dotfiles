@@ -17,3 +17,5 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#8a8a8a"
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 export GPG_TTY=$(tty)
+
+export HOMEBREW_NO_AUTO_UPDATE=1

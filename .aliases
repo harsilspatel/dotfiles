@@ -43,7 +43,7 @@ alias tk="tmux kill-session -t"
 alias tks="tmux kill-server"
 
 alias va="$EDITOR \"$DOTFILES/.aliases\""
-alias ve="$EDITOR \"$DOTFILES/.exports\""
+alias ve="$EDITOR \"$DOTFILES/.zshenv\""
 alias vf="$EDITOR \"$DOTFILES/.functions\""
 alias vz="$EDITOR \"$DOTFILES/zshrc\""
 alias vl="$EDITOR ~/.vscode/extensions/shengchen.vscode-leetcode-*/out/src/commands/list.js"
