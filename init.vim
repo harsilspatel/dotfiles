@@ -1,12 +1,15 @@
+autocmd vimenter * colorscheme gruvbox
+
 let mapleader = "\<space>"
-nnoremap <leader>w :w<cr>
-nnoremap <leader>s :source ~/.config/nvim/init.vim<cr>
-nnoremap <leader>q :q<cr>
-nnoremap <leader>x :wq<cr>
-nnoremap <leader>! :q!<cr>
-nnoremap <leader>u :UndotreeToggle<cr>
+let g:hardtime_default_on = 1
+
+nnoremap <leader>w :w<CR>
+nnoremap <leader>s :source ~/.config/nvim/init.vim<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>x :wq<CR>
+nnoremap <leader>! :q!<CR>
+nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
-nnoremap <leader> <Plug>(easymotion-prefix)
 nnoremap <leader><space> :Files<CR>
 
 if !isdirectory($HOME . "/.config/nvim/_undodir")
@@ -25,6 +28,7 @@ set hidden
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set notimeout
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
@@ -33,17 +37,14 @@ nmap ; :
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-startify'
+Plug 'morhetz/gruvbox'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'pangloss/vim-javascript'
 Plug 'preservim/nerdtree'
 Plug 'takac/vim-hardtime'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'vimwiki/vimwiki'
 call plug#end()

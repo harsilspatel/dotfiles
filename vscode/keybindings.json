@@ -116,4 +116,9 @@
         "command": "-editor.action.indentLines",
         "when": "editorTextFocus && !editorReadonly"
     },
+    {
+        "key": "shift+cmd+c",
+        "command": "-workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
+    },
 ]
