@@ -1,4 +1,4 @@
-# oh my zsh aliases
+# oh my zsh
 alias /="cd /"
 alias ~="cd ~"
 alias ..="cd .."
@@ -7,7 +7,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias d="dirs -v"
 
-# Setting aliases
+# Setting
 alias e="exa -alrs=created"
 alias j="jest"
 alias n="spotify next"
@@ -42,6 +42,7 @@ alias tl="tmux list-sessions"
 alias tk="tmux kill-session -t"
 alias tks="tmux kill-server"
 
+# frequent files
 alias va="$EDITOR \"$DOTFILES/.aliases\""
 alias ve="$EDITOR \"$DOTFILES/.zshenv\""
 alias vf="$EDITOR \"$DOTFILES/.functions\""
@@ -55,10 +56,32 @@ alias vs="$EDITOR \"$DOTFILES/.skhdrc\""
 alias vy="$EDITOR \"$DOTFILES/.yabairc\""
 alias vpj="$EDITOR package.json"
 
-# git aliases
-alias gcop="gco @{-1}"
+# git
+alias ga="git add"
+alias gaa="git add --all"
+alias gau="git add --update"
+alias gc="git commit -v -m"
+alias gca="git commit -v --amend"
+alias gcane="git commit -v --amend --no-edit"
+alias gcd="git checkout develop"
+alias gcl="git clone"
+alias gcm="git checkout master"
+alias gco="git checkout"
+alias gcop="git checkout @{-1}"
+alias gd="git diff"
+alias gdc="git diff --color-words=."
+alias gdw="git diff --color-words"
+alias ggc="git gc --aggresive"
+alias gl="git pull"
+alias gm="git merge"
+alias gp="git push"
+alias grv="git remote -v"
+alias gst="git status"
+alias gsta="git stash save"
+alias gstl="git stash list"
+alias gstp="git stash pop"
 
-# aliases for backend configs
+# backend configs
 alias redis="ulimit -n 4096 && \"$WORKSPACE/utils/redis-3.2.9/src/redis-server\" \"$WORKSPACE/utils/redis-3.2.9/redis.conf\""
 alias mongo="ulimit -n 4096  && \"$WORKSPACE/utils/mongodb-osx-x86_64-enterprise-3.6.9/bin/mongod\" --config \"$WORKSPACE/utils/mongodb-osx-x86_64-enterprise-3.6.9/mongod.conf\""
 alias mongo4="ulimit -n 4096  && \"$WORKSPACE/utils/mongodb-osx-x86_64-enterprise-4.0.16/bin/mongod\" --config \"$WORKSPACE/utils/mongodb-osx-x86_64-enterprise-4.0.16/mongod.conf\""
@@ -68,7 +91,7 @@ alias mongo42="ulimit -n 4096  && \"$WORKSPACE/utils/mongodb-macos-x86_64-enterp
 # Print each PATH entry on a separate line
 alias path="echo -e ${PATH//:/\\n}"
 
-# aliases for blueutil
+# blueutil
 alias b="blueutil"
 alias bz="blueutil --power 0"
 alias bo="blueutil --power 1"

@@ -64,9 +64,6 @@ zinit light romkatv/powerlevel10k
 zinit ice wait'1' lucid
 zinit light rupa/z
 
-zinit ice wait'2' lucid atload'alias g=grunt'
-zinit snippet OMZ::plugins/git/git.plugin.zsh
-
 zinit ice wait'2' lucid
 zinit light lukechilds/zsh-nvm
 
