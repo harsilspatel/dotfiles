@@ -2,14 +2,17 @@ autocmd vimenter * colorscheme gruvbox
 
 let mapleader = "\<space>"
 let g:hardtime_default_on = 1
+let g:sneak#label = 1
+let g:sneak#s_next = 1
+let g:sneak#use_ic_scs = 1
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.DS_Store$', '\.git$']
 let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --follow --exclude .git'
 let g:coc_global_extensions = [
  \  'coc-eslint',
+ \  'coc-json',
  \  'coc-prettier',
  \  'coc-tsserver',
- \  'coc-json'
  \  ]
 
 
@@ -21,6 +24,8 @@ nnoremap <leader>x :wq<CR>
 nnoremap <leader>! :q!<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <leader><space> :Files<CR>
+imap <a-bs> <c-w>
+imap <d-bs> <c-u>
 
 if !isdirectory($HOME . "/.config/nvim/_undodir")
     call mkdir($HOME . "/.config/nvim/_undodir", "p")
@@ -35,14 +40,14 @@ set ignorecase
 set smartcase
 set lazyredraw
 set hidden
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set notimeout
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
-nmap ; :
+map ; :
 
 "================================================ 
 " TextEdit might fail if hidden is not set.
@@ -200,8 +205,10 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'justinmk/vim-sneak'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-startify'
 Plug 'morhetz/gruvbox'
