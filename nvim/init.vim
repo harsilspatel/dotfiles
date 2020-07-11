@@ -13,13 +13,13 @@ let g:coc_global_extensions = [
  \  ]
 
 
+nnoremap <c-n> :NERDTreeToggle<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>s :source ~/.config/nvim/init.vim<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>! :q!<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
-nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader><space> :Files<CR>
 
 if !isdirectory($HOME . "/.config/nvim/_undodir")

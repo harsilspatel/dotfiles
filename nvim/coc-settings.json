@@ -1,0 +1,6 @@
+{
+  "eslint.autoFixOnSave": true,
+  "suggest.enablePreview": true,
+  "suggest.noselect": false,
+  "suggest.removeDuplicateItems": true
+}
