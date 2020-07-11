@@ -3,7 +3,7 @@
     "editor.minimap.enabled": false,
     "leetcode.defaultLanguage": "python3",
     "leetcode.workspaceFolder": "/Users/harsilpatel/workspace/leetcode",
-    "leetcode.nodePath": "/Users/harsilpatel/.nvm/versions/node/v10.16.0/bin/node",
+    "leetcode.nodePath": "/Users/harsilpatel/.nvm/versions/node/v12.18.2/bin/node",
     "leetcode.endpoint": "leetcode",
     "leetcode.hideSolved": true,
     "workbench.colorTheme": "One Dark Pro",
