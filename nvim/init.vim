@@ -5,6 +5,7 @@ let g:hardtime_default_on = 1
 let g:sneak#label = 1
 let g:sneak#s_next = 1
 let g:sneak#use_ic_scs = 1
+let g:NERDSpaceDelims = 1
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.DS_Store$', '\.git$']
 let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --follow --exclude .git'
@@ -215,6 +216,7 @@ Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pangloss/vim-javascript'
 Plug 'preservim/nerdtree'
+Plug 'preservim/nerdcommenter'
 Plug 'takac/vim-hardtime'
 Plug 'tpope/vim-surround'
 call plug#end()
