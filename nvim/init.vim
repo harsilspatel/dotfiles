@@ -16,10 +16,9 @@ let g:coc_global_extensions = [
 
 
 nnoremap <c-n> :NERDTreeToggle<CR>
-nnoremap <leader>s :w<CR>
-" nnoremap <leader>s :source ~/.config/nvim/init.vim<CR>
-nnoremap <leader>q :q<CR>
-nnoremap <leader>x :wq<CR>
+nnoremap <leader>s :update<CR>
+nnoremap <leader>x :q<CR>
+nnoremap <leader>z :wq<CR>
 nnoremap <leader>! :q!<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <leader><space> :Files<CR>
@@ -64,7 +63,10 @@ set incsearch
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
-map ; :
+nno : ;
+nno ; :
+vno : ;
+vno ; :
 
 "================================================ 
 " TextEdit might fail if hidden is not set.
