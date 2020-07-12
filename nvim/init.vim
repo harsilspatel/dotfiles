@@ -1,10 +1,8 @@
 autocmd vimenter * colorscheme gruvbox
 
 let mapleader = "\<space>"
+let g:EasyMotion_smartcase = 1
 let g:hardtime_default_on = 1
-let g:sneak#label = 1
-let g:sneak#s_next = 1
-let g:sneak#use_ic_scs = 1
 let g:NERDSpaceDelims = 1
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.DS_Store$', '\.git$']
@@ -18,8 +16,8 @@ let g:coc_global_extensions = [
 
 
 nnoremap <c-n> :NERDTreeToggle<CR>
-nnoremap <leader>w :w<CR>
-nnoremap <leader>s :source ~/.config/nvim/init.vim<CR>
+nnoremap <leader>s :w<CR>
+" nnoremap <leader>s :source ~/.config/nvim/init.vim<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>! :q!<CR>
@@ -27,6 +25,22 @@ nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <leader><space> :Files<CR>
 imap <a-bs> <c-w>
 imap <d-bs> <c-u>
+
+" easymotion
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)"
+
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 if !isdirectory($HOME . "/.config/nvim/_undodir")
     call mkdir($HOME . "/.config/nvim/_undodir", "p")
@@ -45,6 +59,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set notimeout
+set smartcase
+set incsearch
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
@@ -206,10 +222,10 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'easymotion/vim-easymotion'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'justinmk/vim-sneak'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-startify'
 Plug 'morhetz/gruvbox'
