@@ -16,13 +16,14 @@ let g:coc_global_extensions = [
 
 
 nnoremap <c-n> :NERDTreeToggle<CR>
-nnoremap <leader>s :update<CR>
+nnoremap <leader>w :update<CR>
 nnoremap <leader>x :q<CR>
 nnoremap <leader>z :wq<CR>
 nnoremap <leader>! :q!<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <leader><space> :Files<CR>
-map <Leader>e <Plug>(easymotion-prefix)
+map <leader>e <Plug>(easymotion-prefix)
+nnoremap <d-p> :Files<CR>
 imap <a-bs> <c-w>
 imap <d-bs> <c-u>
 
@@ -38,12 +39,8 @@ nmap t <Plug>(easymotion-bd-t)
 nmap s <Plug>(easymotion-overwin-f2)
 
 " Move to line
-map <Leader>L <Plug>(easymotion-bd-jk)
-nmap <Leader>L <Plug>(easymotion-overwin-line)
-
-" Move to word
-map  <Leader>w <Plug>(easymotion-bd-w)
-nmap <Leader>w <Plug>(easymotion-overwin-w)
+map <leader>L <Plug>(easymotion-bd-jk)
+nmap <leader>L <Plug>(easymotion-overwin-line)
 
 if !isdirectory($HOME . "/.config/nvim/_undodir")
     call mkdir($HOME . "/.config/nvim/_undodir", "p")
