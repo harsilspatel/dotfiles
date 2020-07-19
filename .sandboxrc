@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-sandbox_init_unhook_man(){
-    zinit ice lucid
-    zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
-    colored man "$@"
-}
-
-sandbox_hook unhook_man man
