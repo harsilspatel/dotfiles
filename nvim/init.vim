@@ -15,17 +15,19 @@ let g:coc_global_extensions = [
  \  ]
 
 
-nnoremap <c-n> :NERDTreeToggle<CR>
-nnoremap <leader>w :update<CR>
-nnoremap <leader>x :q<CR>
-nnoremap <leader>z :wq<CR>
+nnoremap <leader>u :update<CR>
+nnoremap <leader>w :q<CR>
+nnoremap <leader>x :wq<CR>
 nnoremap <leader>! :q!<CR>
-nnoremap <leader>u :UndotreeToggle<CR>
-nnoremap <leader><space> :Files<CR>
+nnoremap <c-p> :Files<CR>
+nnoremap <c-n> :NERDTreeToggle<CR>
+nnoremap <c-u> :UndotreeToggle<CR>
 map <leader>e <Plug>(easymotion-prefix)
+nmap <c-m> <Plug>NERDCommenterToggle
+" <c-/> being registered as <c-_>  ¯\_(ツ)_/¯
+nmap <c-_> <Plug>NERDCommenterToggle
 nnoremap <d-p> :Files<CR>
 imap <a-bs> <c-w>
-imap <d-bs> <c-u>
 
 " easymotion
 " f{char} to move to {char}
