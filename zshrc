@@ -85,3 +85,5 @@ unsetopt inc_append_history
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # zsh-defer -c "eval \"$(pyenv init -)\""
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
