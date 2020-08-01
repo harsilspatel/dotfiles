@@ -1,6 +1,7 @@
 autocmd vimenter * colorscheme gruvbox
 
 let g:startify_change_to_dir = 0
+let g:airline_powerline_fonts = 1
 let mapleader = "\<space>"
 let g:EasyMotion_smartcase = 1
 let g:hardtime_default_on = 1
@@ -27,7 +28,7 @@ nnoremap <c-u> :UndotreeToggle<CR>
 map <leader>e <Plug>(easymotion-prefix)
 nmap <c-m> <Plug>NERDCommenterToggle
 " <c-/> being registered as <c-_>  ¯\_(ツ)_/¯
-nmap <c-_> <Plug>NERDCommenterToggle
+map <c-_> <Plug>NERDCommenterToggle
 nnoremap <d-p> :Files<CR>
 imap <a-bs> <c-w>
 
