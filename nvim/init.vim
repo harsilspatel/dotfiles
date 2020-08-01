@@ -1,8 +1,10 @@
 autocmd vimenter * colorscheme gruvbox
 
+let g:startify_change_to_dir = 0
 let mapleader = "\<space>"
 let g:EasyMotion_smartcase = 1
 let g:hardtime_default_on = 1
+let g:hardtime_allow_different_key = 1
 let g:NERDSpaceDelims = 1
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.DS_Store$', '\.git$']
@@ -28,6 +30,9 @@ nmap <c-m> <Plug>NERDCommenterToggle
 nmap <c-_> <Plug>NERDCommenterToggle
 nnoremap <d-p> :Files<CR>
 imap <a-bs> <c-w>
+
+nmap ]h <Plug>(GitGutterNextHunk)
+nmap [h <Plug>(GitGutterPrevHunk)
 
 " easymotion
 " f{char} to move to {char}
@@ -57,9 +62,6 @@ set ignorecase
 set smartcase
 set lazyredraw
 set hidden
-set tabstop=2
-set shiftwidth=2
-set expandtab
 set notimeout
 set smartcase
 set incsearch
@@ -224,6 +226,8 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 "================================================ 
 
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
@@ -233,11 +237,16 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-startify'
+Plug 'mileszs/ack.vim'
 Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pangloss/vim-javascript'
-Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
+Plug 'preservim/nerdtree'
 Plug 'takac/vim-hardtime'
+Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
+
