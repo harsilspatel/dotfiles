@@ -18,13 +18,13 @@ let g:coc_global_extensions = [
  \  ]
 
 
-nnoremap <leader>u :update<CR>
+nnoremap <leader>s :update<CR>
 nnoremap <leader>w :q<CR>
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>! :q!<CR>
+nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <c-p> :Files<CR>
 nnoremap <c-n> :NERDTreeToggle<CR>
-nnoremap <c-u> :UndotreeToggle<CR>
 map <leader>e <Plug>(easymotion-prefix)
 nmap <c-m> <Plug>NERDCommenterToggle
 " <c-/> being registered as <c-_>  ¯\_(ツ)_/¯
@@ -44,20 +44,22 @@ nmap f <Plug>(easymotion-overwin-f)
 nmap t <Plug>(easymotion-bd-t)
 
 " s{char}{char} to move to {char}{char}
-nmap s <Plug>(easymotion-overwin-f2)
+nmap s <Plug>(easymotion-s2)
+nmap S <Plug>(easymotion-sn)
+" nmap s <Plug>(easymotion-overwin-f2)
 
 " Move to line
 map <leader>L <Plug>(easymotion-bd-jk)
 nmap <leader>L <Plug>(easymotion-overwin-line)
 
-if !isdirectory($HOME . "/.config/nvim/_undodir")
-    call mkdir($HOME . "/.config/nvim/_undodir", "p")
+if !isdirectory($HOME . "/.config/nvim/undo-dir")
+    call mkdir($HOME . "/.config/nvim/undo-dir", "p")
 endif
 
 set backspace=indent,eol,start
 set number relativenumber
 set undofile
-set undodir=~/.config/nvim/_undodir
+set undodir=~/.config/nvim/undo-dir
 set mouse=n
 set ignorecase
 set smartcase
@@ -217,7 +219,7 @@ nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
 nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 " Search workspace symbols.
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
+" nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
 nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
@@ -236,6 +238,8 @@ Plug 'easymotion/vim-easymotion'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-user'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-startify'
 Plug 'mileszs/ack.vim'
@@ -244,6 +248,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pangloss/vim-javascript'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
+Plug 'psliwka/vim-smoothie'
 Plug 'takac/vim-hardtime'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
