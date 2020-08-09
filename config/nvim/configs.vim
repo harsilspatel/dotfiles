@@ -1,15 +1,18 @@
 
-let mapleader = "\<space>"
-let g:startify_change_to_dir = 0
-let g:airline_powerline_fonts = 1
-let g:ackprg = 'ag --nogroup --nocolor --column'
-let g:EasyMotion_smartcase = 1
-let g:hardtime_default_on = 1
-let g:hardtime_allow_different_key = 1
-let g:NERDSpaceDelims = 1
-let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.DS_Store$', '\.git$']
+let mapleader = '\<space>'
+
 let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --follow --exclude .git'
+
+let g:ackprg = 'ag --nogroup --nocolor --column'
+let g:airline_powerline_fonts = 1
+let g:EasyMotion_smartcase = 1
+let g:hardtime_allow_different_key = 1
+let g:hardtime_default_on = 1
+let g:NERDSpaceDelims = 1
+let g:NERDTreeIgnore = ['\.DS_Store$', '\.git$']
+let g:NERDTreeShowHidden = 1
+let g:startify_change_to_dir = 0
+
 let g:coc_global_extensions = [
  \  'coc-eslint',
  \  'coc-json',
@@ -18,22 +21,25 @@ let g:coc_global_extensions = [
  \  ]
 
 
-if !isdirectory($HOME . "/.config/nvim/undo-dir")
-    call mkdir($HOME . "/.config/nvim/undo-dir", "p")
-endif
-set undodir=~/.config/nvim/undo-dir
+for s:dir_name in ['swap', 'undo']
+    let s:dir_path = $HOME . '/.config/nvim/' . s:dir_name
+    if !isdirectory(s:dir_path)
+        call mkdir(s:dir_path, 'p')
+    endif
+endfor
 
 set backspace=indent,eol,start
-set number relativenumber
-set undofile
-set mouse=n
-set ignorecase
-set smartcase
-set lazyredraw
+set directory=~/.config/nvim/swap//
 set hidden
-set notimeout
-set smartcase
+set ignorecase
 set incsearch
+set lazyredraw
+set mouse=n
+set notimeout
+set number relativenumber
+set smartcase
+set undodir=~/.config/nvim/undo//
+set undofile
 
 
 " ================== Coc settings =====================
@@ -56,4 +62,4 @@ set signcolumn=yes
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+set statusline^=%{coc#status()}%{get(s:,'coc_current_function','')}

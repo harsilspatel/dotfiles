@@ -1,7 +1,7 @@
-zmodload zsh/zprof
-source $DOTFILES/zsh/.tokens
-source $DOTFILES/zsh/.aliases
-source $DOTFILES/zsh/.functions
+# zmodload zsh/zprof
+source "$DOTFILES/zsh/.tokens"
+source "$DOTFILES/zsh/.aliases"
+source "$DOTFILES/zsh/.functions"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -78,8 +78,8 @@ zinit snippet OMZ::plugins/pyenv/pyenv.plugin.zsh
 
 # to separate history for iterm tabs
 setopt hist_ignore_all_dups
-unsetopt share_history
-unsetopt inc_append_history
+# unsetopt share_history
+# unsetopt inc_append_history
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
