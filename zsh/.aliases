@@ -53,10 +53,10 @@ alias vl="$EDITOR ~/.vscode/extensions/leetcode.vscode-leetcode-*/out/src/comman
 alias vm="$EDITOR \"$DOTFILES/config/nvim/maps.vim\""
 alias vp="$EDITOR \"$DOTFILES/.p10k.zsh\""
 alias vpj="$EDITOR package.json"
-alias vs="$EDITOR \"$DOTFILES/.skhdrc\""
+alias vs="$EDITOR \"$DOTFILES/config/skhd/skhdrc\""
 alias vt="$EDITOR \"$DOTFILES/.tmux.conf\""
 alias vv="$EDITOR \"$DOTFILES/config/nvim/init.vim\""
-alias vy="$EDITOR \"$DOTFILES/.yabairc\""
+alias vy="$EDITOR \"$DOTFILES/config/yabai/yabairc\""
 alias vz="$EDITOR \"$DOTFILES/zsh/.zshrc\""
 
 # git
