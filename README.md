@@ -27,25 +27,27 @@ These dotfiles include configurations for:
 Here are a few tricks, some inspired from Steve Losh's [A modern space cadet](https://stevelosh.com/blog/2012/10/a-modern-space-cadet/), that help me be productive.
 
 ### Redundant caps lock
-A fairly common hack that programmers employ to speed up their workflow is to map <kbd>caps lock</kbd> to <kbd>escape</kbd> and <kbd>control</kbd>.
+Holding down <kbd>shift</kbd> does the job so a common hack that programmers employ to speed up their workflow is to map <kbd>caps lock</kbd> to <kbd>escape</kbd> and <kbd>control</kbd>.
 - <kbd>caps lock</kbd> to <kbd>escape</kbd>
-- <kbd>caps lock</kbd> + <kbd>key</kbd> to <kbd>control</kbd> + <kbd>key</kbd>
+- <kbd>caps lock</kbd> + <kbd><key></kbd> to <kbd>control</kbd> + <kbd><key></kbd>
 
 ### Better shifting
-Pressing shift keys alone does nothing, they're useful only when pressed with other keys. So those can be mapped to parentheses which are very widely characters in programming.
+Pressing shift keys alone does nothing, they're useful only when pressed with other keys. So those can be mapped to parentheses which are very regularly used in programming.
 - <kbd>left shift</kbd> to <kbd>(</kbd>
 - <kbd>right shift</kbd> to <kbd>)</kbd>
 
 ### Convenient navigation
-Arrow keys are some of the most frequently used keys which requires moving hands away from the home row. We can get inspiration from [Bram Moolenaar](https://en.wikipedia.org/wiki/Bram_Moolenaar) and use the following bindings:
+Arrow keys are some of the most frequently used keys which require moving hands away from the home row. We can get inspiration from [Bram Moolenaar](https://en.wikipedia.org/wiki/Bram_Moolenaar) and create mappings like so:
 - <kbd>right command</kbd> + <kbd>h</kbd> to <kbd>left</kbd>
 - <kbd>right command</kbd> + <kbd>j</kbd> to <kbd>down</kbd>
 - <kbd>right command</kbd> + <kbd>k</kbd> to <kbd>up</kbd>
 - <kbd>right command</kbd> + <kbd>l</kbd> to <kbd>right</kbd>
 
+Note that we're only mapping the <kbd>right command</kbd> and leaving the left one as is.
+
 ## Roadmap 🗺
 ### Hyper and Meh keys
-Having two <kbd>command</kbd> and <kbd>option</kbd> keys feels redundant, especially when both are very accessible as compared to keys like <kbd>control</kbd> and <kbd>escape</kbd>. The keys will be far more useful if mapped as hyper and meh keys.
+Having two <kbd>command</kbd> and <kbd>option</kbd> keys feels redundant, especially when both are accessible as compared <kbd>escape</kbd> and arrow keys. Those two modifiers will be far more useful if mapped as hyper and meh keys.
 - <kbd>right option</kbd> to <kbd>option</kbd> + <kbd>control</kbd> + <kbd>shift</kbd> (Meh key)
 - <kbd>right command</kbd> to <kbd>option</kbd> + <kbd>control</kbd> + <kbd>shift</kbd> + <kbd>command</kbd> (Hyper key)
 
@@ -55,6 +57,6 @@ An ideal workflow would include being able to control and manipulate windows onl
 
 ## Screenshot 📸
 
-<a href=".rice/screenshot-oxipng-3x.png">
-    <img src=".rice/screenshot-oxipng-3x.png" alt="screenshot">
+<a href="https://i.imgur.com/4uwKkl1.png">
+    <img src="https://i.imgur.com/4uwKkl1.png" alt="screenshot">
 </a>
