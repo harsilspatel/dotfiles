@@ -29,12 +29,14 @@ Here are a few tricks, some inspired from Steve Losh's [A modern space cadet](ht
 ### Redundant caps lock
 Holding down <kbd>shift</kbd> does the job so a common hack that programmers employ to speed up their workflow is to map <kbd>caps lock</kbd> to <kbd>escape</kbd> and <kbd>control</kbd>.
 - <kbd>caps lock</kbd> to <kbd>escape</kbd>
-- <kbd>caps lock</kbd> + <kbd><key></kbd> to <kbd>control</kbd> + <kbd><key></kbd>
+- <kbd>caps lock</kbd> + <kbd>\<key\></kbd> to <kbd>control</kbd> + <kbd>\<key\></kbd>
 
 ### Better shifting
-Pressing shift keys alone does nothing, they're useful only when pressed with other keys. So those can be mapped to parentheses which are very regularly used in programming.
+Pressing shift keys alone does nothing, they're useful only when pressed with other keys, so those can be mapped to parentheses which are very regularly used in programming.
 - <kbd>left shift</kbd> to <kbd>(</kbd>
 - <kbd>right shift</kbd> to <kbd>)</kbd>
+
+Please note, this mapping is only for when a <kbd>shift</kbd> key pressed by itself. When pressed in combination with other key it acts as intended.
 
 ### Convenient navigation
 Arrow keys are some of the most frequently used keys which require moving hands away from the home row. We can get inspiration from [Bram Moolenaar](https://en.wikipedia.org/wiki/Bram_Moolenaar) and create mappings like so:
