@@ -6,7 +6,7 @@
   <h3 align="center">my dotfiles</h3>
 
   <p align="center">
-    The files that make me a programming wiz 🧙‍♂️
+    The files that make me a programming whiz 🧙‍♂️
     <br>
     <br>
   </p>
@@ -49,7 +49,7 @@ Note that we're only mapping the <kbd>right command</kbd> and leaving the left o
 
 ## Roadmap 🗺
 ### Hyper and Meh keys
-Having two <kbd>command</kbd> and <kbd>option</kbd> keys feels redundant, especially when both are accessible as compared <kbd>escape</kbd> and arrow keys. Those two modifiers will be far more useful if mapped as hyper and meh keys.
+Hyper and Meh, terms popularized by [Ergodox](https://ergodox-ez.com/) community, mean combinations of modifiers. Having two sets of <kbd>command</kbd> and <kbd>option</kbd> keys seems redundant, especially when both are relatively accessible as compared <kbd>escape</kbd> and arrow keys, so one of the sets can be mapped to hyper and meh keys.
 - <kbd>right option</kbd> to <kbd>option</kbd> + <kbd>control</kbd> + <kbd>shift</kbd> (Meh key)
 - <kbd>right command</kbd> to <kbd>option</kbd> + <kbd>control</kbd> + <kbd>shift</kbd> + <kbd>command</kbd> (Hyper key)
 
@@ -59,6 +59,6 @@ An ideal workflow would include being able to control and manipulate windows onl
 
 ## Screenshot 📸
 
-<a href="https://i.imgur.com/4uwKkl1.png">
+<a href="https://proxy.duckduckgo.com/iu/?u=https://i.imgur.com/4uwKkl1.png">
     <img src="https://i.imgur.com/4uwKkl1.png" alt="screenshot">
 </a>
