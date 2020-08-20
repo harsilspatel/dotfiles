@@ -1,32 +1,29 @@
 tap "buildkite/buildkite"
 tap "buildkite/cli"
 tap "candid82/brew"
+tap "caskroom/cask"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "iina/mpv-iina"
 tap "khanhas/tap"
 tap "koekeishiya/formulae"
+tap "mongodb/brew"
 tap "mopidy/mopidy"
-tap "railwaycat/emacsmacport"
 tap "rigellute/tap"
-tap "romkatv/powerlevel10k"
 tap "yqrashawn/goku"
 # Official Amazon AWS command-line interface
 brew "awscli", link: false
+# GNU File, Shell, and Text utilities
+brew "coreutils"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Get/set bluetooth power and discoverable state
 brew "blueutil"
-# Text-based personal organizer
-brew "calcurse"
-# Emacs dependency management
-brew "cask"
-# Tiling window manager for macOS based on plugin architecture
-brew "chunkwm"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Good-lookin' diffs with diff-highlight and more
@@ -37,10 +34,14 @@ brew "exa"
 brew "fd"
 # Identify or delete duplicate files
 brew "fdupes"
+# Manage compile and link flags for libraries
+brew "pkg-config"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GNU awk utility
 brew "gawk"
+# GNU debugger
+brew "gdb"
 # Distributed revision control system
 brew "git"
 # Small git utilities
@@ -51,18 +52,16 @@ brew "glow"
 brew "gnupg", link: false
 # GitHub Markdown previewer
 brew "grip"
-# Perceptual JPEG encoder
-brew "guetzli"
 # Improved top (interactive process viewer)
 brew "htop"
-# Tools and libraries to manipulate images in many formats
-brew "imagemagick"
-# GNU utilities for networking
-brew "inetutils"
 # Manage your Java environment
 brew "jenv"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Website copier/offline browser
+brew "httrack"
+# LLVM's OpenMP runtime library
+brew "libomp"
 # Simple terminal UI for git commands
 brew "lazygit"
 # Cross platform, open source .NET development framework
@@ -71,6 +70,8 @@ brew "mono"
 brew "moreutils"
 # Ncurses-based client for the Music Player Daemon
 brew "ncmpcpp"
+# Fast, highly customisable system info script
+brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Tiny, lightning fast, feature-packed file manager
@@ -79,6 +80,8 @@ brew "nnn"
 brew "openvpn"
 # Animated pipes terminal screensaver
 brew "pipes-sh"
+# Manage multiple Node.js versions
+brew "nvm"
 # Python version management
 brew "pyenv"
 # File browser
@@ -87,24 +90,20 @@ brew "ranger"
 brew "shellcheck"
 # Command-line interface for Spotify on a Mac
 brew "shpotify"
-# Organize software neatly under a single directory tree (e.g. /usr/local)
-brew "stow"
 # Tool to build, change, and version infrastructure
 brew "terraform"
+# Open source continuous file synchronization application
+brew "syncthing"
+# Send macOS User Notifications from the command-line
+brew "terminal-notifier"
 # Code-search similar to ack
 brew "the_silver_searcher"
-# Text interface for Git repositories
-brew "tig"
 # Terminal multiplexer
 brew "tmux"
 # Manage complex tmux sessions easily
 brew "tmuxinator"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Language for application scale JavaScript development
-brew "typescript"
-# Vi 'workalike' with many additional features
-brew "vim"
 # Internet file retriever
 brew "wget"
 # JavaScript package manager
@@ -121,6 +120,8 @@ brew "khanhas/tap/spicetify-cli"
 brew "koekeishiya/formulae/skhd"
 # A tiling window manager for macOS based on binary space partitioning.
 brew "koekeishiya/formulae/yabai"
+# High-performance, schema-free, document-oriented database
+brew "mongodb/brew/mongodb-community@4.0"
 # A terminal user interface for Spotify
 brew "rigellute/tap/spotify-tui"
 # karabiner configurator
@@ -130,20 +131,30 @@ cask "bartender"
 cask "bettertouchtool"
 cask "clion"
 cask "firefox"
+cask "coderunner"
 cask "font-fira-code"
 cask "google-chrome"
 cask "gpg-suite"
 cask "ichm"
+cask "hammerspoon"
 cask "iina"
 cask "iterm2"
 cask "kap"
 cask "key-codes"
+cask "karabiner-elements"
 cask "keyboard-maestro"
 cask "libreoffice"
 cask "mongodb-compass-community"
 cask "paw"
+cask "keycastr"
+cask "monitorcontrol"
+cask "mounty"
+cask "openmtp"
+cask "plover"
 cask "postman"
 cask "sonos"
+cask "private-internet-access"
+cask "qbittorrent"
 cask "spotify"
 cask "tunnelblick"
 cask "ubersicht"
