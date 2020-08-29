@@ -17,6 +17,7 @@ let g:coc_global_extensions = [
  \  'coc-eslint',
  \  'coc-json',
  \  'coc-prettier',
+ \  'coc-python',
  \  'coc-tsserver',
  \  ]
 
@@ -41,6 +42,13 @@ set smartcase
 set undodir=~/.config/nvim/undo//
 set undofile
 
+
+" ================== vim test ========================
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
 
 " ================== Coc settings =====================
 " Some servers have issues with backup files, see #649.

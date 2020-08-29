@@ -1,5 +1,6 @@
 {
   "eslint.autoFixOnSave": true,
+  "python.jediEnabled": false,
   "suggest.enablePreview": true,
   "suggest.noselect": false,
   "suggest.removeDuplicateItems": true

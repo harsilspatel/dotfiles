@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+osascript -e 'display notification "brew, tpm and vim" with title "🧹 Removing stale files..."'
+
 # clean stale files
 brew cleanup --quiet
 

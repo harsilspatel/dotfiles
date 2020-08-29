@@ -84,7 +84,7 @@ alias grv="git remote -v"
 alias gski="git stash push --keep-index"
 alias gsl="git stash list"
 alias gspo="git stash pop"
-alias gspu="git stash push"
+alias gspu="git stash push -u"
 alias gst="git status"
 
 # backend configs

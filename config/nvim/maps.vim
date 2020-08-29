@@ -1,13 +1,12 @@
 
-nnoremap <leader>s :update<CR>
-nnoremap <leader>w :q<CR>
-nnoremap <leader>x :wq<CR>
-nnoremap <leader>! :q!<CR>
+nnoremap gu :update<CR>
+nnoremap gq :q<CR>
+nnoremap gx :wq<CR>
+nnoremap g! :q!<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <c-p> :Files<CR>
 nnoremap <c-n> :NERDTreeToggle<CR>
 map <leader>e <Plug>(easymotion-prefix)
-nmap <c-m> <Plug>NERDCommenterToggle
 " <c-/> being registered as <c-_>  ¯\_(ツ)_/¯
 map <c-_> <Plug>NERDCommenterToggle
 nnoremap <d-p> :Files<CR>
