@@ -1,7 +1,14 @@
 # zmodload zsh/zprof
-source "$DOTFILES/zsh/.tokens"
-source "$DOTFILES/zsh/.aliases"
-source "$DOTFILES/zsh/.functions"
+
+function compile() {
+  FILE_PATH="$DOTFILES/zsh/$1"
+  if [[ -e "$FILE_PATH" ]] \
+     && [[ ! -e "$FILE_PATH.zwc" ]] \
+     || [[ "$FILE_PATH" -nt "$FILE_PATH.zwc" ]]; then
+       zcompile "$FILE_PATH"
+  fi
+  source "$FILE_PATH"
+}
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -13,6 +20,14 @@ fi
 source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
+
+for file in .fzf.zsh \
+            .tokens \
+            .aliases \
+            .functions; do
+  compile "$file"
+done
+unset file
 
 
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/key-bindings.zsh
@@ -81,9 +96,7 @@ setopt hist_ignore_all_dups
 # unsetopt share_history
 # unsetopt inc_append_history
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # zsh-defer -c "eval \"$(pyenv init -)\""
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+compile .p10k.zsh

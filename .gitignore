@@ -3,3 +3,5 @@ ssh/*
 .tokens
 dotbot/
 tpm/
+
+zsh/*.zwc
