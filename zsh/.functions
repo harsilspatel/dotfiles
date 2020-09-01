@@ -6,23 +6,22 @@ function commit_file() {
 }
 
 function lc() {
-  if [[ `basename "$PWD"` == "leetcode" ]]
-    then
+  if [[ $(basename "$PWD") == "leetcode" ]]; then
     f=$(ls -t | head -n 1)
-    commit_file $f 
+    commit_file $f
   fi
 }
 
 function api() {
-    git clone https://gitlab.com/medipass/software/medipass-api.git ./api
-    cd api
-    npm i
-    mkdir ./.vscode
-    cp "$WORKSPACE/utils/commons/launch.json" ./.vscode/launch.json
-    cp "$WORKSPACE/utils/commons/Gruntfile.js" ./Gruntfile.js
+  git clone https://gitlab.com/medipass/software/medipass-api.git ./api
+  cd api
+  npm i
+  mkdir ./.vscode
+  cp "$WORKSPACE/utils/commons/launch.json" ./.vscode/launch.json
+  cp "$WORKSPACE/utils/commons/Gruntfile.js" ./Gruntfile.js
 }
 
 function take() {
-    mkdir -p $1
-    pushd $1 >/dev/null
+  mkdir -p $1
+  pushd $1 >/dev/null
 }

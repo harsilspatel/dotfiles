@@ -1,12 +1,12 @@
 export DOTFILES="$HOME/.dotfiles"
 export WORKSPACE="$HOME/workspace"
 
-export EDITOR="nvim";
+export EDITOR="nvim"
 
 export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=10000
 export SAVEHIST=10000
-export HISTCONTROL='ignoreboth:erasedups';
+export HISTCONTROL='ignoreboth:erasedups'
 
 export NVM_LAZY_LOAD=true
 
