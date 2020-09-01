@@ -1,10 +1,13 @@
 
+let mapleader = "\<space>"
+
 nnoremap gu :update<CR>
 nnoremap gq :q<CR>
 nnoremap gx :wq<CR>
 nnoremap g! :q!<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <c-p> :Files<CR>
+nnoremap <c-f> :BLines<CR>
 nnoremap <c-n> :NERDTreeToggle<CR>
 map <leader>e <Plug>(easymotion-prefix)
 " <c-/> being registered as <c-_>  ¯\_(ツ)_/¯
@@ -42,10 +45,10 @@ nmap <leader>L <Plug>(easymotion-overwin-line)
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+" inoremap <silent><expr> <TAB>
+      " \ pumvisible() ? "\<C-n>" :
+      " \ <SID>check_back_space() ? "\<TAB>" :
+      " \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 " Use <c-space> to trigger completion.

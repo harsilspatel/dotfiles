@@ -1,6 +1,4 @@
 
-let mapleader = '\<space>'
-
 let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --follow --exclude .git'
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
