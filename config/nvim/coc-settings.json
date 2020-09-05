@@ -1,5 +1,8 @@
 {
+  "coc.preferences.formatOnSaveFiletypes": ["javascript", "python"],
+  "coc.preferences.formatOnType": true,
   "eslint.autoFixOnSave": true,
+  "python.formatting.provider": "black",
   "python.jediEnabled": false,
   "suggest.enablePreview": true,
   "suggest.noselect": false,
