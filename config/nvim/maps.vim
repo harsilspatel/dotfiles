@@ -25,11 +25,11 @@ nmap [h <Plug>(GitGutterPrevHunk)
 
 " easymotion
 " f{char} to move to {char}
-map  f <Plug>(easymotion-bd-f)
-nmap f <Plug>(easymotion-overwin-f)
+map <leader>f <Plug>(easymotion-bd-f)
+" nmap f <Plug>(easymotion-overwin-f)
 
 " t{char} to move before {char}
-nmap t <Plug>(easymotion-bd-t)
+" nmap t <Plug>(easymotion-bd-t)
 
 " s{char}{char} to move to {char}{char}
 nmap s <Plug>(easymotion-s2)
