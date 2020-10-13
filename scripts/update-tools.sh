@@ -9,15 +9,15 @@ zinit self-update
 # update plugins
 zinit update --all --parallel --quiet
 
-# update brew
-brew update
-# update formulae
-brew upgrade --quiet
-
 # update tmux plugins
 "$DOTFILES/tpm/bin/update_plugins" all
 
 # update vim-plug, plugins (an extra +q to quit startify buffer)
 nvim --headless +PlugUpgrade +PlugUpdate +q +q
+
+# update brew
+brew update
+# update formulae
+brew upgrade --quiet
 
 osascript -e 'display notification "zinit, homebrew, tpm, vim-plug" with title "💪 Update complete!"'

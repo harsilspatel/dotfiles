@@ -2,9 +2,6 @@
 
 osascript -e 'display notification "brew, tpm and vim" with title "🧹 Removing stale files..."'
 
-# clean stale files
-brew cleanup --quiet
-
 # purge stale plugs
 nvim --headless +PlugClean +q +q
 
@@ -16,5 +13,8 @@ nvim --headless +PlugClean +q +q
 for DIR_NAME in swap undo; do
   find "$HOME/.config/nvim/$DIR_NAME" -type f -mtime +42 -delete
 done
+
+# clean stale files
+brew cleanup --quiet
 
 osascript -e 'display notification "brew, tpm and vim" with title "🧹 Removed stale files!"'

@@ -1,3 +1,3 @@
 
-4 2 * * * timeout 42s "$DOTFILES/scripts/housekeeping.sh" || osascript -e 'display notification "Could have timed-out after 42s" with title "🤕 Housekeeping job errored"'
-6 9 * * * timeout 2m "$DOTFILES/scripts/update-tools.sh" || osascript -e 'display notification "Perhaps timed-out after 2m" with title "🤒 Updating job errored"'
+4 2 * * * /usr/local/bin/timeout 42s "$HOME/.dotfiles/scripts/housekeeping.sh" || osascript -e 'display notification "Could have timed-out after 42s" with title "🤕 Housekeeping job errored"'
+6 9 * * * /usr/local/bin/timeout 2m "$HOME/.dotfiles/scripts/update-tools.sh" || osascript -e 'display notification "Perhaps timed-out after 2m" with title "🤒 Updating job errored"'
