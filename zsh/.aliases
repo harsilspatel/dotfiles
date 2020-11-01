@@ -7,7 +7,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias d="dirs -v"
 
-# Setting
+# settings
 alias c="code ."
 alias ch="wc -l $HISTFILE; cp $HISTFILE $HISTFILE.bak; nl ~/.zsh_history | LC_ALL=C sort -k 2  -k 1,1nr| uniq -f 1 | LC_ALL=C sort -n | cut -f 2 > $HISTFILE; wc -l $HISTFILE;"
 alias e="exa -alrs=created"
@@ -23,7 +23,19 @@ alias v="$EDITOR"
 alias vim="$EDITOR"
 alias x="exit"
 
-# npm alias
+# yarn
+alias y="yarn"
+alias ya="yarn add"
+alias ya="yarn add"
+alias yad="yarn add -D"
+alias yd="yarn dev"
+alias yga="yarn global add"
+alias ygr="yarn global remove"
+alias yr="yarn remove"
+alias yrd="yarn remove -D"
+alias ys="yarn start"
+
+# npm
 alias na="npm audit"
 alias naf="npm audit fix"
 alias ni="npm i"
@@ -36,7 +48,7 @@ alias nt="npm test"
 alias nu="npm uninstall"
 alias nv="npm version"
 
-# tmux alias
+# tmux
 alias t="tmux"
 alias ta="tmux attach -t"
 alias tk="tmux kill-session -t"
