@@ -33,6 +33,7 @@ alias ygr="yarn global remove"
 alias yr="yarn remove"
 alias ys="yarn start"
 alias yt="yarn test"
+alias yy="yarn dev || yarn develop || yarn start"
 
 # npm
 alias na="npm audit"
