@@ -1,42 +1,47 @@
 {
-    "hwindow.zoomLevel": 0,
-    "editor.minimap.enabled": false,
-    "leetcode.defaultLanguage": "python3",
-    "leetcode.workspaceFolder": "/Users/harsilpatel/workspace/leetcode",
-    "leetcode.nodePath": "/Users/harsilpatel/.nvm/versions/node/v12.18.2/bin/node",
-    "leetcode.endpoint": "leetcode",
-    "leetcode.hideSolved": true,
-    "workbench.colorTheme": "One Dark Pro",
-    "workbench.editor.showTabs": true,
-    "editor.renderWhitespace": "all",
-    "vim.useSystemClipboard": false,
-    "eslint.format.enable": true,
-    "files.exclude": {
-        "**/.git": true,
-        "**/node_modules": true
-    },
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "leetcode.showDescription": "Both",
-    "leetcode.hint.commentDescription": false,
-    "leetcode.hint.configWebviewMarkdown": false,
-    
-    "leetcode.hint.commandShortcut": false,
-    "[python]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "ms-python.python"
-    },
+  "hwindow.zoomLevel": 0,
+  "editor.minimap.enabled": false,
+  "leetcode.defaultLanguage": "python3",
+  "leetcode.workspaceFolder": "/Users/harsilpatel/workspace/leetcode",
+  "leetcode.nodePath": "/Users/harsilpatel/.nvm/versions/node/v14.15.1/bin/node",
+  "leetcode.endpoint": "leetcode",
+  "leetcode.hideSolved": true,
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.editor.showTabs": true,
+  "editor.renderWhitespace": "all",
+  "vim.useSystemClipboard": false,
+  "eslint.format.enable": true,
+  "files.exclude": {
+    "dist/": true,
+    "**/.git": true,
+    "**/node_modules": true
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "leetcode.showDescription": "Both",
+  "leetcode.hint.commentDescription": false,
+  "leetcode.hint.configWebviewMarkdown": false,
+
+  "leetcode.hint.commandShortcut": false,
+  "[python]": {
     "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
-    "editor.defaultFormatter": "EditorConfig.EditorConfig",
-    // "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "prettier.tabWidth": 2,
-    "emmet.triggerExpansionOnTab": true,
-    "prettier.requireConfig": true,
-    "editor.fontFamily": "FiraCode-Retina",
-    "editor.fontLigatures": true,
-    "window.zoomLevel": 0,
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.iconTheme": "vscode-icons",
+    "editor.formatOnSaveMode": "file",
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "prettier.tabWidth": 2,
+  "emmet.triggerExpansionOnTab": true,
+  "editor.fontFamily": "FiraCode-Retina",
+  "editor.fontLigatures": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.iconTheme": "vscode-icons",
+  "javascript.validate.enable": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "prettier.requireConfig": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.confirmDelete": false
 }

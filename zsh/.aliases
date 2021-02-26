@@ -23,6 +23,10 @@ alias v="$EDITOR"
 alias vim="$EDITOR"
 alias x="exit"
 
+# github
+alias ghpv="gh pr view -w"
+alias ghrv="gh repo view -w"
+
 # yarn
 alias y="yarn"
 alias ya="yarn add"
@@ -90,6 +94,7 @@ alias gcpa="git cherry-pick --abort"
 alias gcpc="git cherry-pick --continue"
 alias gd="git diff"
 alias gdc="git diff --color-words=."
+alias gdni="git diff --no-index"
 alias gdw="git diff --color-words"
 alias ggc="git gc --aggresive"
 alias gl="git pull"
