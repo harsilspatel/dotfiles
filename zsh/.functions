@@ -11,15 +11,6 @@ function lc() {
   fi
 }
 
-function api() {
-  git clone https://gitlab.com/medipass/software/medipass-api.git ./api
-  cd api
-  npm i
-  mkdir ./.vscode
-  cp "$WORKSPACE/utils/commons/launch.json" ./.vscode/launch.json
-  cp "$WORKSPACE/utils/commons/Gruntfile.js" ./Gruntfile.js
-}
-
 function take() {
   mkdir -p $1
   pushd $1 >/dev/null

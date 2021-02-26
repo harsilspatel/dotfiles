@@ -113,12 +113,6 @@ alias gspo="git stash pop"
 alias gspu="git stash push -u"
 alias gst="git status"
 
-# backend configs
-alias redis="ulimit -n 4096 && \"$WORKSPACE/utils/redis-3.2.9/src/redis-server\" \"$WORKSPACE/utils/redis-3.2.9/redis.conf\""
-alias mongo="ulimit -n 4096  && \"$WORKSPACE/utils/mongodb-osx-x86_64-enterprise-3.6.9/bin/mongod\" --config \"$WORKSPACE/utils/mongodb-osx-x86_64-enterprise-3.6.9/mongod.conf\""
-alias mongo4="ulimit -n 4096  && \"$WORKSPACE/utils/mongodb-osx-x86_64-enterprise-4.0.16/bin/mongod\" --config \"$WORKSPACE/utils/mongodb-osx-x86_64-enterprise-4.0.16/mongod.conf\""
-alias mongo42="ulimit -n 4096  && \"$WORKSPACE/utils/mongodb-macos-x86_64-enterprise-4.2.3/bin/mongod\" --config \"$WORKSPACE/utils/mongodb-macos-x86_64-enterprise-4.2.3/mongod.conf\""
-
 # taken from https://github.com/mathiasbynens/dotfiles/blob/master/.aliases
 # Print each PATH entry on a separate line
 alias path="echo -e ${PATH//:/\\n}"
