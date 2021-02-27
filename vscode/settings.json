@@ -35,12 +35,20 @@
   "emmet.triggerExpansionOnTab": true,
   "editor.fontFamily": "FiraCode-Retina",
   "editor.fontLigatures": true,
+  "window.zoomLevel": 0,
   "workbench.startupEditor": "newUntitledFile",
   "workbench.iconTheme": "vscode-icons",
   "javascript.validate.enable": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDragAndDrop": false,
+  "editor.accessibilitySupport": "off",
+  "editor.linkedEditing": true,
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
   "prettier.requireConfig": true,
+  "python.languageServer": "Jedi",
   "[javascript]": {
+    // "editor.defaultFormatter": "EditorConfig.EditorConfig",
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "explorer.confirmDelete": false
