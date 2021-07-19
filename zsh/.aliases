@@ -18,10 +18,11 @@ alias n="spotify next"
 alias o="open ."
 alias p="spotify pause"
 alias pp="spotify prev"
-alias rmrf="rm -rf"
+alias rmrfnm="rm -rf ./node_modules"
 alias v="$EDITOR"
 alias vim="$EDITOR"
 alias x="exit"
+alias nm="nodemon"
 
 # github
 alias ghpv="gh pr view -w"
