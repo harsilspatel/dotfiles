@@ -1,4 +1,9 @@
 {
+  "td": {
+    "prefix": "td",
+    "body": "// TODO(harsilspatel): ${1}",
+    "description": "todo comment"
+  },
   "console.log": {
     "prefix": "cl",
     "body": [
