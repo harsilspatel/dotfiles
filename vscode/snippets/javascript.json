@@ -21,5 +21,47 @@
       "}"
     ],
     "description": "tryCatch"
+  },
+  "jest-describe": {
+    "prefix": "describe",
+    "body": [
+      "describe(\"$1\", () => {",
+      "  $2",
+      "})"
+    ],
+    "description": "jest-describe"
+  },
+  "jest-before-each": {
+    "prefix": "beforeEach",
+    "body": [
+      "let $1",
+      "beforeEach(() => {",
+      "  $1 = $2",
+      "})"
+    ],
+    "description": "jest-before-each"
+  },
+  "jest-test": {
+    "prefix": "test",
+    "body": [
+      "test(\"$1\", async () => {",
+      "  ",
+      "})"
+    ],
+    "description": "jest-test"
+  },
+  "Create class": {
+    "prefix": "class",
+    "body": [
+      "class $1 {",
+      "  constructor($2) {",
+      "    this.$2 = $2;",
+      "  }",
+      "}",
+      "",
+      "exports.${1} = ${1};",
+      ""
+    ],
+    "description": "Create class"
   }
 }
