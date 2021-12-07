@@ -24,22 +24,22 @@ These dotfiles include configurations for:
 - and more...
 
 ## Tips and tricks ✨
-Here are a few tricks, some inspired from Steve Losh's [A modern space cadet](https://stevelosh.com/blog/2012/10/a-modern-space-cadet/), that help me be productive.
+Here are a few tricks that help me be productive!
 
 ### Redundant caps lock
-Holding down <kbd>shift</kbd> does the job so a common hack that programmers employ to speed up their workflow is to map <kbd>caps lock</kbd> to <kbd>escape</kbd> and <kbd>control</kbd>.
+In <kbd>caps lock</kbd>'s stead, holding down <kbd>shift</kbd> works for capitalizing letters. So a common hack is to map to it to <kbd>escape</kbd> and <kbd>control</kbd>.
 - <kbd>caps lock</kbd> to <kbd>escape</kbd>
 - <kbd>caps lock</kbd> + <kbd>\<key\></kbd> to <kbd>control</kbd> + <kbd>\<key\></kbd>
 
 ### Better shifting
-Pressing shift keys alone does nothing, they're useful only when pressed with other keys, so those can be mapped to parentheses which are very regularly used in programming.
+Pressing just a <kbd>shift</kbd> (by itself) does nothing, it's useful only when pressed with other keys. So it can be mapped to parentheses which are used very frequently in programming.
 - <kbd>left shift</kbd> to <kbd>(</kbd>
 - <kbd>right shift</kbd> to <kbd>)</kbd>
 
-Please note, this mapping is only for when a <kbd>shift</kbd> key pressed by itself. When pressed in combination with other key it acts as intended.
+Please note, this mapping is only for when a <kbd>shift</kbd> key pressed by itself. If pressed in combination with other key it works as it used.
 
 ### Convenient navigation
-Arrow keys are some of the most frequently used keys which require moving hands away from the home row. We can get inspiration from [Bram Moolenaar](https://en.wikipedia.org/wiki/Bram_Moolenaar) and create mappings like so:
+Arrow keys are very frequently used but they require moving the hand away from the home row. We can create vim-like mappings:
 - <kbd>right command</kbd> + <kbd>h</kbd> to <kbd>left</kbd>
 - <kbd>right command</kbd> + <kbd>j</kbd> to <kbd>down</kbd>
 - <kbd>right command</kbd> + <kbd>k</kbd> to <kbd>up</kbd>
@@ -54,7 +54,7 @@ Hyper and Meh, terms popularized by [Ergodox](https://ergodox-ez.com/) community
 - <kbd>right command</kbd> to <kbd>option</kbd> + <kbd>control</kbd> + <kbd>shift</kbd> + <kbd>command</kbd> (Hyper key)
 
 ### Window manager
-An ideal workflow would include being able to control and manipulate windows only via keyboard. Need to spend some time configuring [yabai](https://github.com/koekeishiya/yabai) and [skhd](https://github.com/koekeishiya/skhd) to achieve that.
+My ideal workflow would include the ability control and manipulate windows only via keyboard. So need to invest some time configuring [yabai](https://github.com/koekeishiya/yabai) and [skhd](https://github.com/koekeishiya/skhd) to achieve that!
 
 
 ## Screenshot 📸
