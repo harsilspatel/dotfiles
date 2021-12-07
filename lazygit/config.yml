@@ -1,7 +1,9 @@
+customCommands:
+  - key: "b"
+    command: "git browse"
+    context: "global"
 git:
   commitPrefixes:
-    api:
-      replace: "/\\/ :/"
 reporting: 'on'
 startuppopupversion: 1
 refresher:

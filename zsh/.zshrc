@@ -51,7 +51,7 @@ fi
 # syntax highlighting and auto-suggestions
 zi wait'0' lucid for \
  atinit'zicompinit; zicdreplay' \
-    zdharma/fast-syntax-highlighting \
+    zdharma-continuum/fast-syntax-highlighting \
  compile'{src/*.zsh,src/strategies/*}' \
  atload'!_zsh_autosuggest_start' \
     zsh-users/zsh-autosuggestions

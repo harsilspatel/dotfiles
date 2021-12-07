@@ -9,15 +9,13 @@ alias d="dirs -v"
 
 # settings
 alias c="code ."
+alias i="idea ."
 alias ch="wc -l $HISTFILE; cp $HISTFILE $HISTFILE.bak; nl ~/.zsh_history | LC_ALL=C sort -k 2  -k 1,1nr| uniq -f 1 | LC_ALL=C sort -n | cut -f 2 > $HISTFILE; wc -l $HISTFILE;"
 alias e="exa -alrs=created"
 alias h="cat $HISTFILE | grep "
 alias j="jest"
 alias l="lazygit"
-alias n="spotify next"
 alias o="open ."
-alias p="spotify pause"
-alias pp="spotify prev"
 alias rmrfnm="rm -rf ./node_modules"
 alias v="$EDITOR"
 alias vim="$EDITOR"
@@ -67,7 +65,7 @@ alias va="$EDITOR \"$DOTFILES/zsh/.aliases\""
 alias vc="crontab -e"
 alias ve="$EDITOR \"$DOTFILES/zsh/.zshenv\""
 alias vf="$EDITOR \"$DOTFILES/zsh/.functions\""
-alias vl="$EDITOR ~/.vscode/extensions/leetcode.vscode-leetcode-*/out/src/commands/list.js"
+alias vl="$EDITOR \"$DOTFILES/lazygit/config.yml\""
 alias vm="$EDITOR \"$DOTFILES/config/nvim/maps.vim\""
 alias vp="$EDITOR \"$DOTFILES/zsh/.p10k.zsh\""
 alias vpj="$EDITOR package.json"
@@ -79,6 +77,7 @@ alias vz="$EDITOR \"$DOTFILES/zsh/.zshrc\""
 
 # git
 alias ga="git add"
+alias gb="git browse"
 alias gaa="git add --all"
 alias gau="git add --update"
 alias gc="git commit -v -m"
@@ -110,13 +109,13 @@ alias grc="git rebase --continue"
 alias grv="git remote -v"
 alias gski="git stash push --keep-index"
 alias gsl="git stash list"
-alias gspo="git stash pop"
+alias gspo="git stash apply"
 alias gspu="git stash push -u"
 alias gst="git status"
 
 # taken from https://github.com/mathiasbynens/dotfiles/blob/master/.aliases
 # Print each PATH entry on a separate line
-alias path="echo -e ${PATH//:/\\n}"
+alias path='echo -e ${PATH//:/\\n}'
 
 # blueutil
 alias b="blueutil"
