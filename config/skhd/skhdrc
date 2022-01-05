@@ -7,4 +7,4 @@ ctrl + alt - l    : yabai -m window --focus east
 ctrl + alt - m    : yabai -m window --focus mouse
 ctrl + alt - tab  : yabai -m window --focus east || yabai -m window --focus west
 ctrl + alt - 0x21 : . $NVM_DIR/nvm.sh; $DOTFILES/scripts/fix-windows-height.js # "ctrl + alt - ["
-
+ctrl + alt - 0x1E : . $NVM_DIR/nvm.sh; $DOTFILES/scripts/increase-window-size.js # "ctrl + alt - ]"
