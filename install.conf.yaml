@@ -3,10 +3,9 @@
       create: true
 
 - clean: ["~"]
-
-# - clean:
-#   ~/.config:
-#     recursive: trues
+- clean:
+    ~/.config:
+      recursive: true
 
 - link:
     ~/.zshrc: zsh/.zshrc
@@ -25,8 +24,8 @@
     ~/.config/skhd/skhdrc: config/skhd/skhdrc
     ~/.config/yabai/yabairc: config/yabai/yabairc
     ~/.config/nvim/init.vim: config/nvim/init.vim
-    ~/.config/spicetify/config-xpui.ini: config/spicetify/config-xpui.ini
     ~/.config/nvim/coc-settings.json: config/nvim/coc-settings.json
+    ~/.config/spicetify/config-xpui.ini: config/spicetify/config-xpui.ini
 
     ~/Library/Application Support/Code/User/snippets: vscode/snippets
     ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
