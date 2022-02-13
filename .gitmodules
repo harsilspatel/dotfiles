@@ -2,8 +2,10 @@
 	ignore = dirty
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
-
 [submodule "stackline"]
 	ignore = dirty
 	path = hammerspoon/stackline
 	url = https://github.com/AdamWagner/stackline
+[submodule "tpm"]
+	path = tpm
+	url = https://github.com/tmux-plugins/tpm
