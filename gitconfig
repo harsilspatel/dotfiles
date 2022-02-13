@@ -2,7 +2,7 @@
 [user]
 	name = Harsil Patel
 	email = harsilspatel@gmail.com
-	signingkey = 49D4A268B0162021
+	signingkey = 0BE5FA62402B0CF8
 # Please adapt and uncomment the following lines:
 #	name = Harsil Patel
 #	email = harsilspatel@gmail.com
@@ -24,3 +24,8 @@
 	program = gpg
 [pull]
 	rebase = false
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
