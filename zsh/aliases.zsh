@@ -124,3 +124,7 @@ alias bh="blueutil --connect \"WH-1000XM3\""
 alias bo="blueutil --power 1"
 alias bt="blueutil --power toggle"
 alias bz="blueutil --power 0"
+
+alias tf="terraform"
+
+alias s="serverless"

@@ -87,13 +87,16 @@ setopt hist_ignore_all_dups
 # unsetopt share_history
 # unsetopt inc_append_history
 
-# zsh-defer -c "eval \"$(pyenv init -)\""
+zsh-defer -c "eval \"$(pyenv init --path)\""
+# autoload -U +X bashcompinit && bashcompinit
+# complete -o nospace -C /usr/local/bin/terraform terraform
 
-for file in .fzf.zsh \
-            .tokens \
-            .aliases \
-            .functions \
-            .p10k.zsh; do
+for file in .zshenv \
+            fzf.zsh \
+            tokens.zsh \
+            aliases.zsh \
+            functions.zsh \
+            p10k.zsh; do
   compile_and_source "$DOTFILES/zsh/$file"
 done
 unset file

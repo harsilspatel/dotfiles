@@ -20,8 +20,8 @@
     ~/.zshrc: zsh/.zshrc
     ~/.sleep: sleepwatcher/sleep.zsh
     ~/.wakeup: sleepwatcher/wakeup.zsh
-    ~/.p10k.zsh: zsh/.p10k.zsh
-    ~/.fzf.zsh: zsh/.fzf.zsh
+    ~/.p10k.zsh: zsh/p10k.zsh
+    ~/.fzf.zsh: zsh/fzf.zsh
     ~/.zshenv: zsh/.zshenv
     ~/.hammerspoon: hammerspoon
     ~/.gitconfig: gitconfig
