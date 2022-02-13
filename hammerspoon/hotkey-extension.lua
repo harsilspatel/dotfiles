@@ -1,21 +1,21 @@
+-- from skhd
 local MODIFIER_FLAGS = {
-  -- alt = 0x00080000,
   lalt = 0x00000020,
   ralt = 0x00000040,
-  -- shift = 0x00020000,
   lshift = 0x00000002,
   rshift = 0x00000004,
-  -- cmd = 0x00100000,
   lcmd = 0x00000008,
   rcmd = 0x00000010,
-  -- control = 0x00040000,
-  lcontrol = 0x00000001,
-  rcontrol = 0x00002000
-  -- fn = 0x00800000
+  lctrl = 0x00000001,
+  rctrl = 0x00002000
 }
 
 local bindings = {}
 
+--- Parameters:
+---  * modifierFlags - flags OR'ed from eventtap data for e.g 1573192
+--- Returns:
+---  * An array-like table of modifiers for e.g {'lcmd', 'ralt'}
 local function getModifierNames(modifierFlags)
   local names = {}
   for keyname, flag in pairs(MODIFIER_FLAGS) do
@@ -31,6 +31,11 @@ local function addModifierToAllCombinations(combinations, modifierName)
   end)
 end
 
+--- Parameters:
+---  * hotkeyModifierNames - modifiers to bind hotkey for e.g {'cmd', 'alt'}
+--- Returns:
+---  * A table of tables for all possible combinations of those modifiers, for given input result will be:
+---  {{'lcmd', 'lalt'}, {'lcmd', 'ralt'}, {'rcmd', 'lalt'}, {'rcmd', 'ralt'}}
 local function getAllModifierCombinations(hotkeyModifierNames)
   local combinations = {{}}
 
@@ -54,7 +59,17 @@ local function getAllModifierCombinations(hotkeyModifierNames)
   return combinations
 end
 
-local function getHotkeyHash(modifiers, key)
+--- Parameters:
+---  * mods - A table or a string containing the keyboard modifiers required,
+---    which should be zero or more of the following:
+---    * "cmd", "lcmd" or "rcmd"
+---    * "ctrl", "lctrl" or "rctrl"
+---    * "alt", "lalt" or "ralt"
+---    * "shift", "lshift" or "rshift"
+---  * key - A string containing the name of a keyboard key
+--- Returns:
+---  Returns a string of concetanated modifiers and key for e.g `lcmd.ralt.h`
+local function generateHotkeyHash(modifiers, key)
   -- sorting combinations so "hash" is deterministic
   table.sort(modifiers)
   table.insert(modifiers, key)
@@ -70,10 +85,7 @@ local keyDownEventTap = hs.eventtap.new({hs.eventtap.event.types.keyDown}, funct
   local modifierFlags = eventData.modifierFlags
   local eventModifiers = getModifierNames(modifierFlags)
 
-  p(eventModifiers)
-  local eventHotkeyHash = getHotkeyHash(eventModifiers, keyName)
-  print('yo', eventHotkeyHash)
-  print('pressedFn', bindings[eventHotkeyHash])
+  local eventHotkeyHash = generateHotkeyHash(eventModifiers, keyName)
 
   if #eventModifiers == 0 or (#eventModifiers == 1 and hs.fnutils.contains({'lcmd', 'rcmd'}, eventModifiers[1])) then
     return
@@ -82,28 +94,27 @@ local keyDownEventTap = hs.eventtap.new({hs.eventtap.event.types.keyDown}, funct
     pressedFn(eventData)
     return true
   end
-
-  -- print(dump(bindings))
-  -- getModifierNames(modifierFlags)
-  -- if (hs.keycodes.map[keyCode] == key and modifierFlags == 524608) then hs.application.launchOrFocus('Slack') end
 end)
 
 local module = {}
 
+--- Parameters:
+---  * mods - A table or a string containing the keyboard modifiers required,
+---    which should be zero or more of the following:
+---    * "cmd", "lcmd" or "rcmd"
+---    * "ctrl", "lctrl" or "rctrl"
+---    * "alt", "lalt" or "ralt"
+---    * "shift", "lshift" or "rshift"
+---  * key - A string containing the name of a keyboard key
+---  * pressedfn - A function that will be called when the hotkey has been pressed
+--- Returns:
+---  * None
 function module.bind(mods, key, pressedFn)
-  -- if (not bindings[key]) then bindings[key] = {} end
-  -- local keyTable = bindings[key]
-  -- keyTable[#keyTable + 1] = {mods = mods, pressedFn = pressedFn}
-
   local combinations = getAllModifierCombinations(mods)
-  local hotkeyHashes = hs.fnutils.imap(combinations, function(combination) return getHotkeyHash(combination, key) end)
+  local hotkeyHashes = hs.fnutils.imap(combinations,
+    function(combination) return generateHotkeyHash(combination, key) end)
 
   hs.fnutils.ieach(hotkeyHashes, function(hotkeyHash) bindings[hotkeyHash] = pressedFn end)
-  print('dssfasdfasdfa', p(bindings))
-
-  -- print('hotkeyHashes', dump(hotkeyHashes))
-
-  -- bindings[#bindings + 1] = {mods = mods, key = key, pressedFn = pressedFn}
 
   if (not keyDownEventTap:isEnabled()) then keyDownEventTap:start() end
 end
