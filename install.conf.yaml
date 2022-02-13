@@ -1,0 +1,35 @@
+- defaults:
+    link:
+      create: true
+
+- clean: ["~"]
+
+# - clean:
+#   ~/.config:
+#     recursive: trues
+
+- link:
+    ~/.config/nvim/coc-settings.json: config/nvim/coc-settings.json
+    ~/.config/nvim/init.vim: config/nvim/init.vim
+    ~/.config/skhd/skhdrc: config/skhd/skhdrc
+    ~/.config/spicetify/config-xpui.ini: config/spicetify/config-xpui.ini
+    ~/.config/yabai/yabairc: config/yabai/yabairc
+    ~/.config/karabiner: config/karabiner
+
+    ~/.tmux.conf: .tmux.conf
+    ~/.zshrc: zsh/.zshrc
+    ~/.sleep: sleepwatcher/sleep.zsh
+    ~/.wakeup: sleepwatcher/wakeup.zsh
+    ~/.p10k.zsh: zsh/.p10k.zsh
+    ~/.fzf.zsh: zsh/.fzf.zsh
+    ~/.zshenv: zsh/.zshenv
+    ~/.hammerspoon: hammerspoon
+    ~/.gitconfig: gitconfig
+    ~/.editorconfig: .editorconfig
+
+- shell:
+    - [git submodule update --init dotbot, Installing submodules]
+    - SPOON_INSTALL_ZIP="hs-spooninstall.zip" &&
+      curl https://github.com/Hammerspoon/Spoons/raw/master/Spoons/SpoonInstall.spoon.zip -L -o $SPOON_INSTALL_ZIP &&
+      unzip -o $SPOON_INSTALL_ZIP -d hammerspoon/spoons &&
+      rm $SPOON_INSTALL_ZIP

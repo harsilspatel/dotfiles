@@ -1,7 +1,10 @@
 ssh/*
 
 .tokens
-dotbot/
 tpm/
 
 zsh/*.zwc
+
+alfred/Alfred.alfredpreferences
+
+hammerspoon/Spoons
