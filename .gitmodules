@@ -9,3 +9,6 @@
 [submodule "tpm"]
 	path = tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "chrome-extensions/bypass-paywalls-chrome"]
+	path = chrome-extensions/bypass-paywalls-chrome
+	url = https://github.com/iamadamdev/bypass-paywalls-chrome
