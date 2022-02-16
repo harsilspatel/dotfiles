@@ -13,7 +13,8 @@
     ~/.fzf.zsh: zsh/fzf.zsh
     ~/.p10k.zsh: zsh/p10k.zsh
 
-    ~/.gitconfig: gitconfig
+    ~/.gitconfig: .gitconfig
+    ~/.gitignore_global: .gitignore_global
     ~/.tmux.conf: .tmux.conf
     ~/.hammerspoon: hammerspoon
     ~/.editorconfig: .editorconfig

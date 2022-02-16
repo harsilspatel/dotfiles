@@ -1,20 +1,10 @@
-# This is Git's per-user configuration file.
 [user]
 	name = Harsil Patel
 	email = harsilspatel@gmail.com
 	signingkey = 0BE5FA62402B0CF8
-# Please adapt and uncomment the following lines:
-#	name = Harsil Patel
-#	email = harsilspatel@gmail.com
 [core]
 	excludesfile = /Users/harsilpatel/.gitignore_global
 	pager = diff-so-fancy | less --tabs=4 -RFX
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [commit]
 	template = /Users/harsilpatel/.stCommitMsg
 	gpgsign = true
