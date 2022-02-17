@@ -1,0 +1,16 @@
+{
+  "function syntax": {
+    "prefix": "fn",
+    "body": [
+      "function () ${1} end"
+    ],
+    "description": "function syntax"
+  },
+  "print": {
+    "prefix": "pp",
+    "body": [
+      "print('$TM_SELECTED_TEXT', $TM_SELECTED_TEXT$0)"
+    ],
+    "description": "print with description"
+  },
+}

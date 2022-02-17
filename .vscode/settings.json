@@ -1,0 +1,7 @@
+{
+  "files.exclude": {
+    "dotbot": true,
+    "chrome-extensions/bypass-paywalls-chrome": true,
+    "tpm": true
+  }
+}
