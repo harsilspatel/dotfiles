@@ -71,29 +71,43 @@ end
 ---  Returns a string of concetanated modifiers and key for e.g `lcmd.ralt.h`
 local function generateHotkeyHash(modifiers, key)
   -- sorting combinations so "hash" is deterministic
-  table.sort(modifiers)
-  table.insert(modifiers, key)
-  return table.concat(modifiers, '.')
+  local modifiersCopy = hs.fnutils.copy(modifiers)
+  table.sort(modifiersCopy)
+  table.insert(modifiersCopy, key)
+  return table.concat(modifiersCopy, '.')
 end
 
-local keyDownEventTap = hs.eventtap.new({hs.eventtap.event.types.keyDown}, function(event)
+local keyDownEventTap = hs.eventtap.new({hs.eventtap.event.types.keyDown, hs.eventtap.event.types.keyUp}, function(event)
   local eventData = event:getRawEventData()['NSEventData']
+
+  local modifierFlags = eventData.modifierFlags
+  local eventModifiers = getModifierNames(modifierFlags)
+  if #eventModifiers == 0 then return end
 
   local keyCode = eventData.keyCode
   local keyName = hs.keycodes.map[keyCode]
 
-  local modifierFlags = eventData.modifierFlags
-  local eventModifiers = getModifierNames(modifierFlags)
-
+  -- TODO(harsilspatel): LRU cache some values
   local eventHotkeyHash = generateHotkeyHash(eventModifiers, keyName)
+  if not bindings[eventHotkeyHash] then return end
 
-  if #eventModifiers == 0 or (#eventModifiers == 1 and hs.fnutils.contains({'lcmd', 'rcmd'}, eventModifiers[1])) then
-    return
-  elseif (bindings[eventHotkeyHash]) then
-    local pressedFn = bindings[eventHotkeyHash]
-    pressedFn(eventData)
-    return true
+  local isKeyDown = event:getType() == hs.eventtap.event.types.keyDown
+  local isRepeat = event:getProperty(hs.eventtap.event.properties["keyboardEventAutorepeat"]) > 0
+
+  local fnType
+  if isRepeat then
+    fnType = "repeatfn"
+  elseif isKeyDown then
+    fnType = "pressedfn"
+  else
+    fnType = "releasedfn"
   end
+
+  local fn = bindings[eventHotkeyHash][fnType]
+  if not fn then return end
+
+  fn(eventData)
+  return true
 end)
 
 local module = {}
@@ -109,15 +123,17 @@ local module = {}
 ---  * pressedfn - A function that will be called when the hotkey has been pressed
 --- Returns:
 ---  * None
-function module.bind(mods, key, pressedFn)
+function module.bind(mods, key, pressedfn, releasedfn, repeatfn)
   local combinations = getAllModifierCombinations(mods)
   local hotkeyHashes = hs.fnutils.imap(combinations,
     function(combination) return generateHotkeyHash(combination, key) end)
 
-  hs.fnutils.ieach(hotkeyHashes, function(hotkeyHash) bindings[hotkeyHash] = pressedFn end)
+  local fns = {pressedfn= pressedfn, releasedfn=releasedfn, repeatfn=repeatfn}
+  hs.fnutils.ieach(hotkeyHashes, function(hotkeyHash) bindings[hotkeyHash] = fns end)
 
   if (not keyDownEventTap:isEnabled()) then keyDownEventTap:start() end
 end
 
 hs.hotkeyextension = module
-return (module)
+return module
+
