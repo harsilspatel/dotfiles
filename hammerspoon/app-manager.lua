@@ -1,3 +1,15 @@
-hs.hotkeyextension.bind({'ralt'}, 'd', function() hs.application.launchOrFocus('Slack') end)
-hs.hotkeyextension.bind({'ralt'}, 'f', function() hs.application.launchOrFocus('Spotify') end)
-hs.hotkeyextension.bind({'ralt'}, 'a', function() hs.application.launchOrFocus('Authy Desktop') end)
+
+function launchOrFocus(app)
+  return function () hs.application.launchOrFocus(app) end
+end
+
+local appManagerModifiers = {'ralt'}
+
+hs.hotkeyextension.bind(appManagerModifiers, 'r', launchOrFocus('System Preferences'))
+
+hs.hotkeyextension.bind(appManagerModifiers, 'a', launchOrFocus('Authy Desktop'))
+hs.hotkeyextension.bind(appManagerModifiers, 's', function () hs.osascript.applescript('tell application "/Applications/Google Chrome.app"\nmake new window\nactivate\nend tell') end)
+hs.hotkeyextension.bind(appManagerModifiers, 'd', launchOrFocus('Slack'))
+hs.hotkeyextension.bind(appManagerModifiers, 'f', launchOrFocus('Spotify'))
+
+hs.hotkeyextension.bind(appManagerModifiers, 'b', launchOrFocus('BetterTouchTool'))
