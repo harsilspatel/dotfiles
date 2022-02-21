@@ -9,17 +9,17 @@
 
 - link:
     ~/.zshrc: zsh/.zshrc
-    ~/.zshenv: zsh/.zshenv
+    ~/.zshenv: zsh/env.zsh
     ~/.fzf.zsh: zsh/fzf.zsh
     ~/.p10k.zsh: zsh/p10k.zsh
 
     ~/.gitconfig: .gitconfig
-    ~/.gitignore_global: .gitignore_global
     ~/.tmux.conf: .tmux.conf
     ~/.hammerspoon: hammerspoon
     ~/.editorconfig: .editorconfig
     ~/.sleep: sleepwatcher/sleep.zsh
     ~/.wakeup: sleepwatcher/wakeup.zsh
+    ~/.gitignore_global: .gitignore_global
 
     ~/.config/karabiner: config/karabiner
     ~/.config/skhd/skhdrc: config/skhd/skhdrc
