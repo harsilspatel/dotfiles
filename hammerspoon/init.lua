@@ -1,9 +1,7 @@
 hs.spoons.use('SpoonInstall')
 
-spoon.SpoonInstall:andUse('ReloadConfiguration')
-spoon.ReloadConfiguration:start()
-
--- hs.logger.setGlobalLogLevel(5)
+spoon.SpoonInstall:andUse('HoldToQuit', {start = true})
+spoon.SpoonInstall:andUse('ReloadConfiguration', {start = true})
 
 require 'utils'
 require 'hotkey-extension'

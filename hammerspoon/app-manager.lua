@@ -12,4 +12,6 @@ hs.hotkeyextension.bind(appManagerModifiers, 's', function () hs.osascript.apple
 hs.hotkeyextension.bind(appManagerModifiers, 'd', launchOrFocus('Slack'))
 hs.hotkeyextension.bind(appManagerModifiers, 'f', launchOrFocus('Spotify'))
 
+hs.hotkeyextension.bind(appManagerModifiers, 'h', launchOrFocus('Hammerspoon'))
+
 hs.hotkeyextension.bind(appManagerModifiers, 'b', launchOrFocus('BetterTouchTool'))
