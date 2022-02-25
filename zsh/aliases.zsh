@@ -5,7 +5,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias d="dirs -v"
 
 # settings
 alias c="code ."
@@ -62,6 +61,7 @@ alias tn="tmux new-session -s"
 
 # frequent files
 alias va="$EDITOR \"$DOTFILES/zsh/.aliases\""
+alias vd="code $DOTFILES"
 alias vc="crontab -e"
 alias ve="$EDITOR \"$DOTFILES/zsh/.zshenv\""
 alias vf="$EDITOR \"$DOTFILES/zsh/.functions\""
@@ -128,3 +128,8 @@ alias bz="blueutil --power 0"
 alias tf="terraform"
 
 alias s="serverless"
+
+alias d="docker"
+alias dc="docker-compose"
+alias dcu="docker-compose up"
+alias dcd="docker-compose down"
