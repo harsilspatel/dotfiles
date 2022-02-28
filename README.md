@@ -12,7 +12,15 @@
   </p>
 </p>
 
+## Get started 🚀
+```sh
+git clone --recurse-submodules https://github.com/harsilspatel/dotfiles.git
+cd dotfiles
+./install
+```
+
 These dotfiles include configurations for:
+- Hammerspoon
 - BetterTouchTool
 - Homebrew
 - Karabiner-Elements
@@ -46,16 +54,6 @@ Arrow keys are very frequently used but they require moving the hand away from t
 - <kbd>right command</kbd> + <kbd>l</kbd> to <kbd>right</kbd>
 
 Note that we're only mapping the <kbd>right command</kbd> and leaving the left one as is.
-
-## Roadmap 🗺
-### Hyper and Meh keys
-Hyper and Meh, terms popularized by [Ergodox](https://ergodox-ez.com/) community, mean combinations of modifiers. Having two sets of <kbd>command</kbd> and <kbd>option</kbd> keys seems redundant, especially when both are relatively accessible as compared <kbd>escape</kbd> and arrow keys, so one of the sets can be mapped to hyper and meh keys.
-- <kbd>right option</kbd> to <kbd>option</kbd> + <kbd>control</kbd> + <kbd>shift</kbd> (Meh key)
-- <kbd>right command</kbd> to <kbd>option</kbd> + <kbd>control</kbd> + <kbd>shift</kbd> + <kbd>command</kbd> (Hyper key)
-
-### Window manager
-My ideal workflow would include the ability control and manipulate windows only via keyboard. So need to invest some time configuring [yabai](https://github.com/koekeishiya/yabai) and [skhd](https://github.com/koekeishiya/skhd) to achieve that!
-
 
 ## Screenshot 📸
 
