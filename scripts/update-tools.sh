@@ -18,6 +18,6 @@ nvim --headless +PlugUpgrade +PlugUpdate +q +q
 # update brew
 brew update
 # update formulae
-brew upgrade --quiet
+brew upgrade --greedy --quiet
 
 osascript -e 'display notification "zinit, homebrew, tpm, vim-plug" with title "💪 Update complete!"'
