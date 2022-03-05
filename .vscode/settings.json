@@ -1,7 +1,12 @@
 {
   "files.exclude": {
     "dotbot": true,
+    "hammerspoon/Spoons": true,
+    "hammerspoon/modules": true,
     "chrome-extensions/bypass-paywalls-chrome": true,
     "tpm": true
-  }
+  },
+  "Lua.diagnostics.disable": [
+    "undefined-global"
+  ]
 }

@@ -2,13 +2,18 @@
 	ignore = dirty
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
-[submodule "stackline"]
-	ignore = dirty
-	path = hammerspoon/stackline
-	url = https://github.com/AdamWagner/stackline
 [submodule "tpm"]
 	path = tpm
 	url = https://github.com/tmux-plugins/tpm
 [submodule "chrome-extensions/bypass-paywalls-chrome"]
 	path = chrome-extensions/bypass-paywalls-chrome
 	url = https://github.com/iamadamdev/bypass-paywalls-chrome
+[submodule "hammerspoon/modules/hammerspoon_asm.undocumented"]
+	path = hammerspoon/modules/hammerspoon_asm.undocumented
+	url = https://github.com/asmagill/hammerspoon_asm.undocumented
+[submodule "hammerspoon/modules/stackline"]
+	path = hammerspoon/modules/stackline
+	url = https://github.com/AdamWagner/stackline
+[submodule "hammerspoon/modules/roeybiran"]
+	path = hammerspoon/modules/roeybiran
+	url = https://github.com/roeybiran/.hammerspoon
