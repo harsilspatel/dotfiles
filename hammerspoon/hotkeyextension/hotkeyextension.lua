@@ -1,3 +1,8 @@
+local hotkeyextension = {}
+local log = require('hs.logger').new('hotkeyextension', 'info')
+hotkeyextension.setLogLevel = log.setLogLevel
+hotkeyextension.getLogLevel = log.getLogLevel
+
 -- from skhd
 local MODIFIER_FLAGS = {
   lalt = 0x00000020,
@@ -11,6 +16,7 @@ local MODIFIER_FLAGS = {
 }
 
 local bindings = {}
+local enabledHotkeys = 0
 
 --- Parameters:
 ---  * modifierFlags - flags OR'ed from eventtap data for e.g 1573192
@@ -111,7 +117,42 @@ local keyDownEventTap = hs.eventtap.new({hs.eventtap.event.types.keyDown, hs.eve
     return true
   end)
 
-local module = {}
+local function enable(self)
+  if (self.enabled) then
+    log.v('Hotkey already enabled')
+    return self
+  end
+
+  self.enable = true
+  enabledHotkeys = enabledHotkeys + 1
+  if (not keyDownEventTap:isEnabled() and enabledHotkeys > 0) then keyDownEventTap:start() end
+
+  return self
+end
+
+local function disable(self)
+  if not self.enabled then
+    log.v('Hotkey already disabled')
+    return self
+  end
+
+  self.enable = false
+  enabledHotkeys = enabledHotkeys - 1
+  if (keyDownEventTap:isEnabled() and enabledHotkeys == 0) then keyDownEventTap:stop() end
+
+  return self
+end
+
+local function delete(self)
+  disable(self)
+
+  hs.fnutils.ieach(self.hotkeyHashes, function(hotkeyHash)
+    if bindings[hotkeyHash] == nil then log.ef('Hotkey %s is already deleted', hotkeyHash) end
+
+    bindings[hotkeyHash] = nil
+    log.f('Deleted hotkey %s', hotkeyHash)
+  end)
+end
 
 --- Parameters:
 ---  * mods - A table or a string containing the keyboard modifiers required,
@@ -124,17 +165,40 @@ local module = {}
 ---  * pressedfn - A function that will be called when the hotkey has been pressed
 --- Returns:
 ---  * None
-function module.bind(mods, key, pressedfn, releasedfn, repeatfn)
+function hotkeyextension.new(mods, key, pressedfn, releasedfn, repeatfn)
+  if not pressedfn and not releasedfn and not repeatfn then
+    error('At least one of pressedfn, releasedfn or repeatfn must be a present', 2)
+  end
+
   local combinations = getAllModifierCombinations(mods)
   local hotkeyHashes = hs.fnutils.imap(combinations,
     function(combination) return generateHotkeyHash(combination, key) end)
 
-  local fns = {pressedfn = pressedfn, releasedfn = releasedfn, repeatfn = repeatfn}
-  hs.fnutils.ieach(hotkeyHashes, function(hotkeyHash) bindings[hotkeyHash] = fns end)
+  local hk = {
+    pressedfn = pressedfn,
+    releasedfn = releasedfn,
+    repeatfn = repeatfn,
 
-  if (not keyDownEventTap:isEnabled()) then keyDownEventTap:start() end
+    delete = delete,
+    enable = enable,
+    disable = disable,
+
+    enabled = false,
+    hotkeyHashes = hotkeyHashes
+  }
+
+  hs.fnutils.ieach(hotkeyHashes, function(hotkeyHash)
+    if bindings[hotkeyHash] ~= nil then error('Hotkey ' .. hotkeyHash .. ' is already binded', 2) end
+
+    bindings[hotkeyHash] = hk
+    log.f('Enabled hotkey %s', hotkeyHash)
+  end)
+
+  return hk
 end
 
-hs.hotkeyextension = module
-return module
+function hotkeyextension.bind(...) return hotkeyextension.new(...):enable() end
+
+hs.hotkeyextension = hotkeyextension
+return hotkeyextension
 
