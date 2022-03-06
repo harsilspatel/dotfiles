@@ -77,38 +77,39 @@ local function generateHotkeyHash(modifiers, key)
   return table.concat(modifiersCopy, '.')
 end
 
-local keyDownEventTap = hs.eventtap.new({hs.eventtap.event.types.keyDown, hs.eventtap.event.types.keyUp}, function(event)
-  local eventData = event:getRawEventData()['NSEventData']
+local keyDownEventTap = hs.eventtap.new({hs.eventtap.event.types.keyDown, hs.eventtap.event.types.keyUp},
+  function(event)
+    local eventData = event:getRawEventData()['NSEventData']
 
-  local modifierFlags = eventData.modifierFlags
-  local eventModifiers = getModifierNames(modifierFlags)
-  if #eventModifiers == 0 then return end
+    local modifierFlags = eventData.modifierFlags
+    local eventModifiers = getModifierNames(modifierFlags)
+    if #eventModifiers == 0 then return end
 
-  local keyCode = eventData.keyCode
-  local keyName = hs.keycodes.map[keyCode]
+    local keyCode = eventData.keyCode
+    local keyName = hs.keycodes.map[keyCode]
 
-  -- TODO(harsilspatel): LRU cache some values
-  local eventHotkeyHash = generateHotkeyHash(eventModifiers, keyName)
-  if not bindings[eventHotkeyHash] then return end
+    -- TODO(harsilspatel): LRU cache some values
+    local eventHotkeyHash = generateHotkeyHash(eventModifiers, keyName)
+    if not bindings[eventHotkeyHash] then return end
 
-  local isKeyDown = event:getType() == hs.eventtap.event.types.keyDown
-  local isRepeat = event:getProperty(hs.eventtap.event.properties["keyboardEventAutorepeat"]) > 0
+    local isKeyDown = event:getType() == hs.eventtap.event.types.keyDown
+    local isRepeat = event:getProperty(hs.eventtap.event.properties['keyboardEventAutorepeat']) > 0
 
-  local fnType
-  if isRepeat then
-    fnType = "repeatfn"
-  elseif isKeyDown then
-    fnType = "pressedfn"
-  else
-    fnType = "releasedfn"
-  end
+    local fnType
+    if isRepeat then
+      fnType = 'repeatfn'
+    elseif isKeyDown then
+      fnType = 'pressedfn'
+    else
+      fnType = 'releasedfn'
+    end
 
-  local fn = bindings[eventHotkeyHash][fnType]
-  if not fn then return end
+    local fn = bindings[eventHotkeyHash][fnType]
+    if not fn then return end
 
-  fn(eventData)
-  return true
-end)
+    fn(eventData)
+    return true
+  end)
 
 local module = {}
 
@@ -128,7 +129,7 @@ function module.bind(mods, key, pressedfn, releasedfn, repeatfn)
   local hotkeyHashes = hs.fnutils.imap(combinations,
     function(combination) return generateHotkeyHash(combination, key) end)
 
-  local fns = {pressedfn= pressedfn, releasedfn=releasedfn, repeatfn=repeatfn}
+  local fns = {pressedfn = pressedfn, releasedfn = releasedfn, repeatfn = repeatfn}
   hs.fnutils.ieach(hotkeyHashes, function(hotkeyHash) bindings[hotkeyHash] = fns end)
 
   if (not keyDownEventTap:isEnabled()) then keyDownEventTap:start() end

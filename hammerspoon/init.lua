@@ -1,5 +1,5 @@
 require 'utils'
-require 'hotkey-extension'
+require 'hotkeyextension.hotkeyextension'
 
 require 'app-manager'
 require 'media-manager'
