@@ -31,6 +31,8 @@
     ~/Library/Application Support/Code/User/snippets: vscode/snippets
     ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
     ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
+    ~/Library/Preferences/com.knollsoft.Rectangle.plist: com.knollsoft.Rectangle.plist
+
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
