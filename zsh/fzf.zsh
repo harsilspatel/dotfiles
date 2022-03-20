@@ -9,7 +9,7 @@ fi
 [[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2>/dev/null
 
 
-export FZF_COMPLETION_TRIGGER='``'
+export FZF_COMPLETION_TRIGGER='`'
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 

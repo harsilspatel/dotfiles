@@ -10,6 +10,10 @@ export HISTCONTROL='ignoreboth:erasedups'
 
 export GOKU_EDN_CONFIG_FILE="$DOTFILES/config/karabiner/karabiner.edn"
 
+export MCFLY_KEY_SCHEME=vim
+export MCFLY_FUZZY=2
+export MCFLY_RESULTS=100
+
 export NVM_LAZY_LOAD=true
 
 export PYENV_ROOT="$HOME/.pyenv"
