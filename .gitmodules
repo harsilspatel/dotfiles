@@ -14,6 +14,3 @@
 [submodule "hammerspoon/modules/roeybiran"]
 	path = hammerspoon/modules/roeybiran
 	url = https://github.com/roeybiran/.hammerspoon
-[submodule "hammerspoon/modules/undocumented"]
-	path = hammerspoon/modules/undocumented
-	url = https://github.com/asmagill/hammerspoon_asm.undocumented
