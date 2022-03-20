@@ -1,1 +1,6 @@
-ctrl + alt - 0x21 : . $NVM_DIR/nvm.sh; $DOTFILES/scripts/fix-windows-height.js # "ctrl + alt - ["
+# this has to be supplemented by enabling Mission Control shortcuts for switching Desktops
+ctrl + lshift - 1: yabai -m window --space 1 && skhd --key "ctrl - 1"
+ctrl + lshift - 2: yabai -m window --space 2 && skhd --key "ctrl - 2"
+ctrl + lshift - 3: yabai -m window --space 3 && skhd --key "ctrl - 3"
+ctrl + lshift - 4: yabai -m window --space 4 && skhd --key "ctrl - 4"
+ctrl + lshift - 5: yabai -m window --space 5 && skhd --key "ctrl - 5"
