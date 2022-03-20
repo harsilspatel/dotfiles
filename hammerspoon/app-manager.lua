@@ -28,3 +28,4 @@ local function focusMenuBar() ax.systemElementAtPosition({0, 0}):attributeValue(
 
 hs.hotkeyextension.bind(appManagerModifiers, ',', focusMenuBar)
 hs.hotkeyextension.bind(appManagerModifiers, '.', focusDock)
+hs.hotkeyextension.bind(appManagerModifiers, '`', function() hs.caffeinate.lockScreen() end)
