@@ -6,7 +6,7 @@
   "leetcode.nodePath": "/Users/harsilpatel/.nvm/versions/node/v14.15.1/bin/node",
   "leetcode.endpoint": "leetcode",
   "leetcode.hideSolved": true,
-  "workbench.colorTheme": "One Dark Pro",
+  "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.editor.showTabs": true,
   "editor.renderWhitespace": "all",
   "vim.useSystemClipboard": false,
@@ -15,7 +15,6 @@
     "dist/": true,
     "**/.git": true,
     "**/node_modules": true,
-
     "venv": true,
     "__pycache__": true,
     ".pytest_cache": true,
@@ -24,7 +23,6 @@
   "leetcode.showDescription": "Both",
   "leetcode.hint.commentDescription": false,
   "leetcode.hint.configWebviewMarkdown": false,
-
   "leetcode.hint.commandShortcut": false,
   "[python]": {
     "editor.formatOnSave": true,
@@ -67,3 +65,4 @@
   "editor.detectIndentation": true
 
 }
+  "gitlens.codeLens.enabled": false,
