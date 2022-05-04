@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "description": "zx scripts to improve productivity 🚀",
   "scripts": {
-    "dev": "nodemon src/bburl.js",
-    "compile": "esbuild src/bburl.js --platform=node --target=node16 --bundle --outfile=dist/bburl.cjs",
-    "package": "pkg dist/bburl.cjs --targets node16 --output bin/bburl"
+    "dev": "nodemon src/bbid.js",
+    "compile": "esbuild src/bbid.js --platform=node --target=node16 --bundle --outfile=dist/bbid.cjs",
+    "package": "pkg dist/bbid.cjs --targets node16 --output bin/bbid"
   },
   "author": "harsilspatel",
   "license": "MIT",

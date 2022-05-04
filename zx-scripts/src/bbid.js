@@ -5,7 +5,7 @@ import parseBitbucketUrl from 'parse-bitbucket-url';
 
 async function main() {
   try {
-    const gitOrigin = process.argv[2];
+    const gitOrigin = process.argv[2] || (await zx.$`git config --get remote.origin.url`).stdout.trim();
     const parsedUrl = parseBitbucketUrl(gitOrigin);
     const repoResponse = JSON.parse(
       (
