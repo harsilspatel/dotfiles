@@ -3,13 +3,15 @@
   "version": "0.0.1",
   "description": "zx scripts to improve productivity 🚀",
   "scripts": {
-    "dev": "nodemon src/greet.js",
-    "compile": "esbuild src/greet.js --platform=node --target=node16 --bundle --outfile=dist/greet.cjs",
-    "package": "pkg dist/greet.cjs --targets node16 --output bin/greet"
+    "dev": "nodemon src/bbpr.js",
+    "compile": "esbuild src/bbpr.js --platform=node --target=node16 --bundle --outfile=dist/bbpr.cjs",
+    "package": "pkg dist/bbpr.cjs --targets node16 --output bin/bbpr"
   },
   "author": "harsilspatel",
   "license": "MIT",
   "dependencies": {
+    "open": "^8.4.0",
+    "parse-bitbucket-url": "^0.3.0",
     "pkg": "^5.6.0",
     "zx": "^6.1.0"
   },
