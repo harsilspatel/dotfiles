@@ -1,0 +1,21 @@
+{
+  "name": "zx-scripts",
+  "version": "0.0.1",
+  "description": "zx scripts to improve productivity 🚀",
+  "scripts": {
+    "dev": "nodemon src/greet.js",
+    "compile": "esbuild src/greet.js --platform=node --target=node16 --bundle --outfile=dist/greet.cjs",
+    "package": "pkg dist/greet.cjs --targets node16 --output bin/greet"
+  },
+  "author": "harsilspatel",
+  "license": "MIT",
+  "dependencies": {
+    "pkg": "^5.6.0",
+    "zx": "^6.1.0"
+  },
+  "type": "module",
+  "devDependencies": {
+    "esbuild": "^0.14.38",
+    "nodemon": "^2.0.16"
+  }
+}
