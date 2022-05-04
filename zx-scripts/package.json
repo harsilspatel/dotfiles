@@ -3,13 +3,14 @@
   "version": "0.0.1",
   "description": "zx scripts to improve productivity 🚀",
   "scripts": {
-    "dev": "nodemon src/bbpr.js",
-    "compile": "esbuild src/bbpr.js --platform=node --target=node16 --bundle --outfile=dist/bbpr.cjs",
-    "package": "pkg dist/bbpr.cjs --targets node16 --output bin/bbpr"
+    "dev": "nodemon src/bburl.js",
+    "compile": "esbuild src/bburl.js --platform=node --target=node16 --bundle --outfile=dist/bburl.cjs",
+    "package": "pkg dist/bburl.cjs --targets node16 --output bin/bburl"
   },
   "author": "harsilspatel",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.27.2",
     "open": "^8.4.0",
     "parse-bitbucket-url": "^0.3.0",
     "pkg": "^5.6.0",
