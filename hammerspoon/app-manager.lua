@@ -6,7 +6,7 @@ hs.hotkeyextension.bind(appManagerModifiers, 'r', launchOrFocus('System Preferen
 
 hs.hotkeyextension.bind(appManagerModifiers, 'a', launchOrFocus('Authy Desktop'))
 hs.hotkeyextension.bind(appManagerModifiers, 's', function()
-  hs.osascript.applescript('tell application "/Applications/Google Chrome.app"\nmake new window\nactivate\nend tell')
+  hs.osascript.applescript('tell application "/Applications/Google Chrome.app"\nmake new window with properties {mode: "normal"}\nactivate\nend tell')
 end)
 hs.hotkeyextension.bind(appManagerModifiers, 'd', launchOrFocus('Slack'))
 hs.hotkeyextension.bind(appManagerModifiers, 'f', launchOrFocus('Spotify'))
