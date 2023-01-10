@@ -56,7 +56,19 @@ local function switch_screen()
   local screen = hs.fnutils.find(hs.screen.allScreens(), function(s) return s ~= window:screen() end)
   if not screen then return end
 
+  -- Issue with Chromium and its derivatives https://github.com/Hammerspoon/hammerspoon/issues/3224#issuecomment-1294359070
+  local axApp = hs.axuielement.applicationElement(window:application())
+  local wasEnhanced = axApp.AXEnhancedUserInterface
+  if wasEnhanced then
+	  axApp.AXEnhancedUserInterface = false
+  end
+
   window:moveToScreen(screen)
+
+  if wasEnhanced then
+    axApp.AXEnhancedUserInterface = true
+  end
+
 end
 
 local navigationModifiers = {'alt', 'ctrl'}
@@ -66,4 +78,4 @@ hs.hotkey.bind(navigationModifiers, 'k', focus('north'))
 hs.hotkey.bind(navigationModifiers, 'l', focus('east'))
 hs.hotkey.bind(navigationModifiers, 'm', focus_window_under_mouse)
 hs.hotkey.bind(navigationModifiers, '\\', switch_screen)
-hs.hotkey.bind(navigationModifiers, '[', resize_focussed_window(.75))
+-- hs.hotkey.bind(navigationModifiers, '[', resize_focussed_window(.75))
