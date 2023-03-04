@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/harsilspatel/dotfiles">
-    <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/hammer-and-wrench_1f6e0.png" width="72" height="72">
+    <img src="https://user-images.githubusercontent.com/25992839/222887564-66ef6afb-896b-49bf-89ea-026fd3a2add7.png" width="72" height="72">
   </a>
   <h3 align="center">my dotfiles</h3>
 
