@@ -3,6 +3,9 @@ local log = require('hs.logger').new('hotkeyextension', 'info')
 hotkeyextension.setLogLevel = log.setLogLevel
 hotkeyextension.getLogLevel = log.getLogLevel
 
+local bindings = {}
+local enabledHotkeyCount = 0
+
 -- from skhd
 local MODIFIER_FLAGS = {
   lalt = 0x00000020,
@@ -14,9 +17,6 @@ local MODIFIER_FLAGS = {
   lctrl = 0x00000001,
   rctrl = 0x00002000
 }
-
-local bindings = {}
-local enabledHotkeys = 0
 
 --- Parameters:
 ---  * modifierFlags - flags OR'ed from eventtap data for e.g 1573192
@@ -83,7 +83,8 @@ local function generateHotkeyHash(modifiers, key)
   return table.concat(modifiersCopy, '.')
 end
 
-local keyDownEventTap = hs.eventtap.new({hs.eventtap.event.types.keyDown, hs.eventtap.event.types.keyUp},
+
+local keyDownEventTap = hs.eventtap.new({hs.eventtap.event.types.keyUp, hs.eventtap.event.types.keyDown},
   function(event)
     local eventData = event:getRawEventData()['NSEventData']
 
@@ -96,7 +97,13 @@ local keyDownEventTap = hs.eventtap.new({hs.eventtap.event.types.keyDown, hs.eve
 
     -- TODO(harsilspatel): LRU cache some values
     local eventHotkeyHash = generateHotkeyHash(eventModifiers, keyName)
-    if not bindings[eventHotkeyHash] then return end
+    local hotkey = bindings[eventHotkeyHash]
+
+    if not hotkey then return end
+    if not hotkey['enabled'] then
+      log.v('Hotkey %s is disabled', eventHotkeyHash)
+      return
+    end
 
     local isKeyDown = event:getType() == hs.eventtap.event.types.keyDown
     local isRepeat = event:getProperty(hs.eventtap.event.properties['keyboardEventAutorepeat']) > 0
@@ -110,22 +117,24 @@ local keyDownEventTap = hs.eventtap.new({hs.eventtap.event.types.keyDown, hs.eve
       fnType = 'releasedfn'
     end
 
-    local fn = bindings[eventHotkeyHash][fnType]
+    local fn = hotkey[fnType]
     if not fn then return end
 
     fn(eventData)
     return true
   end)
 
+
+-- [start] Hotkey object functions, which is the value of `bindings[hotkeyHash]`
 local function enable(self)
   if (self.enabled) then
     log.v('Hotkey already enabled')
     return self
   end
 
-  self.enable = true
-  enabledHotkeys = enabledHotkeys + 1
-  if (not keyDownEventTap:isEnabled() and enabledHotkeys > 0) then keyDownEventTap:start() end
+  self.enabled = true
+  enabledHotkeyCount = enabledHotkeyCount + 1
+  if (not keyDownEventTap:isEnabled() and enabledHotkeyCount > 0) then keyDownEventTap:start() end
 
   return self
 end
@@ -136,9 +145,9 @@ local function disable(self)
     return self
   end
 
-  self.enable = false
-  enabledHotkeys = enabledHotkeys - 1
-  if (keyDownEventTap:isEnabled() and enabledHotkeys == 0) then keyDownEventTap:stop() end
+  self.enabled = false
+  enabledHotkeyCount = enabledHotkeyCount - 1
+  if (keyDownEventTap:isEnabled() and enabledHotkeyCount == 0) then keyDownEventTap:stop() end
 
   return self
 end
@@ -153,6 +162,7 @@ local function delete(self)
     log.f('Deleted hotkey %s', hotkeyHash)
   end)
 end
+-- [end] Hotkey object functions
 
 --- Parameters:
 ---  * mods - A table or a string containing the keyboard modifiers required,
@@ -188,7 +198,7 @@ function hotkeyextension.new(mods, key, pressedfn, releasedfn, repeatfn)
   }
 
   hs.fnutils.ieach(hotkeyHashes, function(hotkeyHash)
-    if bindings[hotkeyHash] ~= nil then error('Hotkey ' .. hotkeyHash .. ' is already binded', 2) end
+    if bindings[hotkeyHash] ~= nil then error('Hotkey ' .. hotkeyHash .. ' is already bound', 2) end
 
     bindings[hotkeyHash] = hk
     log.f('Enabled hotkey %s', hotkeyHash)
@@ -199,6 +209,8 @@ end
 
 function hotkeyextension.bind(...) return hotkeyextension.new(...):enable() end
 
+hotkeyextension._bindings = bindings
+hotkeyextension._enabledHotkeyCount = enabledHotkeyCount
 hs.hotkeyextension = hotkeyextension
 return hotkeyextension
 
