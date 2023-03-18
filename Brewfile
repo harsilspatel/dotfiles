@@ -1,29 +1,9 @@
-tap "buildkite/buildkite"
-tap "buildkite/cli"
-tap "candid82/brew"
-tap "caskroom/cask"
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
-tap "homebrew/core"
 tap "homebrew/services"
-tap "iina/mpv-iina"
-tap "khanhas/tap"
 tap "koekeishiya/formulae"
-tap "mongodb/brew"
-tap "mopidy/mopidy"
-tap "rigellute/tap"
-tap "yqrashawn/goku"
-# Official Amazon AWS command-line interface
-brew "awscli", link: false
-# GNU File, Shell, and Text utilities
-brew "coreutils"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Get/set bluetooth power and discoverable state
-brew "blueutil"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Good-lookin' diffs with diff-highlight and more
@@ -32,131 +12,109 @@ brew "diff-so-fancy"
 brew "exa"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# Identify or delete duplicate files
-brew "fdupes"
-# Manage compile and link flags for libraries
-brew "pkg-config"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GNU awk utility
 brew "gawk"
-# GNU debugger
-brew "gdb"
 # Distributed revision control system
 brew "git"
 # Small git utilities
 brew "git-extras"
+# Git extension for versioning large files
+brew "git-lfs"
 # Render markdown on the CLI
 brew "glow"
 # GNU Pretty Good Privacy (PGP) package
-brew "gnupg", link: false
+brew "gnupg"
 # GitHub Markdown previewer
 brew "grip"
 # Improved top (interactive process viewer)
 brew "htop"
-# Manage your Java environment
-brew "jenv"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# Website copier/offline browser
-brew "httrack"
-# LLVM's OpenMP runtime library
-brew "libomp"
 # Simple terminal UI for git commands
 brew "lazygit"
-# Cross platform, open source .NET development framework
-brew "mono"
-# Collection of tools that nobody wrote when UNIX was young
-brew "moreutils"
-# Ncurses-based client for the Music Player Daemon
-brew "ncmpcpp"
-# Fast, highly customisable system info script
-brew "neofetch"
-# Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
-# Tiny, lightning fast, feature-packed file manager
-brew "nnn"
-# SSL/TLS VPN implementing OSI layer 2 or 3 secure network extension
-brew "openvpn"
-# Animated pipes terminal screensaver
-brew "pipes-sh"
 # Manage multiple Node.js versions
 brew "nvm"
-# Python version management
-brew "pyenv"
+# Pinentry for GPG on Mac
+brew "pinentry-mac"
 # File browser
 brew "ranger"
-# Static analysis and lint tool, for (ba)sh scripts
-brew "shellcheck"
-# Command-line interface for Spotify on a Mac
-brew "shpotify"
-# Tool to build, change, and version infrastructure
-brew "terraform"
+# Monitors sleep, wakeup, and idleness of a Mac
+brew "sleepwatcher"
 # Open source continuous file synchronization application
 brew "syncthing"
-# Send macOS User Notifications from the command-line
-brew "terminal-notifier"
 # Code-search similar to ack
 brew "the_silver_searcher"
 # Terminal multiplexer
 brew "tmux"
-# Manage complex tmux sessions easily
-brew "tmuxinator"
-# Display directories as trees (with optional color/HTML output)
-brew "tree"
-# Internet file retriever
-brew "wget"
-# JavaScript package manager
-brew "yarn"
-# Download YouTube videos from the command-line
-brew "youtube-dl"
-# UNIX shell (command interpreter)
-brew "zsh"
-# A command line interface for Buildkite.
-brew "buildkite/cli/bk"
-# Command-line tool to customize Spotify client
-brew "khanhas/tap/spicetify-cli"
+# Flexible and fast Zsh plugin manager
+brew "zinit"
 # Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd"
 # A tiling window manager for macOS based on binary space partitioning.
 brew "koekeishiya/formulae/yabai"
-# High-performance, schema-free, document-oriented database
-brew "mongodb/brew/mongodb-community@4.0"
-# A terminal user interface for Spotify
-brew "rigellute/tap/spotify-tui"
-# karabiner configurator
-brew "yqrashawn/goku/goku"
+# Apple TV Aerial screensaver
+cask "aerial"
+# Two-factor authentication software
 cask "authy"
-cask "bartender"
+# Tool to customize input devices and automate computer systems
 cask "bettertouchtool"
-cask "clion"
-cask "firefox"
+# Monitors common persistence locations
+cask "blockblock"
+# Web browser focusing on privacy
+cask "brave-browser"
+# Tool to remove unnecessary files and folders from disk
+cask "cleanmymac"
+# Multi-language programming editor
 cask "coderunner"
+# Tool to hide status bar icons
+cask "dozer"
+# Cross-platform Text Expander written in Rust
+cask "espanso"
+# Free monospaced font with programming ligatures
 cask "font-fira-code"
+# Web browser
 cask "google-chrome"
-cask "gpg-suite"
-cask "ichm"
+# Desktop automation application
 cask "hammerspoon"
+# Free and open-source media player
 cask "iina"
+# Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Open-source screen recorder built with web technology
 cask "kap"
-cask "key-codes"
+# Keyboard customizer
 cask "karabiner-elements"
-cask "keyboard-maestro"
-cask "libreoffice"
-cask "mongodb-compass-community"
-cask "paw"
+# Open-source keystroke visualizer
 cask "keycastr"
+# Tool to show what is persistently installed on the computer
+cask "knockknock"
+# Clipboard manager
+cask "maccy"
+# Tool to control external monitor brightness & volume
 cask "monitorcontrol"
-cask "mounty"
-cask "openmtp"
-cask "plover"
-cask "postman"
-cask "sonos"
+# Monitors computer mic and webcam
+cask "oversight"
+# VPN client
 cask "private-internet-access"
-cask "qbittorrent"
-cask "spotify"
-cask "tunnelblick"
+# IDE for Python programming - Community Edition
+cask "pycharm-ce"
+# Control your tools with a few keystrokes
+cask "raycast"
+# Move and resize windows using keyboard shortcuts or snap areas
+cask "rectangle"
+# Scans, detects, and monitors keyboard taps
+cask "reikey"
+# Team communication and collaboration software
+cask "slack"
+# Web browser focusing on security
+cask "tor-browser"
+# Run commands and display their output on the desktop
 cask "ubersicht"
+# Open-source code editor
 cask "visual-studio-code"
-cask "zsa-wally"
+# Rust-based terminal
+cask "warp"
