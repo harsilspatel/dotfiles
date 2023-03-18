@@ -14,6 +14,8 @@ hs.hotkeyextension.bind(appManagerModifiers, 'f', launchOrFocus('Spotify'))
 hs.hotkeyextension.bind(appManagerModifiers, 'h', launchOrFocus('Hammerspoon'))
 
 hs.hotkeyextension.bind(appManagerModifiers, 'b', launchOrFocus('BetterTouchTool'))
+hs.hotkeyextension.bind(appManagerModifiers, 'n', launchOrFocus('Notes'))
+hs.hotkeyextension.bind(appManagerModifiers, 'm', launchOrFocus('Activity Manager'))
 
 -- when we import rb.ui, it then tries to import it's sibling file utils.lua by
 -- importing rb.utils and local since it's not in path it seems to can't find it
