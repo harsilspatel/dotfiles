@@ -33,10 +33,11 @@
     ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
     ~/Library/Preferences/com.knollsoft.Rectangle.plist: com.knollsoft.Rectangle.plist
 
-
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
     - SPOON_INSTALL_ZIP="hs-spooninstall.zip" &&
       curl https://github.com/Hammerspoon/Spoons/raw/master/Spoons/SpoonInstall.spoon.zip -L -o $SPOON_INSTALL_ZIP &&
       unzip -o $SPOON_INSTALL_ZIP -d hammerspoon/spoons &&
       rm $SPOON_INSTALL_ZIP
+      git clone https://github.com/dbalatero/SkyRocket.spoon.git ~/.hammerspoon/Spoons/SkyRocket.spoon
+    - touch zsh/tokens.zsh
