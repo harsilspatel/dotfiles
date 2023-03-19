@@ -17,7 +17,7 @@ export MCFLY_RESULTS=100
 export NVM_LAZY_LOAD=true
 
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/Cellar/openvpn/2.4.8/sbin:$PYENV_ROOT/bin:$PATH
+export PATH=$PYENV_ROOT/bin:$HOME/bin:/usr/local/bin:$PATH
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#8a8a8a"
 

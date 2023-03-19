@@ -10,6 +10,7 @@ let g:NERDSpaceDelims = 1
 let g:NERDTreeIgnore = ['\.DS_Store$', '\.git$']
 let g:NERDTreeShowHidden = 1
 let g:startify_change_to_dir = 0
+let g:coc_node_path = trim(system('which node'))
 
 let g:coc_global_extensions = [
  \  'coc-eslint',
