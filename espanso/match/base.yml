@@ -1,0 +1,13 @@
+matches:
+  - trigger: ",shrug"
+    replace: "¯\\_(ツ)_/¯"
+  - trigger: ",tf"
+    replace: "(╯°□°)╯︵ ┻━┻"
+  - trigger: ",sad"
+    replace: "ಠ , ಥ"
+  - trigger: ",lod"
+    replace: "ಠ_ಠ"
+  - trigger: ",cry"
+    replace: "ಥ_ಥ"
+  - trigger: ",eyepop"
+    replace: "ಠ_ృ"

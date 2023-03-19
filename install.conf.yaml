@@ -28,6 +28,7 @@
     ~/.config/nvim/coc-settings.json: config/nvim/coc-settings.json
     ~/.config/spicetify/config-xpui.ini: config/spicetify/config-xpui.ini
 
+    ~/Library/Application Support/espanso: espanso
     ~/Library/Application Support/Code/User/snippets: vscode/snippets
     ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
     ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
