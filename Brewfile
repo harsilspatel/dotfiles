@@ -36,10 +36,14 @@ brew "imagemagick"
 brew "jq"
 # Simple terminal UI for git commands
 brew "lazygit"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
 # Manage multiple Node.js versions
 brew "nvm"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
+# Python version management
+brew "pyenv"
 # File browser
 brew "ranger"
 # Monitors sleep, wakeup, and idleness of a Mac
@@ -50,6 +54,8 @@ brew "syncthing"
 brew "the_silver_searcher"
 # Terminal multiplexer
 brew "tmux"
+# JavaScript package manager
+brew "yarn"
 # Flexible and fast Zsh plugin manager
 brew "zinit"
 # Simple hotkey-daemon for macOS.
@@ -70,6 +76,8 @@ cask "brave-browser"
 cask "cleanmymac"
 # Multi-language programming editor
 cask "coderunner"
+# Voice and text chat software
+cask "discord"
 # Tool to hide status bar icons
 cask "dozer"
 # Cross-platform Text Expander written in Rust
