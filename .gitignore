@@ -3,6 +3,5 @@ zsh/tokens.zsh
 
 alfred/Alfred.alfredpreferences
 
-hammerspoon/Spoons
-
+config/hammerspoon/Spoons
 config/karabiner/automatic_backups

@@ -8,12 +8,12 @@
 [submodule "chrome-extensions/bypass-paywalls-chrome"]
 	path = chrome-extensions/bypass-paywalls-chrome
 	url = https://github.com/iamadamdev/bypass-paywalls-chrome
-[submodule "hammerspoon/modules/stackline"]
-	path = hammerspoon/modules/stackline
+[submodule "config/hammerspoon/modules/stackline"]
+	path = config/hammerspoon/modules/stackline
 	url = https://github.com/AdamWagner/stackline
-[submodule "hammerspoon/modules/roeybiran"]
-	path = hammerspoon/modules/roeybiran
+[submodule "config/hammerspoon/modules/roeybiran"]
+	path = config/hammerspoon/modules/roeybiran
 	url = https://github.com/roeybiran/.hammerspoon
-[submodule "/Users/hpatel2/.dotfiles/hammerspoon/Spoons/SkyRocket.spoon"]
-	path = /Users/hpatel2/.dotfiles/hammerspoon/Spoons/SkyRocket.spoon
+[submodule "config/hammerspoon/Spoons/SkyRocket.spoon"]
+	path = config/hammerspoon/Spoons/SkyRocket.spoon
 	url = https://github.com/dbalatero/SkyRocket.spoon.git

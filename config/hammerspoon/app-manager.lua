@@ -2,6 +2,7 @@ function launchOrFocus(app) return function() hs.application.launchOrFocus(app) 
 
 local appManagerModifiers = {'ralt'}
 
+hs.hotkeyextension.bind(appManagerModifiers, 'w', launchOrFocus('Whatsapp'))
 hs.hotkeyextension.bind(appManagerModifiers, 'r', launchOrFocus('System Preferences'))
 
 hs.hotkeyextension.bind(appManagerModifiers, 'a', launchOrFocus('Authy Desktop'))

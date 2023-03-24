@@ -1,5 +1,6 @@
 - defaults:
     link:
+      relink: true
       create: true
 
 - clean: ["~"]
@@ -14,11 +15,11 @@
     ~/.p10k.zsh: zsh/p10k.zsh
 
     ~/.gitconfig: .gitconfig
-    ~/.tmux.conf: .tmux.conf
-    ~/.hammerspoon: hammerspoon
+    ~/.tmux.conf: config/.tmux.conf
+    ~/.hammerspoon: config/hammerspoon
     ~/.editorconfig: .editorconfig
-    ~/.sleep: sleepwatcher/sleep.zsh
-    ~/.wakeup: sleepwatcher/wakeup.zsh
+    ~/.sleep: config/sleepwatcher/sleep.zsh
+    ~/.wakeup: config/sleepwatcher/wakeup.zsh
     ~/.gitignore_global: .gitignore_global
 
     ~/.config/karabiner: config/karabiner
@@ -28,11 +29,12 @@
     ~/.config/nvim/coc-settings.json: config/nvim/coc-settings.json
     ~/.config/spicetify/config-xpui.ini: config/spicetify/config-xpui.ini
 
-    ~/Library/Application Support/espanso: espanso
-    ~/Library/Application Support/Code/User/snippets: vscode/snippets
-    ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
-    ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
-    ~/Library/Preferences/com.knollsoft.Rectangle.plist: com.knollsoft.Rectangle.plist
+    ~/Library/Application Support/espanso: config/espanso
+    ~/Library/Application Support/lazygit/config.yml: config/lazygit/config.yml
+    ~/Library/Application Support/Code/User/snippets: config/vscode/snippets
+    ~/Library/Application Support/Code/User/settings.json: config/vscode/settings.json
+    ~/Library/Application Support/Code/User/keybindings.json: config/vscode/keybindings.json
+    ~/Library/Preferences/com.knollsoft.Rectangle.plist: config/rectangle/com.knollsoft.Rectangle.plist
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
