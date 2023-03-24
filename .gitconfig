@@ -1,12 +1,12 @@
 [user]
 	name = Harsil Patel
 	email = harsilspatel@gmail.com
-	signingkey = 0BE5FA62402B0CF8
+	signingkey = BA0EB6A706D6638D
 [core]
-	excludesfile = /Users/harsilpatel/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [commit]
-	template = /Users/harsilpatel/.stCommitMsg
+	template = ~/.stCommitMsg
 	gpgsign = true
 [credential]
 	helper = osxkeychain
