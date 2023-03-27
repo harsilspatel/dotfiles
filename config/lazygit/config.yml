@@ -4,7 +4,10 @@ customCommands:
     context: "global"
 git:
   commitPrefixes:
-reporting: 'on'
+  paging:
+    colorArg: always
+    pager: diff-so-fancy
+reporting: "on"
 startuppopupversion: 1
 refresher:
   refreshInterval: 2
