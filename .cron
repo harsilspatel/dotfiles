@@ -1,4 +1,4 @@
 
-4 2 * * * /usr/local/bin/timeout 42s "$HOME/.dotfiles/scripts/housekeeping.sh" || osascript -e 'display notification "Could have timed-out after 42s" with title "🤕 Housekeeping job errored"'
-6 9 * * * /usr/local/bin/timeout 2m "$HOME/.dotfiles/scripts/update-tools.sh" || osascript -e 'display notification "Perhaps timed-out after 2m" with title "🤒 Updating job errored"'
-1 12 * * * /usr/local/bin/timeout 2m git submodule update --init --recursive
+4 2 * * * /opt/homebrew/bin/timeout 42s "$HOME/.dotfiles/scripts/housekeeping.sh" || osascript -e 'display notification "Could have timed-out after 42s" with title "🤕 Housekeeping job errored"'
+6 9 * * * /opt/homebrew/bin/timeout 2m "$HOME/.dotfiles/scripts/update-tools.sh" || osascript -e 'display notification "Perhaps timed-out after 2m" with title "🤒 Updating job errored"'
+1 12 * * * /opt/homebrew/bin/timeout 2m git submodule update --init --recursive
