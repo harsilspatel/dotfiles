@@ -25,8 +25,8 @@ hs.hotkeyextension.bind(mediaManagerModifiers, 'q', sendSystemKey('PREVIOUS'))
 hs.hotkeyextension.bind(mediaManagerModifiers, 'w', sendSystemKey('PLAY'))
 hs.hotkeyextension.bind(mediaManagerModifiers, 'e', sendSystemKey('NEXT'))
 
-hs.hotkeyextension.bind(mediaManagerModifiers, 'o', function() hs.execute('/usr/local/bin/blueutil --power 0') end)
-hs.hotkeyextension.bind(mediaManagerModifiers, 'p', function() hs.execute('/usr/local/bin/blueutil --power 1') end)
+hs.hotkeyextension.bind(mediaManagerModifiers, 'o', function() hs.execute('/opt/homebrew/bin/blueutil --power 0') end)
+hs.hotkeyextension.bind(mediaManagerModifiers, 'p', function() hs.execute('/opt/homebrew/bin/blueutil --power 1') end)
 
 hs.hotkeyextension.bind(mediaManagerModifiers, 'a', seekAudio('backward'))
 hs.hotkeyextension.bind(mediaManagerModifiers, 's', seekAudio('forward'))
