@@ -26,7 +26,10 @@ alias pv="python -m venv venv"
 alias pa="source venv/bin/activate"
 alias pd="deactivate"
 alias pf="pip freeze > requirements.txt"
-alias pi="pip install -r requirements.txt"
+alias pir="pip install -r requirements.txt"
+alias pi="pip install"
+alias pu="pip uninstall"
+alias pup="pip install --upgrade pip"
 
 # github
 alias ghpv="gh pr view -w"
