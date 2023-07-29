@@ -22,6 +22,12 @@ alias vim="$EDITOR"
 alias x="exit"
 alias nm="nodemon"
 
+alias pv="python -m venv venv"
+alias pa="source venv/bin/activate"
+alias pd="deactivate"
+alias pf="pip freeze > requirements.txt"
+alias pi="pip install -r requirements.txt"
+
 # github
 alias ghpv="gh pr view -w"
 alias ghrv="gh repo view -w"
@@ -140,4 +146,3 @@ alias dcd="docker-compose down"
 
 alias copy="pbcopy"
 alias paste="pbpaste"
-alias d="lazydocker"
