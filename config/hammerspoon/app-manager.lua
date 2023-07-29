@@ -14,6 +14,8 @@ hs.hotkeyextension.bind(appManagerModifiers, 'f', launchOrFocus('Spotify'))
 
 hs.hotkeyextension.bind(appManagerModifiers, 'h', launchOrFocus('Hammerspoon'))
 
+hs.hotkeyextension.bind(appManagerModifiers, 'l', launchOrFocus('Linear'))
+
 hs.hotkeyextension.bind(appManagerModifiers, 'b', launchOrFocus('BetterTouchTool'))
 hs.hotkeyextension.bind(appManagerModifiers, 'n', launchOrFocus('Notes'))
 hs.hotkeyextension.bind(appManagerModifiers, 'm', launchOrFocus('Activity Manager'))
