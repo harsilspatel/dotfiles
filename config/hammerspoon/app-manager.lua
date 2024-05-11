@@ -4,6 +4,7 @@ local appManagerModifiers = {'ralt'}
 
 hs.hotkeyextension.bind(appManagerModifiers, 'w', launchOrFocus('Whatsapp'))
 hs.hotkeyextension.bind(appManagerModifiers, 'r', launchOrFocus('System Preferences'))
+hs.hotkeyextension.bind(appManagerModifiers, 'o', launchOrFocus('Obsidian'))
 
 hs.hotkeyextension.bind(appManagerModifiers, 'a', launchOrFocus('Authy Desktop'))
 hs.hotkeyextension.bind(appManagerModifiers, 's', function()

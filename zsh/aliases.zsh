@@ -10,13 +10,14 @@ alias .....="cd ../../../.."
 alias c="code ."
 alias i="idea ."
 alias ch="wc -l $HISTFILE; cp $HISTFILE $HISTFILE.bak; nl ~/.zsh_history | LC_ALL=C sort -k 2  -k 1,1nr| uniq -f 1 | LC_ALL=C sort -n | cut -f 2 > $HISTFILE; wc -l $HISTFILE;"
-alias e="exa -alrs=created"
+alias e="eza -alrs=created"
 alias h="cat $HISTFILE | grep "
 alias j="jest"
 alias l="lazygit"
 alias ld="lazydocker"
 alias o="open ."
 alias rmrfnm="rm -rf ./node_modules"
+alias rm="trash"
 alias v="$EDITOR"
 alias vim="$EDITOR"
 alias x="exit"
@@ -62,6 +63,9 @@ alias ns="npm start"
 alias nt="npm test"
 alias nu="npm uninstall"
 alias nv="npm version"
+
+alias bi="bun install"
+alias bx="bunx"
 
 # tmux
 alias t="tmux"
@@ -129,14 +133,6 @@ alias gst="git status"
 # taken from https://github.com/mathiasbynens/dotfiles/blob/master/.aliases
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
-
-# blueutil
-alias b="blueutil"
-alias bd="blueutil --disconnect \"WH-1000XM3\""
-alias bh="blueutil --connect \"WH-1000XM3\""
-alias bo="blueutil --power 1"
-alias bt="blueutil --power toggle"
-alias bz="blueutil --power 0"
 
 alias tf="terraform"
 
