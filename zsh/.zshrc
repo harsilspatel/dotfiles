@@ -5,6 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+source /opt/homebrew/opt/zinit/zinit.zsh
+
 function compile_and_source() {
   file="$1"
   if [[ -e "$file" ]] \
@@ -15,8 +17,6 @@ function compile_and_source() {
   source "$file"
 }
 
-
-source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
@@ -74,18 +74,16 @@ zinit ice lucid wait"1" from"gh-r" as"program" atload'eval "$(mcfly init zsh)"'
 zinit light cantino/mcfly
 
 zinit ice wait'2' lucid
-zinit light lukechilds/zsh-nvm
-
-zinit ice wait'3' lucid
 zinit light hlissner/zsh-autopair
 
-zinit ice wait'4' lucid
+zinit ice wait'3' lucid
 zinit snippet OMZ::plugins/pyenv/pyenv.plugin.zsh
 
-# to separate history for iterm tabs
 setopt hist_ignore_all_dups
-# unsetopt share_history
-# unsetopt inc_append_history
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 zsh-defer -c "eval \"$(pyenv init --path)\""
 # autoload -U +X bashcompinit && bashcompinit
@@ -100,3 +98,12 @@ for file in env.zsh \
   compile_and_source "$DOTFILES/zsh/$file"
 done
 unset file
+
+
+# pnpm
+export PNPM_HOME="/Users/harsilspatel/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

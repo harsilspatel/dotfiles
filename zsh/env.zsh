@@ -14,15 +14,21 @@ export MCFLY_KEY_SCHEME=vim
 export MCFLY_FUZZY=2
 export MCFLY_RESULTS=100
 
-export NVM_LAZY_LOAD=true
-
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH=$PYENV_ROOT/bin:$HOME/bin:/usr/local/bin:$PATH
+export PATH=$PYENV_ROOT/bin:$HOME/bin:/usr/local/bin:/opt/homebrew/opt/postgresql@15/bin:$PATH
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#8a8a8a"
 
-export JAVA_HOME=$(/usr/libexec/java_home)
+# export JAVA_HOME=$(/usr/libexec/java_home)
 
 export GPG_TTY=$(tty)
 
 export HOMEBREW_NO_AUTO_UPDATE=1
+
+export PATH="$PATH:/Users/harsilspatel/.foundry/bin"
+
+export PNPM_HOME="/Users/harsilspatel/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
